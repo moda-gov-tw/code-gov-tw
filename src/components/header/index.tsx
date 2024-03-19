@@ -55,7 +55,7 @@ export default component$(() => {
           <NavLanguage />
         </div>
       </nav>
-      <dialog
+      <div
         class={["lg:hidden", { hidden: menu.value === false }]}
         aria-modal="true"
       >
@@ -110,7 +110,7 @@ export default component$(() => {
             </div>
           </div>
         </div>
-      </dialog>
+      </div>
     </header>
   );
 });
