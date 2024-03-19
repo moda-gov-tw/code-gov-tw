@@ -1,0 +1,23 @@
+{
+  "platforms": ["windows"],
+  "categories": ["document-management", "office"],
+  "repoOwners": [
+    "數位發展部",
+    "臺北市",
+    "新北市",
+    "桃園市",
+    "臺中市",
+    "臺南市",
+    "高雄市",
+    "英國 gov.uk"
+  ],
+  "features": [
+    "表單填寫/資料上傳",
+    "個案管理",
+    "地圖資訊呈現",
+    "資料檢索",
+    "文書處理",
+    "其他"
+  ],
+  "techStacks": ["Open Document Format"]
+}

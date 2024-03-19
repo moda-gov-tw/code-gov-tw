@@ -1,0 +1,51 @@
+[
+  {
+    "publiccodeYmlVersion": "0.3.0",
+    "name": "MODA_ODF_Application_Tools",
+    "url": "https://github.com/MODAODF/MODA_ODF_Application_Tools",
+    "releaseDate": "2023-03-06",
+    "platforms": ["windows"],
+    "categories": ["document-management", "office"],
+    "developmentStatus": "stable",
+    "softwareType": "addon",
+    "description": {
+      "zh-Hant": {
+        "localisedName": "ODF文件應用工具",
+        "shortDescription": "為引導公務機關從文件製作、保存均以開放文件格式(ODF)處理，且使政府ODF文件能跨機關流通，本部基於開放文件軟體，發展適合公務機關使用之「ODF文件應用工具」，提供編輯標準ODF文件及支援CNS11643中文標準交換碼全字庫，並提供 Q＆A 問題回報程式，建立客服流程及諮詢服務，並將相關問題與回應提供其他使用者查詢。\n",
+        "features": ["文書處理"]
+      }
+    },
+    "legal": {
+      "license": "LGPL-3.0、MPL-2.0",
+      "repoOwner": "數位發展部"
+    },
+    "maintenance": {
+      "type": "internal",
+      "contacts": [
+        {
+          "name": "數位發展部"
+        }
+      ]
+    },
+    "localisation": {
+      "localisationReady": false
+    },
+    "dependsOn": {
+      "open": [
+        {
+          "name": "Open Document Format"
+        }
+      ]
+    },
+    "usedBy": ["無，非網頁應用"],
+    "tw": {
+      "countryExtensionVersion": "1.0.0",
+      "vulnerability": ["SonarQube"],
+      "createdDate": "2020-03-06"
+    },
+    "filterTags": {
+      "features": ["文書處理"],
+      "techStack": ["Open Document Format"]
+    }
+  }
+]

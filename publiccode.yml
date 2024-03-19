@@ -1,0 +1,79 @@
+publiccodeYmlVersion: 0.3.0
+
+name: public code platform
+url: "https://awesome.com"
+landingURL: "https://demo.awesome.com"
+releaseDate: "2022-03-29"
+
+platforms:
+  - web
+
+categories:
+  - data-collection
+  - digital-citizenship
+
+developmentStatus: development
+
+softwareType: standalone/web
+
+description:
+  zh-Hant:
+    localisedName: 公共程式平台
+    shortDescription: >
+      這是我們的平台短描述, 最多只有150字
+    longDescription: >
+      這是我們的平台長描述, 至少有150字以上
+    features:
+      - 表單填寫/資料上傳
+      - 個案管理
+    screenshots:
+      - screenshots/screenshot1.png
+      - screenshots/screenshot2.png
+  en:
+    shortDescription: >
+      This is a short description of my awesome software, it is at most 150 words long
+    longDescription: >
+      This is a long description of my awesome software, it is at least 150 words long
+    features:
+      - Form filling/data uploading
+      - Case Management
+    screenshots:
+      - screenshots/screenshot1.png
+      - screenshots/screenshot2.png
+
+legal:
+  license: MIT
+  repoOwner: Mutix Co.
+  mainCopyrightOwner: Mutix Co.
+
+maintenance:
+  type: internal
+  contacts:
+    - name: someone's name
+      email: "someone@email.com"
+      phone: "+8861234567890"
+
+localisation:
+  localisationReady: true
+  availableLanguages:
+    - zh-Hant
+    - en
+
+dependsOn:
+  open:
+    - name: Node.js
+      version: "18"
+
+usedBy:
+  - Ministry of Awesome
+  - "[Ministry of Awesome, Ministry of Awesome 2](https://example.com)"
+
+tw:
+  countryExtensionVersion: "1.0.0"
+  techStack:
+    - name: "TypeScript"
+    - name: "Qwik"
+    - name: "Tailwind CSS"
+  vulnerability:
+    - "OWASP"
+  accessibility: "AA"

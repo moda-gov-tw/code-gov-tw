@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap");
+
+/**
+ * Tailwind CSS imports
+ * View the full documentation at https://tailwindcss.com
+ */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .max-wrapper {
+    box-sizing: content-box;
+    max-width: 80rem;
+    margin: 0 auto;
+  }
+}
+
+@layer base {
+  h1 {
+    @apply text-5xl font-medium;
+  }
+
+  h2 {
+    @apply text-3xl font-medium;
+  }
+
+  h3 {
+    @apply text-2xl font-medium;
+  }
+
+  h4 {
+    @apply text-lg font-medium;
+  }
+
+  small {
+    @apply text-sm font-normal;
+  }
+}
+
+/**
+ * WHAT IS THIS FILE?
+ *
+ * Globally applied styles. No matter which components are in the page or matching route,
+ * the styles in here will be applied to the Document, without any sort of CSS scoping.
+ *
+ */
+html {
+  @apply text-base font-normal leading-relaxed text-black;
+  -webkit-text-size-adjust: 100%;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  font-family:
+    "PingFang TC",
+    "Noto Sans TC",
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial,
+    "Noto Sans",
+    sans-serif,
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
+    "Segoe UI Symbol",
+    "Noto Color Emoji";
+}
+
+body {
+  padding: 0;
+  line-height: inherit;
+}
