@@ -26,9 +26,9 @@ export default component$(() => {
       <div class="h-0 w-20 border-t-2 border-primary" />
       <h2 class="mt-4">{$localize`常見問答`}</h2>
       <div class="mt-8 flex flex-col gap-8">
-        {accordions.map((accordion, index) => (
+        {accordions.map((accordion) => (
           <Accordion
-            key={index}
+            key={accordion.title}
             title={accordion.title}
             description={accordion.description}
           />

@@ -22,18 +22,26 @@ export default component$(() => {
           <div class="mt-8">
             <p>
               您所查詢的網址無法顯示，可能是因為您所查詢的網頁或檔案不存在或已被移除，請至
+              {/*
+               */}
               <a class="underline" href={baselink}>
                 網站首頁
               </a>
+              {/*
+               */}
               查詢您所需要的資訊。
             </p>
             <p class="mt-4">
               The webpage you are trying to access either does not exist or has
               been removed, Please visit the
+              {/*
+               */}
               <a class="underline" href={baselink}>
                 {" "}
                 home page
               </a>{" "}
+              {/*
+               */}
               to find the information you need.
             </p>
           </div>

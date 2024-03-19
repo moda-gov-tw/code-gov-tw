@@ -8,10 +8,6 @@ type PageNavProps = {
   totalItems: number;
 };
 
-function handleFewPages(totalPage: number) {
-  return Array.from({ length: totalPage }, (_, i) => i + 1);
-}
-
 function calculatePageRange(currentPage: number, totalPage: number) {
   let startPage = Math.max(currentPage - 1, 2);
   let endPage = Math.min(currentPage + 1, totalPage - 1);
@@ -23,6 +19,26 @@ function calculatePageRange(currentPage: number, totalPage: number) {
   }
 
   return { startPage, endPage };
+}
+
+function generatePageNumbers(totalPage: number, currentPageValue: number) {
+  if (totalPage <= 8) {
+    return Array.from({ length: totalPage }, (_, i) => i + 1);
+  }
+
+  const pages = [1];
+
+  const { startPage, endPage } = calculatePageRange(
+    currentPageValue,
+    totalPage,
+  );
+
+  if (startPage > 2) pages.push(-1);
+  for (let i = startPage; i <= endPage; i++) pages.push(i);
+  if (endPage < totalPage - 1) pages.push(-1);
+  pages.push(totalPage);
+
+  return pages;
 }
 
 export const PageNav = component$<PageNavProps>(
@@ -42,37 +58,33 @@ export const PageNav = component$<PageNavProps>(
     });
 
     const generatePageList = () => {
-      const pages = [];
-      if (totalPage <= 8) {
-        return handleFewPages(totalPage);
-      } else {
-        // Add the first page
-        pages.push(1);
+      const pages = generatePageNumbers(totalPage, currentPage.value);
 
-        const { startPage, endPage } = calculatePageRange(
-          currentPage.value,
-          totalPage,
-        );
-
-        // Add ellipsis if there's a gap between the first page and the start page
-        if (startPage > 2) {
-          pages.push("...");
-        }
-
-        // Add the middle pages
-        for (let i = startPage; i <= endPage; i++) {
-          pages.push(i);
-        }
-
-        // Add ellipsis if there's a gap between the end page and the last page
-        if (endPage < totalPage - 1) {
-          pages.push("...");
-        }
-
-        // Add the last page
-        pages.push(totalPage);
-      }
-      return pages;
+      return pages.map((page, index) => (
+        <button
+          key={index}
+          class={[
+            "group relative w-10 font-medium hover:text-brand-secondary",
+            currentPage.value === page
+              ? "text-brand-secondary"
+              : "text-gray-300",
+            "transition-colors duration-[50ms] ease-out",
+          ]}
+          onClick$={() => (currentPage.value = page)}
+          disabled={page === -1}
+        >
+          {page === -1 ? "..." : page}
+          <span
+            class={[
+              "absolute inset-x-0 -top-4 w-10 border-t-2 border-brand-secondary group-hover:border-brand-secondary",
+              currentPage.value === page
+                ? "border-brand-secondary"
+                : "border-transparent",
+              "transition-colors duration-[50ms] ease-out",
+            ]}
+          ></span>
+        </button>
+      ));
     };
 
     return (
@@ -89,37 +101,7 @@ export const PageNav = component$<PageNavProps>(
           </div>
         </button>
 
-        <div class="hidden xl:flex">
-          {generatePageList().map((page, index) => (
-            <button
-              key={index}
-              class={[
-                "group relative w-10 font-medium hover:text-brand-secondary",
-                currentPage.value === page
-                  ? "text-brand-secondary"
-                  : "text-gray-300",
-                "transition-colors duration-[50ms] ease-out",
-              ]}
-              onClick$={() => {
-                if (page !== "...") {
-                  currentPage.value = page;
-                }
-              }}
-              disabled={page === "..."}
-            >
-              {page}
-              <span
-                class={[
-                  "absolute inset-x-0 -top-4 w-10 border-t-2 border-brand-secondary group-hover:border-brand-secondary",
-                  currentPage.value === page
-                    ? "border-brand-secondary"
-                    : "border-transparent",
-                  "transition-colors duration-[50ms] ease-out",
-                ]}
-              ></span>
-            </button>
-          ))}
-        </div>
+        <div class="hidden xl:flex">{generatePageList()}</div>
 
         <button
           class={[
@@ -128,6 +110,7 @@ export const PageNav = component$<PageNavProps>(
               : "",
           ]}
           onClick$={handleNextPage}
+          disabled={currentPage.value * itemsPerPage >= totalItems}
         >
           <div class="flex gap-3">
             <div class="text-sm font-medium">{$localize`下一頁`}</div>
