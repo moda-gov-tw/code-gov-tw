@@ -6,7 +6,7 @@ export default component$<LinkProps>((props) => {
   return (
     <Link
       class={[
-        "flex items-center justify-center gap-3 rounded-md border border-primary bg-white px-3.5 py-2.5 text-base font-semibold text-primary shadow-sm",
+        "flex items-center justify-center gap-3 rounded-md border border-primary-700 bg-white px-3.5 py-2.5 text-base font-semibold text-primary-700 shadow-sm",
         "hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600",
         props.class,
       ]}
