@@ -15,7 +15,7 @@ export default component$(() => {
     {
       title: $localize`資源共享`,
       title2: $localize`善用已開發的資訊系統`,
-      description: $localize`過去有共同需求的機關可以利用相同系統，減少重複開發的心力。 使用公共程式，透過共享前段開發成果，將預算集中在客製化該公共程式。`,
+      description: $localize`過去有共同需求的機關可以利用相同系統，減少重複開發的心力。 使用公共程式，透過共享前段開發成果，將精神集中在客製化該公共程式。`,
       image: Feature2Svg,
     },
     {

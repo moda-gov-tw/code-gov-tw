@@ -51,7 +51,7 @@ export default component$(() => {
                 <br />
                 {$localize`想進一步了解公共程式`}
               </h3>
-              <Button class="mt-8 w-full" href="/projects">
+              <Button class="mt-8 w-full" href="/about">
                 {$localize`認識公共程式`}
                 <ArrowRightIcon q:slot="icon-right" class="h-6 w-6" />
               </Button>

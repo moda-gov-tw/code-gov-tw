@@ -7,7 +7,7 @@ export default component$(() => {
   return (
     <footer class="bg-black text-white">
       <Section class="bg-black">
-        <h3 class="mb-4 max-md:text-center">{$localize`公共程式平台`}</h3>
+        <h3 class="mb-4 max-md:text-center">{$localize`公共程式平臺`}</h3>
         <div class="flex flex-col gap-10 md:flex-row-reverse md:justify-between">
           <SiteMap />
           <Contact />
