@@ -39,9 +39,9 @@ export default component$(() => {
       // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
       if (window.matchMedia) {
         const darkMedia = window.matchMedia("(prefers-color-scheme: dark)");
-  
+
         theme.value = darkMedia.matches ? Theme.dark : Theme.light;
-  
+
         darkMedia.addEventListener("change", (event: MediaQueryListEvent) => {
           theme.value = event.matches ? Theme.dark : Theme.light;
         });
@@ -52,7 +52,6 @@ export default component$(() => {
       else if (localTheme === Theme.light) userTheme.value = Theme.light;
     }),
   );
-
 
   const tValue = userTheme.value || theme.value;
   return (

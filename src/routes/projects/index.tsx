@@ -5,7 +5,7 @@ import {
   useStore,
   useComputed$,
 } from "@builder.io/qwik";
-import Section from "~/components/Layout/Section";
+import Section from "~/components/section";
 import { RepoBlock } from "~/routes/projects/repo-block";
 import { PageNav } from "~/routes/projects/page-nav";
 import FunnelIcon from "~/media/icons/funnel-icon.svg?jsx";

@@ -1,6 +1,6 @@
 import { component$ } from "@builder.io/qwik";
 import { useLocation, type StaticGenerateHandler } from "@builder.io/qwik-city";
-import Section from "~/components/Layout/Section";
+import Section from "~/components/section";
 import Breadcrumb from "~/components/breadcrumb";
 import ArrowTopRightOnSquare from "~/media/icons/arrow-top-right-on-square.svg?jsx";
 import Button from "~/components/button";

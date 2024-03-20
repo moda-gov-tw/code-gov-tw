@@ -1,5 +1,5 @@
 import { component$ } from "@builder.io/qwik";
-import Section from "../Layout/Section";
+import Section from "../section";
 import Contact from "./contact";
 import SiteMap from "./site-map";
 

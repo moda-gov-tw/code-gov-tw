@@ -1,6 +1,6 @@
 import { component$ } from "@builder.io/qwik";
-import Section from "~/components/Layout/Section";
-import PromotionSection from "~/components/PromotionSection";
+import Section from "~/components/section";
+import Promotion from "~/components/promotion";
 import Button from "~/components/button";
 import HeroSvg from "~/media/images/hero.svg?jsx";
 
@@ -90,7 +90,7 @@ export default component$(() => {
           <ECOSystemSvg class="mx-auto md:w-4/6 lg:w-5/12 lg:shrink-0" />
         </div>
       </Section>
-      <PromotionSection />
+      <Promotion />
     </>
   );
 });

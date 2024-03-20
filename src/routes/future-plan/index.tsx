@@ -1,7 +1,7 @@
 import { component$ } from "@builder.io/qwik";
-import Section from "~/components/Layout/Section";
+import Section from "~/components/section";
 import Breadcrumb from "~/components/breadcrumb";
-import PromotionSection from "~/components/PromotionSection";
+import Promotion from "~/components/promotion";
 import FuturePlatform from "~/media/images/future-platform.svg?jsx";
 import FutureLaw from "~/media/images/future-law.svg?jsx";
 import FutureTalent from "~/media/images/future-talent.svg?jsx";
@@ -104,7 +104,7 @@ export default component$(() => {
           </div>
         </div>
       </Section>
-      <PromotionSection />
+      <Promotion />
     </>
   );
 });

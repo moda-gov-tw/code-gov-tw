@@ -1,5 +1,5 @@
 import { component$ } from "@builder.io/qwik";
-import Section from "~/components/Layout/Section";
+import Section from "~/components/section";
 import ArrowRightIcon from "~/media/icons/arrow-right-icon.svg?jsx";
 import Button from "~/components/button";
 

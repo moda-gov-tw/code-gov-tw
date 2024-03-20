@@ -1,5 +1,5 @@
 import { component$ } from "@builder.io/qwik";
-import Section from "~/components/Layout/Section";
+import Section from "~/components/section";
 import Feature02Svg from "~/media/images/about-work-feature-02.svg?jsx";
 import useLocaleLink from "~/components/link/useLocaleLink";
 

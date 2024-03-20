@@ -3,7 +3,7 @@ import Link from "~/components/link";
 
 export default component$(() => {
   return (
-    <div class="flex flex-col gap-10 md:flex-row mt-4 md:-mt-12">
+    <div class="mt-4 flex flex-col gap-10 md:-mt-12 md:flex-row">
       <div class="flex flex-col items-center">
         <h4 class="mb-5 border-b px-2 pb-3 md:pl-0">{$localize`關於公共程式`}</h4>
         <div class="flex flex-col items-center gap-1 md:w-full md:items-start">

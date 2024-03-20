@@ -1,6 +1,6 @@
 import { component$ } from "@builder.io/qwik";
-import Section from "~/components/Layout/Section";
-import PromotionSection from "~/components/PromotionSection";
+import Section from "~/components/section";
+import Promotion from "~/components/promotion";
 import ParticipateScreenshot1 from "~/media/images/participate-screenshot-1.png?jsx";
 import ParticipateScreenshot2 from "~/media/images/participate-screenshot-2.png?jsx";
 import Block from "./block";
@@ -61,7 +61,7 @@ export default component$(() => {
           </div>
         </div>
       </Section>
-      <PromotionSection />
+      <Promotion />
     </>
   );
 });

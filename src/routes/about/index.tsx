@@ -1,7 +1,7 @@
 import { component$ } from "@builder.io/qwik";
-import Section from "~/components/Layout/Section";
+import Section from "~/components/section";
 import Breadcrumb from "~/components/breadcrumb";
-import PromotionSection from "~/components/PromotionSection";
+import Promotion from "~/components/promotion";
 import PublicCodeWork from "./public-code-work";
 import Features from "./features";
 import Accordions from "./accordions";
@@ -32,7 +32,7 @@ export default component$(() => {
       <Section>
         <Accordions />
       </Section>
-      <PromotionSection />
+      <Promotion />
     </>
   );
 });
