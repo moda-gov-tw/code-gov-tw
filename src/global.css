@@ -44,13 +44,12 @@
   }
 }
 
-/**
- * WHAT IS THIS FILE?
- *
- * Globally applied styles. No matter which components are in the page or matching route,
- * the styles in here will be applied to the Document, without any sort of CSS scoping.
- *
- */
+@media (min-width: 768px) {
+  h1 {
+    @apply text-2xl;
+  }
+}
+
 html {
   @apply text-base font-normal leading-relaxed text-black;
   -webkit-text-size-adjust: 100%;
@@ -72,6 +71,36 @@ html {
     "Segoe UI Emoji",
     "Segoe UI Symbol",
     "Noto Color Emoji";
+}
+
+@media (max-width: 768px) {
+  h1 {
+    @apply text-4xl;
+  }
+
+  .h1-sub {
+    @apply text-xl;
+  }
+
+  h2 {
+    @apply text-2xl;
+  }
+
+  .h2-sub {
+    @apply text-lg;
+  }
+
+  h3 {
+    @apply text-xl;
+  }
+
+  h4 {
+    @apply text-lg;
+  }
+
+  small {
+    @apply text-sm;
+  }
 }
 
 body {
