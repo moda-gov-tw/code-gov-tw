@@ -8,7 +8,7 @@ export default component$(() => {
       <small>{$localize`xxxx@moda.gov.tw`}</small>
       <small>{$localize`更新日期：2024-01-24`}</small>
       <small>
-        <a href="https://spdx.org/licenses/CC0-1.0" target="_blank">
+        <a href="https://spdx.org/licenses/CC0-1.0" target="cc0" title="Creative Commons Zero (另開新視窗)">
           <span class="underline">CC0</span>
         </a>
         <span> No copyright reserved.</span>

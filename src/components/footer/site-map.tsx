@@ -22,7 +22,7 @@ export default component$(() => {
       <div class="flex flex-col items-center">
         <h4 class="mb-5 border-b px-2 pb-3 md:pl-0">{$localize`參與公共程式`}</h4>
         <div class="flex flex-col items-center gap-1 md:w-full md:items-start">
-          <Link href="/submit">
+          <Link class="hidden" href="/submit">
             <p class="h2-sub hover:text-gray-300">{$localize`提供公共程式`}</p>
           </Link>
           <Link href="/participate">

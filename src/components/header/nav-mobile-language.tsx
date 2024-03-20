@@ -4,7 +4,7 @@ export default component$(() => {
   const menu = useSignal(false);
 
   return (
-    <div class="-mx-3">
+    <div class="-mx-3 hidden">
       <button
         type="button"
         class="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-gray-900 hover:bg-gray-50"

@@ -7,7 +7,7 @@ export default component$(() => {
   const onClick$ = $(() => (menu.value = !menu.value));
 
   return (
-    <div class="relative">
+    <div class="relative hidden">
       <button
         type="button"
         class="flex cursor-pointer select-none items-center rounded-md px-3 py-2 text-black hover:bg-gray-100"

@@ -1,0 +1,5 @@
+/*
+  Access-Control-Allow-Origin: code.gov.tw
+  X-Frame-Options: SAMEORIGIN
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; object-src 'none'; img-src *; frame-src 'self'; style-src 'unsafe-inline' 'unsafe-eval' * data:; font-src 'self' data:; connect-src 'self'; media-src 'self'; frame-ancestors 'none';
+  
