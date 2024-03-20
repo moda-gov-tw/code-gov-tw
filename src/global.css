@@ -78,3 +78,19 @@ body {
   padding: 0;
   line-height: inherit;
 }
+
+@page {
+  size: 380mm 500mm;
+  margin: 5mm 14mm;
+}
+
+@media print {
+  html, body {
+    width: 380mm;
+    height: 500mm;
+  }
+}
+
+header {
+  position: relative;
+}
