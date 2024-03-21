@@ -18,11 +18,11 @@ softwareType: standalone/web
 
 description:
   zh-Hant:
-    localisedName: 公共程式平台
+    localisedName: 公共程式平臺
     shortDescription: >
-      這是我們的平台短描述, 最多只有150字
+      簡易描述, 最多只有150字
     longDescription: >
-      這是我們的平台長描述, 至少有150字以上
+      詳細描述, 至少有150字以上
     features:
       - 表單填寫/資料上傳
       - 個案管理

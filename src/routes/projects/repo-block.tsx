@@ -24,13 +24,16 @@ export const RepoBlock = component$(
         <div class="flex flex-1 flex-col gap-7 p-6">
           <div class="flex flex-col gap-7 lg:flex-row lg:justify-between">
             <h3>{name}</h3>
-            <h4>提供單位：{repoOwner}</h4>
+            <h4>
+              {$localize`提供單位：`}
+              {repoOwner}
+            </h4>
           </div>
           <div class="leading-7">{shortDescription}</div>
           <hr class="border-gray-500" />
           <div class="flex flex-col gap-7 lg:grid lg:grid-cols-2">
             <div class="flex flex-col gap-4">
-              <div>內含系統功能</div>
+              <div>{$localize`功能類型`}</div>
               <div class="flex flex-wrap gap-2">
                 {features.map((feature) => (
                   <LabelButton key={feature}>{feature}</LabelButton>
@@ -38,7 +41,7 @@ export const RepoBlock = component$(
               </div>
             </div>
             <div class="flex flex-col gap-4">
-              <div>使用技術</div>
+              <div>{$localize`使用技術`}</div>
               <div class="flex flex-wrap gap-2">
                 {dependsOn.map((depend: { name: string }) => (
                   <LabelButton key={depend.name}>{depend.name}</LabelButton>
@@ -55,7 +58,7 @@ export const RepoBlock = component$(
             ]}
           >
             <div class="flex items-center justify-center gap-2">
-              <div class="font-normal text-white">更多細節</div>
+              <div class="font-normal text-white">{$localize`更多細節`}</div>
               <div class="text-white">
                 <ArrowRightIcon class="h-6 w-6" />
               </div>

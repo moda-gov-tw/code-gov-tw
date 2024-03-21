@@ -107,7 +107,7 @@ export default component$(() => {
           >
             <Filter
               filterName="features"
-              categoryName={$localize`包含系統功能`}
+              categoryName={$localize`功能類型`}
               filterOptions={filters.features}
               store={filterStore}
             />

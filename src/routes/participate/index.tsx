@@ -17,13 +17,13 @@ export default component$(() => {
           <div class="h-0 w-20 border-t-2 border-primary" />
           <h2 class="mt-4">{$localize`在程式碼的世界裡實踐公共力`}</h2>
           <p class="mt-8">
-            {$localize`公共程式發展初期，你是否也想嘗試參與？那就開始練習使用 GitHub 吧。GitHub 是一個存放與管理程式碼的協作平台，各政府機關都將其管理的公共程式存放於此。不同程式開放不同程度的民眾參與權限，因此在瀏覽找到你想參與的公共程式後，藉由閱讀以下說明，前往 GitHub 給予意見回饋，或提供專業技術協助。`}
+            {$localize`公共程式發展初期，你是否也想嘗試參與？那就開始練習使用 GitHub 吧。GitHub 是一個存放與管理程式碼的協作平臺，各政府機關都將其管理的公共程式存放於此。不同程式開放不同程度的民眾參與權限，因此在瀏覽找到你想參與的公共程式後，藉由閱讀以下說明，前往 GitHub 給予意見回饋，或提供專業技術協助。`}
           </p>
         </div>
         <div class="mt-8 flex flex-col gap-8">
           <Block title={$localize`透過 Issue 回報錯誤或提出意見`}>
             <div>
-              {$localize`Issue 是 GitHub 平台上的一種重要功能，類似網路論壇的討論區。讓有權限的協作者，可以針對特定程式提出意見與討論。無論是回報錯誤、建議新功能，甚至只是提問或尋求幫助，都可以透過 issue 完成。以下是如何建立 issue 的說明方式：`}
+              {$localize`Issue 是 GitHub 平臺上的一種重要功能，類似網路論壇的討論區。讓有權限的協作者，可以針對特定程式提出意見與討論。無論是回報錯誤、建議新功能，甚至只是提問或尋求幫助，都可以透過 issue 完成。以下是如何建立 issue 的說明方式：`}
             </div>
             <div>{$localize`1. 註冊或登錄 GitHub。`}</div>
             <div>
