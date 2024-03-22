@@ -29,7 +29,7 @@ function extractFilterTags(data: Project) {
     );
   }
 
-  // Collect tw.techStack
+  // Collect tw.techStacks
   if (Array.isArray(data.tw.techStacks)) {
     data.tw.techStacks.forEach((techStack: Dependency) =>
       techStacksSet.add(techStack.name),
@@ -45,7 +45,7 @@ function extractFilterTags(data: Project) {
 
   return {
     features: Array.from(featuresSet),
-    techStack: Array.from(techStacksSet),
+    techStacks: Array.from(techStacksSet),
   };
 }
 
@@ -68,10 +68,10 @@ function getYamlFiles(directoryPath: string): string[] {
 function collectProjects(filePaths: string[]): object[] {
   const projects: object[] = [];
 
-  filePaths.forEach((filePath) => {
+  filePaths.forEach((filePath, index) => {
     try {
       const data = loadYamlFile(filePath);
-      projects.push(data);
+      projects.push({ id: index, ...data });
     } catch (e) {
       console.error(
         `Failed to load or parse YAML file: ${filePath}, Error: ${e}`,
@@ -173,19 +173,12 @@ const finalFilters = {
     "高雄市",
     "英國 gov.uk",
   ],
-  features: [
-    "表單填寫/資料上傳",
-    "個案管理",
-    "地圖資訊呈現",
-    "資料檢索",
-    ...filterValues.features,
-    "其他",
-  ],
+  features: [...filterValues.features],
   techStacks: [...filterValues.techStacks],
 };
+const projects = collectProjects(yamlFiles);
 
 const outputFiltersFile = join(baseDir, "./outputs/filters.json");
-const projects = collectProjects(yamlFiles);
 const outputProjectsFile = join(baseDir, "./outputs/projects.json");
 
 try {

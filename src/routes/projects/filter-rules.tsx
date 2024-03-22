@@ -26,7 +26,7 @@ export function filterProjectsByTechStacks(
   return (
     techStacks.length === 0 ||
     techStacks.some((techStack) =>
-      project.filterTags.techStack.includes(techStack),
+      project.filterTags.techStacks.includes(techStack),
     )
   );
 }

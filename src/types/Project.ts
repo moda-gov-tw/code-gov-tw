@@ -17,7 +17,14 @@ type Contractor = {
   website?: string;
 };
 
+type OpenAPI = {
+  name: string;
+  description: string;
+  url: string;
+};
+
 export type Project = {
+  id: number;
   name: string;
   url?: string;
   releaseDate: string;
@@ -48,7 +55,7 @@ export type Project = {
   };
   filterTags: {
     features: string[];
-    techStack: string[];
+    techStacks: string[];
   };
   usedBy: string[];
   tw: {
@@ -57,5 +64,6 @@ export type Project = {
     vulnerability?: string[];
     // Workaround for the missing field
     createdDate: string;
+    openapi?: OpenAPI[];
   };
 };

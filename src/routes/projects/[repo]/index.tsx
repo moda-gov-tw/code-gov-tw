@@ -9,6 +9,7 @@ import Carousel from "~/routes/projects/[repo]/carousel";
 
 import type { Project } from "~/types/Project";
 import projects from "~/data/projects.json";
+import Openapi from "./openapi";
 
 export const onStaticGenerate: StaticGenerateHandler = async () => {
   const length = projects.length;
@@ -52,15 +53,18 @@ export default component$(() => {
   const contact = project.maintenance.contacts.at(0);
   const contactInfo = contact && [contact.name, contact.email, contact.phone];
 
+  // Workaround for the file not ready
+  const openAPISource = project.tw.openapi;
+
   return (
     <>
       <Section>
         <Breadcrumb
           pages={[
-            { title: $localize`專案一覽`, href: "projects", current: false },
+            { title: $localize`專案一覽`, href: "/projects", current: false },
             {
               title: $localize`專案細節`,
-              href: `projects/${repo}`,
+              href: "#",
               current: true,
             },
           ]}
@@ -124,28 +128,22 @@ export default component$(() => {
           <List title={$localize`最後更新時間`} contents={[releaseDate]} />
         </div>
       </Section>
-      <Section class="bg-gray-100">
-        <div class="flex flex-col">
-          <div class="h-0 w-20 border-t-2 border-primary" />
-          <h2 class="mt-4">{$localize`相關 API`}</h2>
-        </div>
-
-        <div class="mt-8">
-          <div class="flex flex-col items-start gap-4 rounded-md border border-gray-500 bg-white p-6">
-            <h4>{"{API名稱}"}</h4>
-            <div>
-              API描述API描述API描述API描述，API描述API描述API描述API描述。
-            </div>
-            <Button>
-              {$localize`詳細資訊`}
-              <ArrowTopRightOnSquare
-                q:slot="icon-right"
-                class="w-5 text-brand-primary"
-              />
-            </Button>
+      {openAPISource && (
+        <Section class="bg-gray-100">
+          <div class="flex flex-col">
+            <div class="h-0 w-20 border-t-2 border-primary" />
+            <h2 class="mt-4">{$localize`相關 API`}</h2>
           </div>
-        </div>
-      </Section>
+          {openAPISource.map((openAPI) => (
+            <Openapi
+              key={`index-${openAPI.name}`}
+              name={openAPI.name}
+              description={openAPI.description}
+              url={openAPI.url}
+            />
+          ))}
+        </Section>
+      )}
     </>
   );
 });

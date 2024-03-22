@@ -12,6 +12,7 @@ export default component$<LinkProps>((props) => {
       ]}
       rel="noopener"
       href={props.href}
+      target={props.target}
     >
       <Slot name="icon-left" />
       <div>

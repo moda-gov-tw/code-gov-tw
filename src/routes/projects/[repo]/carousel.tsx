@@ -104,6 +104,7 @@ export default component$<CarouselProps>(({ images }) => {
                   height="640"
                   alt={`Screenshot ${index + 1}`}
                   draggable={false}
+                  class="max-h-[640px] w-auto"
                 />
               </div>
             ))}

@@ -30,7 +30,7 @@ function paginateData(
 }
 
 export default component$(() => {
-  const itemsPerPage = 1;
+  const itemsPerPage = 5;
   const currentPage = useSignal(1);
   const filter = useSignal(false);
   const store = useStore({
@@ -150,9 +150,9 @@ export default component$(() => {
             </div>
           ) : (
             <div id="projects" class="flex w-full flex-col gap-8">
-              {computedProjects.value.data.map((project, index) => (
+              {computedProjects.value.data.map((project) => (
                 <RepoBlock
-                  id={index}
+                  id={project.id}
                   key={project.name}
                   name={
                     project.description["zh-Hant"].localisedName || project.name
