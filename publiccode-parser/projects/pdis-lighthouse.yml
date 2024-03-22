@@ -1,0 +1,42 @@
+publiccodeYmlVersion: 0.3.0
+name: pdis-lighthouse
+url: "https://github.com/PDIS/lighthouse"
+landingURL: "https://lighthouse.pdis.run/"
+releaseDate: "2024-03-21"
+platforms:
+  - web
+categories:
+  - data-collection
+developmentStatus: stable
+softwareType: standalone/web
+description:
+  zh-Hant:
+    localisedName: lighthouse 平台
+    shortDescription: >
+      Lighthouse 平台使用 GitHub Actions 自動執行 Lighthouse 掃描，將報告集中展示。Lighthouse 是一個開源的自動化工具，用於改善網頁的效能、品質和正確性。Lighthouse 對網頁進行一系列測試並產生一份報告及評分。透過報告，我們可以審視未通過測試的項目，了解如何改進。
+    features:
+      - 數據呈現
+legal:
+  license: CC0
+  repoOwner: PDIS
+maintenance:
+  type: internal
+  contacts:
+    - name: 李宥辰
+      email: "isacl@pdis.nat.gov.tw"
+      phone: "0928563478"
+localisation:
+  localisationReady: true
+  availableLanguages:
+    - zh-Hant
+    - en
+dependsOn:
+  open:
+    - name: Ruby
+usedBy:
+  - "[https://lighthouse.pdis.run/](https://lighthouse.pdis.run/ ) (無障礙檢測結果：尚未檢測)"
+tw:
+  countryExtensionVersion: "1.0.0"
+  vulnerability:
+    - "未掃描"
+  createdDate: "2023-07-18"

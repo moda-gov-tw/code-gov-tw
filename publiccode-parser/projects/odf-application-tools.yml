@@ -1,20 +1,15 @@
 publiccodeYmlVersion: 0.3.0
-
 name: MODA_ODF_Application_Tools
 url: "https://github.com/MODAODF/MODA_ODF_Application_Tools"
-releaseDate: "2023-03-06"
-
+landingURL: "https://moda.gov.tw/digital-affairs/digital-service/app-services/248"
+releaseDate: "2024-01-23"
 platforms:
   - windows
-
 categories:
   - document-management
   - office
-
 developmentStatus: stable
-
 softwareType: addon
-
 description:
   zh-Hant:
     localisedName: ODF文件應用工具
@@ -22,29 +17,30 @@ description:
       為引導公務機關從文件製作、保存均以開放文件格式(ODF)處理，且使政府ODF文件能跨機關流通，本部基於開放文件軟體，發展適合公務機關使用之「ODF文件應用工具」，提供編輯標準ODF文件及支援CNS11643中文標準交換碼全字庫，並提供 Q＆A 問題回報程式，建立客服流程及諮詢服務，並將相關問題與回應提供其他使用者查詢。
     features:
       - 文書處理
-
+    screenshots:
+      - /images/projects/odf-application-tools/screenshot-1.png
+      - /images/projects/odf-application-tools/screenshot-2.png
+      - /images/projects/odf-application-tools/screenshot-3.png
 legal:
   license: LGPL-3.0、MPL-2.0
-  repoOwner: 數位發展部
-
+  repoOwner: 數位政府司/(廠商)晟鑫科技股份有限公司
 maintenance:
   type: internal
   contacts:
-    - name: 數位發展部
-
+    - name: 黃煌洲/(廠商)林毓能
+      email: "huangchou@moda.gov.tw/(廠商)kevin.lin@ossii.com.tw"
+      phone: "02-2380-0225/(廠商)02-2543-1959"
 localisation:
   localisationReady: false
-
 dependsOn:
   open:
     - name: Open Document Format
-
+    - name: "C++"
 usedBy:
-  - 無，非網頁應用
-
+  - 各政府機關
 tw:
   countryExtensionVersion: "1.0.0"
   vulnerability:
     - "SonarQube"
   # GitHub API 有資訊可以取得, 暫時手動填寫
-  createdDate: "2020-03-06"
+  createdDate: "2022-03-06"

@@ -1,0 +1,47 @@
+publiccodeYmlVersion: 0.3.0
+name: moda-ghg-inventory-system-frontend
+url: "https://github.com/moda-gov-tw/moda-ghg-inventory-system-frontend"
+landingURL: "https://ghg.moda.gov.tw/Member/Login"
+releaseDate: "2023-12-18"
+platforms:
+  - web
+categories:
+  - data-collection
+  - digital-citizenship
+developmentStatus: stable
+softwareType: standalone/web
+description:
+  zh-Hant:
+    localisedName: 數位產業自願性溫室氣體盤查系統
+    shortDescription: >
+      為落實臺灣2050淨零目標, 基於公共程式碼的理念，以公私協力方式發展可行之數位工具, 以數位部為首，示範將公共程式碼模式導入公部門及數位產業，推動政府開放資料、與民協作的倡議, 建立碳盤查系統公共程式，提供各界運用，降低自主碳盤查門檻。
+    features:
+      - 表單填寫/資料上傳
+      - 個案管理
+      - 數據呈現
+    screenshots:
+      - /images/projects/moda-ghg-inventory-system-frontend/screenshot.png
+legal:
+  license: 「網頁文字圖片採取 CC0 授權方式，程式碼採取 MIT 的授權方式」
+  repoOwner: 民主司
+maintenance:
+  type: internal
+  contacts:
+    - name: 郭智宇
+      email: "chihyukuo@moda.gov.tw"
+      phone: "80345"
+localisation:
+  localisationReady: false
+dependsOn:
+  open:
+    - name: ASP.NET Core
+      version: "6.0"
+    - name: C#
+    - name: MySQL
+usedBy:
+  - "[數位產業自願性溫室氣體盤查系統](https://ghg.moda.gov.tw/Member/Login) (無障礙檢測結果：尚未檢測)"
+tw:
+  countryExtensionVersion: "1.0.0"
+  vulnerability:
+    - "HCL AppScan"
+  createdDate: "2023-11-24"

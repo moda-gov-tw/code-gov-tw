@@ -1,8 +1,25 @@
 {
-  "platforms": ["windows"],
-  "categories": ["document-management", "office"],
+  "platforms": [
+    "web",
+    "windows"
+  ],
+  "categories": [
+    "data-collection",
+    "data-visualization",
+    "digital-citizenship",
+    "collaboration",
+    "communications",
+    "document-management",
+    "office",
+    "website-builder",
+    "blog"
+  ],
   "repoOwners": [
     "數位發展部",
+    "民主司",
+    "數位政府司/(廠商)晟鑫科技股份有限公司",
+    "數位發展部多元創新司",
+    "PDIS",
     "臺北市",
     "新北市",
     "桃園市",
@@ -15,9 +32,21 @@
     "表單填寫/資料上傳",
     "個案管理",
     "地圖資訊呈現",
-    "資料檢索",
+    "資料一覽/檢索",
+    "數據呈現",
     "文書處理",
-    "其他"
+    "靜態網站產生器"
   ],
-  "techStacks": ["Open Document Format"]
+  "techStacks": [
+    "Node.js",
+    "Firebase Realtime Database",
+    "MongoDB",
+    "PHP",
+    "MySQL",
+    "ASP.NET Core",
+    "C#",
+    "Open Document Format",
+    "C++",
+    "Ruby"
+  ]
 }

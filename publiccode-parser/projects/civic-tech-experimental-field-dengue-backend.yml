@@ -1,0 +1,53 @@
+publiccodeYmlVersion: 0.3.0
+name: civic-tech-experimental-field-dengue-backend
+url: "https://github.com/moda-gov-tw/civic-tech-experimental-field-dengue-backend"
+releaseDate: "2023-12-14"
+platforms:
+  - web
+categories:
+  - data-collection
+  - data-visualization
+  - digital-citizenship
+  - collaboration
+  - communications
+developmentStatus: stable
+softwareType: standalone/web
+description:
+  zh-Hant:
+    localisedName: 台南市登革熱防疫現場數位工具 - 後端
+    shortDescription: >
+      本案為「112年數位發展部公民科技試驗場域示範案」由「好想打流感」團隊開發的「台南市登革熱防疫現場數位工具」透過與臺南市政府衛生局的合作，協助開發數位工具以簡化登革熱防治工作上的流程，並改善目前繁瑣的人工確認作業及掌握更即時的資訊。
+    features:
+      - 表單填寫/資料上傳
+      - 個案管理
+      - 地圖資訊呈現
+      - 資料一覽/檢索
+      - 數據呈現
+    screenshots:
+      - /images/projects/dengue/backend.png
+legal:
+  license: MIT License
+  repoOwner: 數位發展部
+maintenance:
+  type: internal
+  contacts:
+    - name: 劉澄真
+      email: "rosalind.liu@moda.gov.tw"
+      phone: "02-23800325"
+localisation:
+  localisationReady: false
+dependsOn:
+  open:
+    - name: Node.js
+      versionMin: "18"
+    - name: "Firebase Realtime Database"
+usedBy:
+  - "[台南市登革熱防疫現場數位工具](https://dengue.tncghb.gov.tw/dashboard) (無障礙檢測結果：尚未檢測)"
+tw:
+  countryExtensionVersion: "1.0.0"
+  techStacks:
+    - name: "Vue.js"
+  vulnerability:
+    - "OWASP"
+  # GitHub API 有資訊可以取得, 暫時手動填寫
+  createdDate: "2023-11-22"
