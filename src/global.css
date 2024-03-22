@@ -44,12 +44,6 @@
   }
 }
 
-@media (min-width: 768px) {
-  h1 {
-    @apply text-2xl;
-  }
-}
-
 html {
   @apply text-base font-normal leading-relaxed text-black;
   -webkit-text-size-adjust: 100%;
