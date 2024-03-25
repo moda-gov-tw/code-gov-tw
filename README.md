@@ -1,105 +1,47 @@
-# Codegov
+# code-gov-tw
 
-## Project Structure
+## 簡介
 
-This project is using Qwik with [QwikCity](https://qwik.builder.io/qwikcity/overview/). QwikCity is just an extra set of tools on top of Qwik to make it easier to build a full site, including directory-based routing, layouts, and more.
+本專案為公共程式平臺（code.gov.tw）的原始碼
 
-Inside your project, you'll see the following directory structure:
+主旨為促進民間或政府單位需要了解或使用公共程式的人，方便查閱公共程式的相關資訊而建立的平臺。
 
-```
-├── public/
-│   └── ...
-└── src/
-    ├── components/
-    │   └── ...
-    ├── data/
-    │   └── ...
-    ├── locales/
-    │   └── ...
-    ├── media/
-    │   └── ...
-    ├── routes/
-    │   └── ...
-    └── types/
-        └── ...
-```
+## 安裝指南
 
-- `src/components`: Directory for common components.
-
-- `src/data`: Store list of projects and options for filters
-
-- `src/locales`: Store locale strings for i18n
-
-- `src/media`: Store media like icons, images for Qwik Image Optimization
-
-- `src/routes`: Provides the directory-based routing, which can include a hierarchy of `layout.tsx` layout files, and an `index.tsx` file as the page. Additionally, `index.ts` files are endpoints. Please see the [routing docs](https://qwik.builder.io/qwikcity/routing/overview/) for more info.
-
-- `src/types`: Store types.
-
-- `public`: Any static assets, like images, can be placed in the public directory. Please see the [Vite public directory](https://vitejs.dev/guide/assets.html#the-public-directory) for more info.
-
-## Development
-
-Development mode uses [Vite's development server](https://vitejs.dev/). The `dev` command will server-side render (SSR) the output during development.
+需具備 NodeJS 版本 18 以上的環境，執行下列指令複製專案及安裝必須的套件。
 
 ```shell
-npm start # or `pnpm start`
+git clone https://github.com/moda-gov-tw/code-gov-tw.git # 複製本專案原始碼
+cd code-gov-tw
+pnpm install # 從網路下載所需的套件
 ```
 
-> Note: during dev mode, Vite may request a significant number of `.js` files. This does not represent a Qwik production build.
-
-## Preview
-
-The preview command will create a production build of the client modules, a production build of `src/entry.preview.tsx`, and run a local server. The preview server is only for convenience to preview a production build locally and should not be used as a production server.
+接著使用下列指令開啟網站後，正常會開啟一個瀏覽器並連到[網站首頁](http://localhost:5173/)。沒有自動啟動的話也可以看指令顯示的網址自行連線。接著就可以開始瀏覽目前網站現有的內容
 
 ```shell
-pnpm preview # or `pnpm preview`
+pnpm start
 ```
 
-## Production
+## 使用範例
 
-The production build will generate client and server modules by running both client and server build commands. The build command will use Typescript to run a type check on the source code.
+瀏覽下列的頁面
 
-```shell
-pnpm build # or `pnpm build`
-```
+- `首頁`與從選單進入的`認識公共程式`及`未來規劃頁面`頁面，說明 `公共程式` 是什麼樣的東西? 如何運作以及未來會如何發展
+- `公共程式一覽`頁面，顯示現有收錄的公共程式專案並提供篩選功能
+- 支援國際化 (internationalization) 功能。從自動產生的字典檔快速新增翻譯
+- 支援從 publiccode.yml 標準管理公共程式一覽的專案清單
 
-- deployment
+## 如何貢獻
 
-use directory `dist` to upload or deploy to target site
+如果您想要為這個專案貢獻，請查閱[CONTRIBUTING.md](/docs/CONTRIBUTING.md)。
 
-## Static Site Generator (Node.js)
+## 資訊安全問題
 
-```shell
-pnpm build.server
-```
+如果您發現本平台存在資訊安全問題，請查閱[SECURITY.md](/docs/SECURITY.md)。
 
-## Test Static Site
+## 授權
 
-```shell
-npx http-server ./dist
-```
+© [作者與貢獻者](/docs/AUTHORS.md)
 
-## support tools
-
-### publiccode-parser
-
-This tool for update list of projects and filters
-
-1. add yml file to publiccode-parser/projects
-
-2. use command to update data
-
-```sh
-npx tsx publiccode-parser/generator.ts && cp publiccode-parser/outputs/* src/data/
-```
-
-### Internationalization (i18n)
-
-- extract strings from source code
-
-```shell
-pnpm i18n-extract
-```
-
-- copy content in ./src/locales/message.zh-hant.json to other locales (e.g. message.en.json and update the value of `locale` with `en` and translate those strings)
+此專案程式碼採用 MIT 授權。詳細內容請查閱[LICENSE.md](/docs/LICENSE.md)。
+此專案文件採用 CC0 授權。

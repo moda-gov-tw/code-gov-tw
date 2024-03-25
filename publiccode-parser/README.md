@@ -1,37 +1,24 @@
-# Project Title
+# publiccode-parser
 
-This script is used to parse YAML files in a specified directory, extract certain data from them, and then save that data as JSON files.
+此腳本用於解析指定目錄中的 YAML 檔案，從中取出特定資料，然後將該資料整理並儲存為 JSON 檔案。
 
-## Getting Started
+## 入門
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+以下指示將幫助您在本地機器上獲取並運行該專案副本，用於開發和測試目的。
 
-### Prerequisites
+### 先決條件
 
-- Node.js installed on your local machine.
-- TypeScript installed globally or in your project. You can install it using npm with the following command: `npm install -g typescript`
+- 您的本地機器上安裝了 Node.js 版本 18 以上。
+- 在您的專案中或全域安裝了 TypeScript。您可以使用以下 npm 命令進行安裝：`npm install -g typescript`
 
-### Installing
+### 安裝
 
-1. Clone the repository to your local machine.
-2. Navigate to the project directory.
-3. Run `npm install` to install the necessary dependencies.
+1. 複製 code-gov-tw 專案到您的本地機器。
+2. 進入到專案根目錄。
+3. 運行 `npm install` 來安裝必要的依賴項。
 
-### Usage
+### 使用方式
 
-1. Place your YAML files in the `./projects` directory.
-2. Run the script using the command `ts-node main.ts` (or compile it to JavaScript using the `tsc` command and then run it with `node main.js`).
-3. The script will parse the YAML files, extract the necessary data, and save it as JSON files in the `./outputs` directory.
-
-## Built With
-
-- [Node.js](https://nodejs.org/)
-- [TypeScript](https://www.typescriptlang.org/)
-
-## Authors
-
-- Your Name
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+1. 將您的 YAML 檔案放置在 `./projects` 目錄中。
+2. 使用命令 `npx tsx publiccode-parser/main.ts` 運行腳本。
+3. 腳本將解析 YAML 檔案，取得必要的資料，並將其儲存為 `./outputs` 目錄中的 JSON 檔案。

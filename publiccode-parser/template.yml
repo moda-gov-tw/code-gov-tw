@@ -1,24 +1,19 @@
 publiccodeYmlVersion: 0.3.0
-
 name: public code platform
 url: "https://awesome.com"
 landingURL: "https://demo.awesome.com"
 releaseDate: "2022-03-29"
-
 platforms:
   - web
-
 categories:
   - data-collection
   - digital-citizenship
-
 developmentStatus: development
-
 softwareType: standalone/web
-
 description:
+  # 網站目前預設使用的語系
   zh-Hant:
-    localisedName: 公共程式平臺
+    localisedName: 公共程式平臺 # 顯示在網站上的名稱
     shortDescription: >
       簡易描述, 最多只有150字
     longDescription: >
@@ -29,6 +24,7 @@ description:
     screenshots:
       - screenshots/screenshot1.png
       - screenshots/screenshot2.png
+  # 可以使用多個語系
   en:
     shortDescription: >
       This is a short description of my awesome software, it is at most 150 words long
@@ -40,37 +36,33 @@ description:
     screenshots:
       - screenshots/screenshot1.png
       - screenshots/screenshot2.png
-
 legal:
   license: MIT
+  # 使用空白區分主要單位跟下屬單位, 網站上一覽頁面只顯示主要單位, 細節頁面才會顯示完整的提供者
+  # 數位發展部<空白>民主網路司
   repoOwner: Mutix Co.
-  mainCopyrightOwner: Mutix Co.
-
 maintenance:
   type: internal
   contacts:
     - name: someone's name
       email: "someone@email.com"
       phone: "+8861234567890"
-
 localisation:
   localisationReady: true
   availableLanguages:
     - zh-Hant
     - en
-
 dependsOn:
   open:
     - name: Node.js
       version: "18"
-
 usedBy:
   - Ministry of Awesome
+  # 使用 Markdown 語法顯示網站連結
   - "[Ministry of Awesome, Ministry of Awesome 2](https://example.com) (無障礙檢測結果：尚未檢測)"
-
 tw:
   countryExtensionVersion: "1.0.0"
-  techStack:
+  techStacks:
     - name: "TypeScript"
     - name: "Qwik"
     - name: "Tailwind CSS"
