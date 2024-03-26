@@ -23,13 +23,13 @@ description:
       - /images/projects/odf-application-tools/screenshot-3.png
 legal:
   license: LGPL-3.0、MPL-2.0
-  repoOwner: 數位政府司/(廠商)晟鑫科技股份有限公司
+  repoOwner: 數位發展部 數位政府司
 maintenance:
   type: internal
   contacts:
-    - name: 黃煌洲/(廠商)林毓能
-      email: "huangchou@moda.gov.tw/(廠商)kevin.lin@ossii.com.tw"
-      phone: "02-2380-0225/(廠商)02-2543-1959"
+    - name: 黃煌洲
+      email: "huangchou@moda.gov.tw"
+      phone: "02-2380-0225"
 localisation:
   localisationReady: false
 dependsOn:

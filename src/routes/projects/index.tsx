@@ -150,21 +150,25 @@ export default component$(() => {
             </div>
           ) : (
             <div id="projects" class="flex w-full flex-col gap-8">
-              {computedProjects.value.data.map((project) => (
-                <RepoBlock
-                  id={project.id}
-                  key={project.name}
-                  name={
-                    project.description["zh-Hant"].localisedName || project.name
-                  }
-                  repoOwner={project.legal.repoOwner || "未填寫"}
-                  shortDescription={
-                    project.description["zh-Hant"].shortDescription
-                  }
-                  features={project.description["zh-Hant"].features}
-                  dependsOn={project.dependsOn?.open}
-                />
-              ))}
+              {computedProjects.value.data.map((project) => {
+                const projectName =
+                  project.description["zh-Hant"].localisedName || project.name;
+                const repoOwner = project.legal.repoOwner.split(" ")[0];
+                const projectDescription =
+                  project.description["zh-Hant"].shortDescription;
+                const projectFeatures = project.description["zh-Hant"].features;
+                return (
+                  <RepoBlock
+                    id={project.id}
+                    key={project.name}
+                    name={projectName}
+                    repoOwner={repoOwner}
+                    shortDescription={projectDescription}
+                    features={projectFeatures}
+                    dependsOn={project.dependsOn?.open}
+                  />
+                );
+              })}
               <PageNav
                 currentPage={currentPage}
                 itemsPerPage={itemsPerPage}

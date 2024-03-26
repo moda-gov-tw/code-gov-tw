@@ -21,6 +21,7 @@ function loadYamlFile(filePath: string): any {
 function extractFilterTags(data: Project) {
   const featuresSet = new Set<string>();
   const techStacksSet = new Set<string>();
+  const repoOwnersSet = new Set<string>();
 
   // Collect description."zh-Hant".features
   if (Array.isArray(data.description["zh-Hant"].features)) {
@@ -43,9 +44,16 @@ function extractFilterTags(data: Project) {
     );
   }
 
+  // Collect legal.repoOwner
+  if (data.legal.repoOwner) {
+    const firstPart = data.legal.repoOwner.split(" ")[0];
+    repoOwnersSet.add(firstPart);
+  }
+
   return {
     features: Array.from(featuresSet),
     techStacks: Array.from(techStacksSet),
+    repoOwners: Array.from(repoOwnersSet),
   };
 }
 
@@ -116,7 +124,8 @@ function collectUniqueValues(filePaths: string[]): {
 
       // Collect legal.repoOwner
       if (data?.legal?.repoOwner && typeof data.legal.repoOwner === "string") {
-        repoOwnersSet.add(data.legal.repoOwner);
+        const firstPart = data.legal.repoOwner.split(" ")[0];
+        repoOwnersSet.add(firstPart);
       }
 
       // Collect description."zh-Hant".features
@@ -163,16 +172,7 @@ console.log("Collected filterValues values:", filterValues);
 const finalFilters = {
   platforms: [...filterValues.platforms],
   categories: [...filterValues.categories],
-  repoOwners: [
-    ...filterValues.repoOwners,
-    "臺北市",
-    "新北市",
-    "桃園市",
-    "臺中市",
-    "臺南市",
-    "高雄市",
-    "英國 gov.uk",
-  ],
+  repoOwners: [...filterValues.repoOwners, "臺北市政府", "英國 gov.uk"],
   features: [...filterValues.features],
   techStacks: [...filterValues.techStacks],
 };

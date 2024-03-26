@@ -23,8 +23,7 @@ description:
       - /images/projects/opendata-frontend/screenshot-2.png
 legal:
   license: MIT License
-  repoOwner: 數位發展部多元創新司
-  mainCopyrightOwner: 數位發展部多元創新司
+  repoOwner: 數位發展部 多元創新司
 maintenance:
   type: internal
   contacts:

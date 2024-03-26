@@ -15,7 +15,10 @@ export function filterProjectsByRepoOwners(
   repoOwners: string[],
 ): boolean {
   return (
-    repoOwners.length === 0 || repoOwners.includes(project.legal.repoOwner)
+    repoOwners.length === 0 ||
+    repoOwners.some((repoOwner) =>
+      project.filterTags.repoOwners.includes(repoOwner),
+    )
   );
 }
 

@@ -56,6 +56,7 @@ export type Project = {
   filterTags: {
     features: string[];
     techStacks: string[];
+    repoOwners: string[];
   };
   usedBy: string[];
   tw: {

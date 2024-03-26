@@ -1,8 +1,5 @@
 {
-  "platforms": [
-    "web",
-    "windows"
-  ],
+  "platforms": ["web", "windows"],
   "categories": [
     "data-collection",
     "data-visualization",
@@ -16,16 +13,8 @@
   ],
   "repoOwners": [
     "數位發展部",
-    "民主司",
-    "數位政府司/(廠商)晟鑫科技股份有限公司",
-    "數位發展部多元創新司",
-    "PDIS",
-    "臺北市",
-    "新北市",
-    "桃園市",
-    "臺中市",
-    "臺南市",
-    "高雄市",
+    "國家資通安全研究院",
+    "臺北市政府",
     "英國 gov.uk"
   ],
   "features": [

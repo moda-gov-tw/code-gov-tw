@@ -19,7 +19,7 @@ description:
       - 靜態網站產生器
 legal:
   license: 除另有標示外，內容以創用 CC BY 4.0 授權條款釋出。
-  repoOwner: PDIS
+  repoOwner: 國家資通安全研究院 公共數位創新空間小組(Public Digial Innovation Space，PDIS)
 maintenance:
   type: internal
   contacts:
