@@ -2,24 +2,27 @@ import { component$ } from "@builder.io/qwik";
 import Section from "~/components/section";
 import Breadcrumb from "~/components/breadcrumb";
 import Promotion from "~/components/promotion";
-import FuturePlatform from "~/media/images/future-platform.svg?jsx";
-import FutureLaw from "~/media/images/future-law.svg?jsx";
-import FutureTalent from "~/media/images/future-talent.svg?jsx";
+import FuturePlatform from "~/media/images/future-platform.png?jsx";
+import FutureLaw from "~/media/images/future-law.png?jsx";
+import FutureTalent from "~/media/images/future-talent.png?jsx";
 
 export default component$(() => {
   const features = [
     {
-      img: FuturePlatform,
+      image: FuturePlatform,
+      imageAlt: "Future Platform",
       title: $localize`方便查找的公共程式`,
       description: $localize`為了方便查詢與使用，無論是來自數位發展部的示範案例，還是政府內各個機關開放的公共程式，甚至國外提供開放的資訊服務程式碼，都將儲存收整在單一窗口，即公共程式平臺（code.gov.tw）。所有政策公告也將一致在此發佈，讓民間或政府需要了解或使用公共程式的人，易於了解。`,
     },
     {
-      img: FutureLaw,
+      image: FutureLaw,
+      imageAlt: "Future Law",
       title: $localize`建置相關規範與指引`,
       description: $localize`調適規範與指引，讓現行制度更容易導入公共程式，包括減少公共程式政策與相關法規的歧異，提供政府機關實務推動的依據。另外也將完備行政院及所屬機關（構）公共程式參考指引，包括公務機關辦理公共程式業務的規劃、採購、管理、資通安全防護等指南。`,
     },
     {
-      img: FutureTalent,
+      image: FutureTalent,
+      imageAlt: "Future Talent",
       title: $localize`打造人才培育環境`,
       description: $localize`透過教育訓練與宣導推廣，鼓勵民間有意投入者，在此參與公共程式的開發、維護和營運。另外將推動公共程式培力方案：包含試辦政府採購案、獎助公共程式研發和開辦培訓課程，並研擬回饋機制。`,
     },
@@ -76,7 +79,10 @@ export default component$(() => {
                 class="rounded-lg border border-gray-400 p-8"
               >
                 <div class="flex flex-col items-center gap-8 md:flex-row">
-                  <feature.img class="mx-auto h-40 w-40 shrink-0" />
+                  <feature.image
+                    class="mx-auto h-32 w-32 shrink-0"
+                    alt={feature.imageAlt}
+                  />
                   <div class="flex flex-col">
                     <h4 class="text-center md:text-left">{feature.title}</h4>
                     <p class="pt-4">{feature.description}</p>

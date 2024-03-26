@@ -1,6 +1,6 @@
 import { component$ } from "@builder.io/qwik";
 import Section from "~/components/section";
-import Feature02Svg from "~/media/images/about-work-feature-02.svg?jsx";
+import WhatIsPublicCode from "~/media/images/index-what-is-public-code.png?jsx";
 import useLocaleLink from "~/components/link/useLocaleLink";
 
 export default component$(() => {
@@ -15,7 +15,10 @@ export default component$(() => {
           "xl:h-[calc(100vh-335px-240px)] xl:gap-20",
         ]}
       >
-        <Feature02Svg class="w-full md:h-80 md:w-80 md:shrink-0" />
+        <WhatIsPublicCode
+          class="w-full md:h-80 md:w-80 md:shrink-0"
+          alt="Page not found"
+        />
 
         <div class="flex flex-col items-center md:items-start md:justify-center">
           <h1 class="text-brand-primary">404</h1>

@@ -3,12 +3,11 @@ import Section from "~/components/section";
 import Promotion from "~/components/promotion";
 import Button from "~/components/button";
 import HeroSvg from "~/media/images/hero.svg?jsx";
-
-import ECOSystemSvg from "~/media/images/index-eco-system.svg?jsx";
+import WhatIsPublicCode from "~/media/images/index-what-is-public-code.png?jsx";
+import InfoCardGOV from "~/media/images/index-info-card-gov.png?jsx";
+import InfoCardPeople from "~/media/images/index-info-card-people.png?jsx";
+import ECOSystem from "~/media/images/index-eco-system.png?jsx";
 import ArrowRightIcon from "~/media/icons/arrow-right-icon.svg?jsx";
-import InfoCardGOVSvg from "~/media/images/index-info-card-gov.svg?jsx";
-import InfoCardPeople from "~/media/images/index-info-card-people.svg?jsx";
-import WhatIsPublicCodeSvg from "~/media/images/index-what-is-public-code.svg?jsx";
 
 export default component$(() => {
   return (
@@ -31,7 +30,10 @@ export default component$(() => {
       <Section>
         <div class="flex flex-col gap-8 md:gap-20">
           <div class="flex flex-col gap-8 rounded-lg bg-primary-800 px-6 py-10 text-white md:p-16 lg:flex-row-reverse">
-            <WhatIsPublicCodeSvg class="mx-auto h-60 w-60 shrink-0 md:h-[360px] md:w-[360px]" />
+            <WhatIsPublicCode
+              class="mx-auto h-60 w-60 shrink-0 md:h-80 md:w-80"
+              alt="What is Public Code?"
+            />
             <div class="flex flex-col">
               <div class="h-0 w-20 border-t-2 border-white" />
               <h2 class="mt-4">{$localize`公共程式是什麼`}</h2>
@@ -45,7 +47,7 @@ export default component$(() => {
           </div>
           <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
             <div class="flex flex-col items-center rounded-md border border-black p-6">
-              <InfoCardGOVSvg class="h-52 w-52" />
+              <InfoCardGOV class="h-52 w-52" alt="Government agencies" />
               <h3 class="mt-4 whitespace-nowrap text-center text-primary">
                 {$localize`我是政府機關承辦`}
                 <br />
@@ -57,7 +59,7 @@ export default component$(() => {
               </Button>
             </div>
             <div class="flex flex-col items-center rounded-md border border-black p-6">
-              <InfoCardPeople class="h-52 w-52" />
+              <InfoCardPeople class="h-52 w-52" alt="contributor" />
               <h3 class="mt-4 text-center text-primary">
                 {$localize`我是有意願協作或給建議的民眾`}
                 <br />
@@ -87,7 +89,10 @@ export default component$(() => {
               <ArrowRightIcon q:slot="icon-right" class="h-6 w-6" />
             </Button>
           </div>
-          <ECOSystemSvg class="mx-auto md:w-4/6 lg:w-5/12 lg:shrink-0" />
+          <ECOSystem
+            class="mx-auto md:w-4/6 lg:w-5/12 lg:shrink-0"
+            alt="ECO System"
+          />
         </div>
       </Section>
       <Promotion />

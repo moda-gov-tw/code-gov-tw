@@ -108,7 +108,8 @@ body {
 }
 
 @media print {
-  html, body {
+  html,
+  body {
     width: 380mm;
     height: 500mm;
   }
