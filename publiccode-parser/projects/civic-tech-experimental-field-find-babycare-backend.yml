@@ -43,8 +43,6 @@ dependsOn:
   open:
     - name: PHP
     - name: MySQL
-usedBy:
-  - 無
 tw:
   countryExtensionVersion: "1.0.0"
   techStacks:

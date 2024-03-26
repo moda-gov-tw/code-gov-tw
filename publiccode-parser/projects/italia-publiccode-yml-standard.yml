@@ -1,0 +1,45 @@
+publiccodeYmlVersion: 0.3.0
+name: publiccodeyml-publiccode.yml
+url: "https://github.com/moda-gov-tw/publiccodeyml-publiccode.yml/"
+releaseDate: "2023-11-08"
+platforms:
+  - web
+categories:
+  - data-collection
+  - digital-citizenship
+developmentStatus: development
+softwareType: standalone/web
+description:
+  zh-Hant:
+    localisedName: publiccode.yml Standard
+    shortDescription: >
+      一種針對公共軟體的詮釋資料（metadata）描述標準，這標準對開發者以及技術背景較淺的人士都易於使用，目的是讓由公共行政機關和公共組織開發的軟體容易被發現。
+    features:
+      - 標準
+legal:
+  license: CC0 v1.0
+  repoOwner: 數位發展部 民主網絡司 公民科技科
+maintenance:
+  type: internal
+  contacts:
+    - name: 關涵蓁 分析師
+      email: "hckuan@moda.gov.tw"
+      phone: "02-2380-0322"
+localisation:
+  localisationReady: true
+  availableLanguages:
+    - en
+    - zh-Hant
+dependsOn:
+  open:
+    - name: Node.js
+applicationSuite: "publiccode.yml"
+isBasedOn: "https://github.com/publiccodeyml/publiccode.yml"
+usedBy:
+  - "[公共程式平臺](https://code.gov.tw) (無障礙檢測結果：AAA)"
+tw:
+  countryExtensionVersion: "1.0.0"
+  vulnerability:
+    - "經上傳至 GitHub 及與上游社群溝通，無被檢查出嚴重漏洞。"
+  # GitHub API 有資訊可以取得, 暫時手動填寫
+  createdDate: "2022-12-01"

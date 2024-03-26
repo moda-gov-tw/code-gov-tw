@@ -16,7 +16,7 @@ description:
     shortDescription: >
       本專案為政府資料開放平臺前端開源，透過開源程式提供政府機關或民間團體，作為發展資料開放應用的參考，共同為政府開放資料盡一份心力。
     features:
-      - 資料一覽/檢索
+      - 資料一覽 / 檢索
       - 個案管理
     screenshots:
       - /images/projects/opendata-frontend/screenshot-1.png

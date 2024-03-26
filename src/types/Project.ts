@@ -58,7 +58,7 @@ export type Project = {
     techStacks: string[];
     repoOwners: string[];
   };
-  usedBy: string[];
+  usedBy?: string[];
   tw: {
     countryExtensionVersion: string;
     techStacks?: Dependency[];

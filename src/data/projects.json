@@ -20,10 +20,10 @@
         "localisedName": "台南市登革熱防疫現場數位工具 - 後端",
         "shortDescription": "本案為「112年數位發展部公民科技試驗場域示範案」由「好想打流感」團隊開發的「台南市登革熱防疫現場數位工具」透過與臺南市政府衛生局的合作，協助開發數位工具以簡化登革熱防治工作上的流程，並改善目前繁瑣的人工確認作業及掌握更即時的資訊。\n",
         "features": [
-          "表單填寫/資料上傳",
+          "表單填寫 / 資料上傳",
           "個案管理",
           "地圖資訊呈現",
-          "資料一覽/檢索",
+          "資料一覽 / 檢索",
           "數據呈現"
         ],
         "screenshots": ["/images/projects/dengue/backend.png"]
@@ -72,10 +72,10 @@
     },
     "filterTags": {
       "features": [
-        "表單填寫/資料上傳",
+        "表單填寫 / 資料上傳",
         "個案管理",
         "地圖資訊呈現",
-        "資料一覽/檢索",
+        "資料一覽 / 檢索",
         "數據呈現"
       ],
       "techStacks": ["Vue.js", "Node.js", "Firebase Realtime Database"],
@@ -103,10 +103,10 @@
         "localisedName": "台南市登革熱防疫現場數位工具 - 前台",
         "shortDescription": "本案為「112年數位發展部公民科技試驗場域示範案」由「好想打流感」團隊開發的「台南市登革熱防疫現場數位工具」透過與臺南市政府衛生局的合作，協助開發數位工具以簡化登革熱防治工作上的流程，並改善目前繁瑣的人工確認作業及掌握更即時的資訊。\n",
         "features": [
-          "表單填寫/資料上傳",
+          "表單填寫 / 資料上傳",
           "個案管理",
           "地圖資訊呈現",
-          "資料一覽/檢索",
+          "資料一覽 / 檢索",
           "數據呈現"
         ],
         "screenshots": ["/images/projects/dengue/frontend.png"]
@@ -151,10 +151,10 @@
     },
     "filterTags": {
       "features": [
-        "表單填寫/資料上傳",
+        "表單填寫 / 資料上傳",
         "個案管理",
         "地圖資訊呈現",
-        "資料一覽/檢索",
+        "資料一覽 / 檢索",
         "數據呈現"
       ],
       "techStacks": ["Node.js", "MongoDB"],
@@ -219,7 +219,6 @@
         }
       ]
     },
-    "usedBy": ["無"],
     "tw": {
       "countryExtensionVersion": "1.0.0",
       "techStacks": [
@@ -257,7 +256,7 @@
       "zh-Hant": {
         "localisedName": "公托報名管理系統（前端）",
         "shortDescription": "本案為「112年數位發展部公民科技試驗場域示範案」由「一起加油陣線」團隊開發的「公托申請數位流程優化」透過與臺中市政府社會局的合作，提供既有公托申請流程解方，開發一申請公托的整合平台，提供申請、查詢、審核及管理等功能。本案為示範案例尚未正式上線提供服務。\n",
-        "features": ["表單填寫/資料上傳", "個案管理", "地圖資訊呈現"],
+        "features": ["表單填寫 / 資料上傳", "個案管理", "地圖資訊呈現"],
         "screenshots": [
           "/images/projects/find-babycare/01_daycare_map.png",
           "/images/projects/find-babycare/02_application _process.png",
@@ -292,7 +291,6 @@
         }
       ]
     },
-    "usedBy": ["無"],
     "tw": {
       "countryExtensionVersion": "1.0.0",
       "techStacks": [
@@ -304,7 +302,7 @@
       "createdDate": "2023-11-22"
     },
     "filterTags": {
-      "features": ["表單填寫/資料上傳", "個案管理", "地圖資訊呈現"],
+      "features": ["表單填寫 / 資料上傳", "個案管理", "地圖資訊呈現"],
       "techStacks": ["Vue.js", "Node.js"],
       "repoOwners": ["數位發展部"]
     }
@@ -324,7 +322,7 @@
       "zh-Hant": {
         "localisedName": "公共程式平臺",
         "shortDescription": "數位發展部 Ministry of Digital Affairs (moda) 作為臺灣數位發展的「mòda（馬達）」，將連結「公民」與「技術」、提升「產業」及「安全」，實現智慧國家的願景，並以臺灣模式持續引領世界。\n",
-        "features": ["資料一覽/檢索"]
+        "features": ["資料一覽 / 檢索"]
       }
     },
     "legal": {
@@ -372,13 +370,319 @@
       "createdDate": "2024-02-01"
     },
     "filterTags": {
-      "features": ["資料一覽/檢索"],
+      "features": ["資料一覽 / 檢索"],
       "techStacks": ["TypeScript", "Qwik", "Tailwind CSS", "Node.js"],
       "repoOwners": ["數位發展部"]
     }
   },
   {
     "id": 5,
+    "publiccodeYmlVersion": "0.3.0",
+    "name": "gov-uk-forms-admin",
+    "url": "https://github.com/moda-gov-tw/alphagov.forms-admin/",
+    "releaseDate": "2023-11-08",
+    "platforms": ["web"],
+    "categories": ["data-collection", "digital-citizenship"],
+    "developmentStatus": "development",
+    "softwareType": "standalone/web",
+    "description": {
+      "zh-Hant": {
+        "localisedName": "GOV.UK Forms Admin",
+        "shortDescription": "GOV.UK Forms 是英國 GDS 政府數位服務團隊維運之公部門線上表單平台。此服務開放程式原始碼，可提供政府各機關與單位利用該平台之模版，建立可供外部填寫之簡易表單。\n",
+        "features": ["表單填寫 / 資料上傳"]
+      }
+    },
+    "legal": {
+      "license": "MIT License",
+      "repoOwner": "數位發展部 民主網絡司 公民科技科"
+    },
+    "maintenance": {
+      "type": "internal",
+      "contacts": [
+        {
+          "name": "關涵蓁 分析師",
+          "email": "hckuan@moda.gov.tw",
+          "phone": "02-2380-0322"
+        }
+      ]
+    },
+    "localisation": {
+      "localisationReady": true,
+      "availableLanguages": ["en", "zh-Hant"]
+    },
+    "dependsOn": {
+      "open": [
+        {
+          "name": "Ruby",
+          "version": "3"
+        },
+        {
+          "name": "Node.js",
+          "version": "16"
+        }
+      ]
+    },
+    "applicationSuite": "GOV.UK Forms",
+    "isBasedOn": "https://github.com/alphagov/forms-admin",
+    "tw": {
+      "countryExtensionVersion": "1.0.0",
+      "vulnerability": [
+        "經上傳至 GitHub 及與上游社群溝通，無被檢查出嚴重漏洞。"
+      ],
+      "createdDate": "2023-02-03"
+    },
+    "filterTags": {
+      "features": ["表單填寫 / 資料上傳"],
+      "techStacks": ["Ruby", "Node.js"],
+      "repoOwners": ["數位發展部"]
+    }
+  },
+  {
+    "id": 6,
+    "publiccodeYmlVersion": "0.3.0",
+    "name": "gov-uk-forms-product-pages",
+    "url": "https://github.com/moda-gov-tw/alphagov.forms-product-page/",
+    "releaseDate": "2023-11-08",
+    "platforms": ["web"],
+    "categories": ["data-collection", "digital-citizenship"],
+    "developmentStatus": "development",
+    "softwareType": "standalone/web",
+    "description": {
+      "zh-Hant": {
+        "localisedName": "GOV.UK Forms Product Pages",
+        "shortDescription": "GOV.UK Forms 是英國 GDS 政府數位服務團隊維運之公部門線上表單平台。此服務開放程式原始碼，可提供政府各機關與單位利用該平台之模版，建立可供外部填寫之簡易表單。\n",
+        "features": ["表單填寫 / 資料上傳"]
+      }
+    },
+    "legal": {
+      "license": "MIT License",
+      "repoOwner": "數位發展部 民主網絡司 公民科技科"
+    },
+    "maintenance": {
+      "type": "internal",
+      "contacts": [
+        {
+          "name": "關涵蓁 分析師",
+          "email": "hckuan@moda.gov.tw",
+          "phone": "02-2380-0322"
+        }
+      ]
+    },
+    "localisation": {
+      "localisationReady": true,
+      "availableLanguages": ["en", "zh-Hant"]
+    },
+    "dependsOn": {
+      "open": [
+        {
+          "name": "Ruby",
+          "version": "3"
+        },
+        {
+          "name": "Node.js",
+          "version": "16"
+        }
+      ]
+    },
+    "applicationSuite": "GOV.UK Forms",
+    "isBasedOn": "https://github.com/alphagov/forms-product-page",
+    "tw": {
+      "countryExtensionVersion": "1.0.0",
+      "vulnerability": [
+        "經上傳至 GitHub 及與上游社群溝通，無被檢查出嚴重漏洞。"
+      ],
+      "createdDate": "2023-02-03"
+    },
+    "filterTags": {
+      "features": ["表單填寫 / 資料上傳"],
+      "techStacks": ["Ruby", "Node.js"],
+      "repoOwners": ["數位發展部"]
+    }
+  },
+  {
+    "id": 7,
+    "publiccodeYmlVersion": "0.3.0",
+    "name": "gov-uk-notify",
+    "url": "https://github.com/moda-gov-tw/notifications-admin/",
+    "releaseDate": "2023-11-08",
+    "platforms": ["web"],
+    "categories": [
+      "data-collection",
+      "content-management",
+      "digital-citizenship"
+    ],
+    "developmentStatus": "stable",
+    "softwareType": "standalone/web",
+    "description": {
+      "zh-Hant": {
+        "localisedName": "GOV.UK Notify",
+        "shortDescription": "GOV.UK Notify 是英國 GDS 政府數位服務團隊維運的公部門業務訊息傳遞服務平台。業務訊息包含電子郵件、簡訊、信函等。讓使用者無需程式編碼能力也可以編輯預設訊息範本、追蹤訊息傳送狀態、手動或自動傳送訊息。此程式提供開放原始碼，各單位可以整合需要的功能至自己的業務系統或平台以增加訊息傳遞與通知的功能。\n",
+        "features": ["公共服務通知"]
+      }
+    },
+    "legal": {
+      "license": "MIT License",
+      "repoOwner": "數位發展部 民主網絡司 公民科技科",
+      "mainCopyrightOwner": "Government Digital Service"
+    },
+    "maintenance": {
+      "type": "internal",
+      "contacts": [
+        {
+          "name": "關涵蓁 分析師",
+          "email": "hckuan@moda.gov.tw",
+          "phone": "02-2380-0322"
+        }
+      ]
+    },
+    "localisation": {
+      "localisationReady": true,
+      "availableLanguages": ["en", "zh-Hant"]
+    },
+    "dependsOn": {
+      "open": [
+        {
+          "name": "Python",
+          "version": "3.9"
+        },
+        {
+          "name": "Node.js",
+          "version": "18"
+        }
+      ]
+    },
+    "applicationSuite": "GOV.UK Notify",
+    "isBasedOn": "https://github.com/alphagov/notifications-admin",
+    "tw": {
+      "countryExtensionVersion": "1.0.0",
+      "vulnerability": [
+        "經上傳至 GitHub 及與上游社群溝通，無被檢查出嚴重漏洞。"
+      ],
+      "createdDate": "2022-11-16"
+    },
+    "filterTags": {
+      "features": ["公共服務通知"],
+      "techStacks": ["Python", "Node.js"],
+      "repoOwners": ["數位發展部"]
+    }
+  },
+  {
+    "id": 8,
+    "publiccodeYmlVersion": "0.3.0",
+    "name": "italia-publiccode-editor",
+    "url": "https://github.com/moda-gov-tw/italia-publiccode-editor",
+    "releaseDate": "2023-11-08",
+    "platforms": ["web"],
+    "categories": ["data-collection", "digital-citizenship"],
+    "developmentStatus": "development",
+    "softwareType": "standalone/web",
+    "description": {
+      "zh-Hant": {
+        "localisedName": "publiccode.yml Editor",
+        "shortDescription": "這個應用程式幫助您為您的專案創建並驗證一個 publiccode.yml 檔案。只需填寫表單即可生成一個符合最新標準的 YAML 檔案，然後您可以下載或複製到您的專案根目錄中。您也可以使用這個應用程式來檢查並糾正現有的 publiccode.yml 檔案。只需上傳檔案進行導入，應用程式將進行驗證並幫助修正任何問題。\n",
+        "features": ["編輯器"]
+      }
+    },
+    "legal": {
+      "license": "AGPL-3.0",
+      "repoOwner": "數位發展部 民主網絡司 公民科技科"
+    },
+    "maintenance": {
+      "type": "internal",
+      "contacts": [
+        {
+          "name": "關涵蓁 分析師",
+          "email": "hckuan@moda.gov.tw",
+          "phone": "02-2380-0322"
+        }
+      ]
+    },
+    "localisation": {
+      "localisationReady": true,
+      "availableLanguages": ["en", "zh-Hant"]
+    },
+    "dependsOn": {
+      "open": [
+        {
+          "name": "Node.js"
+        }
+      ]
+    },
+    "applicationSuite": "publiccode.yml",
+    "isBasedOn": "https://github.com/italia/publiccode-editor",
+    "tw": {
+      "countryExtensionVersion": "1.0.0",
+      "vulnerability": [
+        "經上傳至 GitHub 及與上游社群溝通，無被檢查出嚴重漏洞。"
+      ],
+      "createdDate": "2022-12-01"
+    },
+    "filterTags": {
+      "features": ["編輯器"],
+      "techStacks": ["Node.js"],
+      "repoOwners": ["數位發展部"]
+    }
+  },
+  {
+    "id": 9,
+    "publiccodeYmlVersion": "0.3.0",
+    "name": "publiccodeyml-publiccode.yml",
+    "url": "https://github.com/moda-gov-tw/publiccodeyml-publiccode.yml/",
+    "releaseDate": "2023-11-08",
+    "platforms": ["web"],
+    "categories": ["data-collection", "digital-citizenship"],
+    "developmentStatus": "development",
+    "softwareType": "standalone/web",
+    "description": {
+      "zh-Hant": {
+        "localisedName": "publiccode.yml Standard",
+        "shortDescription": "一種針對公共軟體的詮釋資料（metadata）描述標準，這標準對開發者以及技術背景較淺的人士都易於使用，目的是讓由公共行政機關和公共組織開發的軟體容易被發現。\n",
+        "features": ["標準"]
+      }
+    },
+    "legal": {
+      "license": "CC0 v1.0",
+      "repoOwner": "數位發展部 民主網絡司 公民科技科"
+    },
+    "maintenance": {
+      "type": "internal",
+      "contacts": [
+        {
+          "name": "關涵蓁 分析師",
+          "email": "hckuan@moda.gov.tw",
+          "phone": "02-2380-0322"
+        }
+      ]
+    },
+    "localisation": {
+      "localisationReady": true,
+      "availableLanguages": ["en", "zh-Hant"]
+    },
+    "dependsOn": {
+      "open": [
+        {
+          "name": "Node.js"
+        }
+      ]
+    },
+    "applicationSuite": "publiccode.yml",
+    "isBasedOn": "https://github.com/publiccodeyml/publiccode.yml",
+    "usedBy": ["[公共程式平臺](https://code.gov.tw) (無障礙檢測結果：AAA)"],
+    "tw": {
+      "countryExtensionVersion": "1.0.0",
+      "vulnerability": [
+        "經上傳至 GitHub 及與上游社群溝通，無被檢查出嚴重漏洞。"
+      ],
+      "createdDate": "2022-12-01"
+    },
+    "filterTags": {
+      "features": ["標準"],
+      "techStacks": ["Node.js"],
+      "repoOwners": ["數位發展部"]
+    }
+  },
+  {
+    "id": 10,
     "publiccodeYmlVersion": "0.3.0",
     "name": "moda-ghg-inventory-system-frontend",
     "url": "https://github.com/moda-gov-tw/moda-ghg-inventory-system-frontend",
@@ -392,7 +696,7 @@
       "zh-Hant": {
         "localisedName": "數位產業自願性溫室氣體盤查系統",
         "shortDescription": "為落實臺灣2050淨零目標, 基於公共程式碼的理念，以公私協力方式發展可行之數位工具, 以數位部為首，示範將公共程式碼模式導入公部門及數位產業，推動政府開放資料、與民協作的倡議, 建立碳盤查系統公共程式，提供各界運用，降低自主碳盤查門檻。\n",
-        "features": ["表單填寫/資料上傳", "個案管理", "數據呈現"],
+        "features": ["表單填寫 / 資料上傳", "個案管理", "數據呈現"],
         "screenshots": [
           "/images/projects/moda-ghg-inventory-system-frontend/screenshot.png"
         ]
@@ -438,13 +742,75 @@
       "createdDate": "2023-11-24"
     },
     "filterTags": {
-      "features": ["表單填寫/資料上傳", "個案管理", "數據呈現"],
+      "features": ["表單填寫 / 資料上傳", "個案管理", "數據呈現"],
       "techStacks": ["ASP.NET Core", "C#", "MySQL"],
       "repoOwners": ["數位發展部"]
     }
   },
   {
-    "id": 6,
+    "id": 11,
+    "publiccodeYmlVersion": "0.3.0",
+    "name": "matrix-org.matrix-react-sdk",
+    "url": "https://github.com/moda-gov-tw/matrix-org.matrix-react-sdk/",
+    "releaseDate": "2023-11-08",
+    "platforms": ["web"],
+    "categories": ["data-collection", "digital-citizenship"],
+    "developmentStatus": "development",
+    "softwareType": "standalone/web",
+    "description": {
+      "zh-Hant": {
+        "localisedName": "Matrix Client (Element Series)",
+        "shortDescription": "Element 是 Matrix 核心團隊基於去中心化標準開發的開放原始碼通訊軟體。可應用網際網路 IP based 進行即時通訊。基於其開放特性，可整合其他程式，快速建構即時交換資料系統。除此之外，亦可與 Slack、Telegram 等其它通訊軟體進行串聯。\n",
+        "features": ["即時通訊"]
+      }
+    },
+    "legal": {
+      "license": "Apache-2.0",
+      "repoOwner": "數位發展部 民主網絡司 公民科技科"
+    },
+    "maintenance": {
+      "type": "internal",
+      "contacts": [
+        {
+          "name": "關涵蓁 分析師",
+          "email": "hckuan@moda.gov.tw",
+          "phone": "02-2380-0322"
+        }
+      ]
+    },
+    "localisation": {
+      "localisationReady": true,
+      "availableLanguages": ["en", "zh-Hant"]
+    },
+    "dependsOn": {
+      "open": [
+        {
+          "name": "Ruby",
+          "version": "3"
+        },
+        {
+          "name": "Node.js",
+          "version": "16"
+        }
+      ]
+    },
+    "applicationSuite": "Matrix Element",
+    "isBasedOn": "https://github.com/matrix-org/matrix-react-sdk",
+    "tw": {
+      "countryExtensionVersion": "1.0.0",
+      "vulnerability": [
+        "經上傳至 GitHub 及與上游社群溝通，無被檢查出嚴重漏洞。"
+      ],
+      "createdDate": "2022-12-16"
+    },
+    "filterTags": {
+      "features": ["即時通訊"],
+      "techStacks": ["Ruby", "Node.js"],
+      "repoOwners": ["數位發展部"]
+    }
+  },
+  {
+    "id": 12,
     "publiccodeYmlVersion": "0.3.0",
     "name": "MODA_ODF_Application_Tools",
     "url": "https://github.com/MODAODF/MODA_ODF_Application_Tools",
@@ -506,7 +872,7 @@
     }
   },
   {
-    "id": 7,
+    "id": 13,
     "publiccodeYmlVersion": "0.3.0",
     "name": "opendata-frontend",
     "url": "https://github.com/moda-gov-tw/opendata-frontend",
@@ -519,7 +885,7 @@
       "zh-Hant": {
         "localisedName": "政府資料開放平臺前端",
         "shortDescription": "本專案為政府資料開放平臺前端開源，透過開源程式提供政府機關或民間團體，作為發展資料開放應用的參考，共同為政府開放資料盡一份心力。\n",
-        "features": ["資料一覽/檢索", "個案管理"],
+        "features": ["資料一覽 / 檢索", "個案管理"],
         "screenshots": [
           "/images/projects/opendata-frontend/screenshot-1.png",
           "/images/projects/opendata-frontend/screenshot-2.png"
@@ -576,13 +942,13 @@
       "createdDate": "2013-11-22"
     },
     "filterTags": {
-      "features": ["資料一覽/檢索", "個案管理"],
+      "features": ["資料一覽 / 檢索", "個案管理"],
       "techStacks": ["Node.js"],
       "repoOwners": ["數位發展部"]
     }
   },
   {
-    "id": 8,
+    "id": 14,
     "publiccodeYmlVersion": "0.3.0",
     "name": "pdis-lighthouse",
     "url": "https://github.com/PDIS/lighthouse",
@@ -639,7 +1005,7 @@
     }
   },
   {
-    "id": 9,
+    "id": 15,
     "publiccodeYmlVersion": "0.3.0",
     "name": "pdis-web-jekyll",
     "url": "https://github.com/PDIS/web-jekyll",
@@ -701,6 +1067,234 @@
       "features": ["靜態網站產生器"],
       "techStacks": ["Ruby"],
       "repoOwners": ["國家資通安全研究院"]
+    }
+  },
+  {
+    "id": 16,
+    "publiccodeYmlVersion": "0.3.0",
+    "name": "privacybydesign.irmamobile",
+    "url": "https://github.com/moda-gov-tw/privacybydesign.irmamobile/",
+    "releaseDate": "2023-11-08",
+    "platforms": ["Android", "iOS"],
+    "categories": ["data-collection", "digital-citizenship"],
+    "developmentStatus": "development",
+    "softwareType": "standalone/web",
+    "description": {
+      "zh-Hant": {
+        "localisedName": "Yivi (IRMA)",
+        "shortDescription": "Yivi 是開放原始碼的身份驗證服務。因應不同需求，使用者可選擇不同程度的身份資料揭露。個人資料將以 PIN 碼加密的方式儲存在裝置中。使用者可以自行掌控個人資料，進行無密碼驗證登入網站、簽署文件等目的。\n",
+        "features": ["身份驗證"]
+      }
+    },
+    "legal": {
+      "license": "GPL v3",
+      "repoOwner": "數位發展部 民主網絡司 公民科技科"
+    },
+    "maintenance": {
+      "type": "internal",
+      "contacts": [
+        {
+          "name": "關涵蓁 分析師",
+          "email": "hckuan@moda.gov.tw",
+          "phone": "02-2380-0322"
+        }
+      ]
+    },
+    "localisation": {
+      "localisationReady": true,
+      "availableLanguages": ["en", "zh-Hant"]
+    },
+    "dependsOn": {
+      "open": [
+        {
+          "name": "Java",
+          "version": "11"
+        }
+      ]
+    },
+    "applicationSuite": "Yivi (IRMA)",
+    "isBasedOn": "https://github.com/privacybydesign/irmamobile",
+    "tw": {
+      "countryExtensionVersion": "1.0.0",
+      "techStacks": [
+        {
+          "name": "Flutter"
+        }
+      ],
+      "vulnerability": [
+        "經上傳至 GitHub 及與上游社群溝通，無被檢查出嚴重漏洞。"
+      ],
+      "createdDate": "2022-12-16"
+    },
+    "filterTags": {
+      "features": ["身份驗證"],
+      "techStacks": ["Flutter", "Java"],
+      "repoOwners": ["數位發展部"]
+    }
+  },
+  {
+    "id": 17,
+    "publiccodeYmlVersion": "0.3.0",
+    "name": "privacybydesign.pbdf-schememanager",
+    "url": "https://github.com/moda-gov-tw/privacybydesign.pbdf-schememanager",
+    "releaseDate": "2023-11-08",
+    "platforms": ["Android", "iOS"],
+    "categories": ["data-collection", "digital-citizenship"],
+    "developmentStatus": "development",
+    "softwareType": "standalone/web",
+    "description": {
+      "zh-Hant": {
+        "localisedName": "Yivi (IRMA) scheme manager",
+        "shortDescription": "Yivi 是開放原始碼的身份驗證服務。因應不同需求，使用者可選擇不同程度的身份資料揭露。個人資料將以 PIN 碼加密的方式儲存在裝置中。使用者可以自行掌控個人資料，進行無密碼驗證登入網站、簽署文件等目的。\n",
+        "features": ["身份驗證"]
+      }
+    },
+    "legal": {
+      "license": "GPL v3",
+      "repoOwner": "數位發展部 民主網絡司 公民科技科"
+    },
+    "maintenance": {
+      "type": "internal",
+      "contacts": [
+        {
+          "name": "關涵蓁 分析師",
+          "email": "hckuan@moda.gov.tw",
+          "phone": "02-2380-0322"
+        }
+      ]
+    },
+    "localisation": {
+      "localisationReady": true,
+      "availableLanguages": ["en", "zh-Hant"]
+    },
+    "applicationSuite": "Yivi (IRMA)",
+    "isBasedOn": "https://github.com/privacybydesign/pbdf-schememanager",
+    "tw": {
+      "countryExtensionVersion": "1.0.0",
+      "vulnerability": [
+        "經上傳至 GitHub 及與上游社群溝通，無被檢查出嚴重漏洞。"
+      ],
+      "createdDate": "2022-12-20"
+    },
+    "filterTags": {
+      "features": ["身份驗證"],
+      "techStacks": [],
+      "repoOwners": ["數位發展部"]
+    }
+  },
+  {
+    "id": 18,
+    "publiccodeYmlVersion": "0.3.0",
+    "name": "vector-im.element-web",
+    "url": "https://github.com/moda-gov-tw/vector-im.element-web/",
+    "releaseDate": "2023-11-08",
+    "platforms": ["web"],
+    "categories": ["data-collection", "digital-citizenship"],
+    "developmentStatus": "development",
+    "softwareType": "standalone/web",
+    "description": {
+      "zh-Hant": {
+        "localisedName": "Standard for Public Code",
+        "shortDescription": "Standard for Public Code 是由公共程式碼基金會（Foundation for Public Code）所制定的公共程式標準。目的為提供政府不同部門或協作組織之間，依循標準及指南開發軟體時，以利後續進行互相協作開發，並且重複使用各自的成果。此標準有利於公家機關透過協作方式，創造出好用、開放、易懂、課責、近用、永續的程式基底。\n",
+        "features": ["標準"]
+      }
+    },
+    "legal": {
+      "license": "CC0 v1.0",
+      "repoOwner": "數位發展部 民主網絡司 公民科技科"
+    },
+    "maintenance": {
+      "type": "internal",
+      "contacts": [
+        {
+          "name": "關涵蓁 分析師",
+          "email": "hckuan@moda.gov.tw",
+          "phone": "02-2380-0322"
+        }
+      ]
+    },
+    "localisation": {
+      "localisationReady": true,
+      "availableLanguages": ["en", "zh-Hant"]
+    },
+    "dependsOn": {
+      "open": [
+        {
+          "name": "Ruby",
+          "version": "3"
+        }
+      ]
+    },
+    "applicationSuite": "Standard for Public Code",
+    "isBasedOn": "https://github.com/publiccodenet/standard",
+    "tw": {
+      "countryExtensionVersion": "1.0.0",
+      "vulnerability": [
+        "經上傳至 GitHub 及與上游社群溝通，無被檢查出嚴重漏洞。"
+      ],
+      "createdDate": "2022-11-24"
+    },
+    "filterTags": {
+      "features": ["標準"],
+      "techStacks": ["Ruby"],
+      "repoOwners": ["數位發展部"]
+    }
+  },
+  {
+    "id": 19,
+    "publiccodeYmlVersion": "0.3.0",
+    "name": "vector-im.element-web",
+    "url": "https://github.com/moda-gov-tw/vector-im.element-web/",
+    "releaseDate": "2023-11-08",
+    "platforms": ["web"],
+    "categories": ["data-collection", "digital-citizenship"],
+    "developmentStatus": "development",
+    "softwareType": "standalone/web",
+    "description": {
+      "zh-Hant": {
+        "localisedName": "Matrix Client (Element Series)",
+        "shortDescription": "Element 是 Matrix 核心團隊基於去中心化標準開發的開放原始碼通訊軟體。可應用網際網路 IP based 進行即時通訊。基於其開放特性，可整合其他程式，快速建構即時交換資料系統。除此之外，亦可與 Slack、Telegram 等其它通訊軟體進行串聯。\n",
+        "features": ["即時通訊"]
+      }
+    },
+    "legal": {
+      "license": "Apache-2.0",
+      "repoOwner": "數位發展部 民主網絡司 公民科技科"
+    },
+    "maintenance": {
+      "type": "internal",
+      "contacts": [
+        {
+          "name": "關涵蓁 分析師",
+          "email": "hckuan@moda.gov.tw",
+          "phone": "02-2380-0322"
+        }
+      ]
+    },
+    "localisation": {
+      "localisationReady": true,
+      "availableLanguages": ["en", "zh-Hant"]
+    },
+    "dependsOn": {
+      "open": [
+        {
+          "name": "Node.js"
+        }
+      ]
+    },
+    "applicationSuite": "Matrix Element",
+    "isBasedOn": "https://github.com/element-hq/element-web",
+    "tw": {
+      "countryExtensionVersion": "1.0.0",
+      "vulnerability": [
+        "經上傳至 GitHub 及與上游社群溝通，無被檢查出嚴重漏洞。"
+      ],
+      "createdDate": "2022-12-16"
+    },
+    "filterTags": {
+      "features": ["即時通訊"],
+      "techStacks": ["Node.js"],
+      "repoOwners": ["數位發展部"]
     }
   }
 ]

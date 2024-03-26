@@ -1,0 +1,44 @@
+publiccodeYmlVersion: 0.3.0
+name: vector-im.element-web
+url: "https://github.com/moda-gov-tw/vector-im.element-web/"
+releaseDate: "2023-11-08"
+platforms:
+  - web
+categories:
+  - data-collection
+  - digital-citizenship
+developmentStatus: development
+softwareType: standalone/web
+description:
+  zh-Hant:
+    localisedName: Standard for Public Code
+    shortDescription: >
+      Standard for Public Code 是由公共程式碼基金會（Foundation for Public Code）所制定的公共程式標準。目的為提供政府不同部門或協作組織之間，依循標準及指南開發軟體時，以利後續進行互相協作開發，並且重複使用各自的成果。此標準有利於公家機關透過協作方式，創造出好用、開放、易懂、課責、近用、永續的程式基底。
+    features:
+      - 標準
+legal:
+  license: CC0 v1.0
+  repoOwner: 數位發展部 民主網絡司 公民科技科
+maintenance:
+  type: internal
+  contacts:
+    - name: 關涵蓁 分析師
+      email: "hckuan@moda.gov.tw"
+      phone: "02-2380-0322"
+localisation:
+  localisationReady: true
+  availableLanguages:
+    - en
+    - zh-Hant
+dependsOn:
+  open:
+    - name: Ruby
+      version: "3"
+applicationSuite: "Standard for Public Code"
+isBasedOn: "https://github.com/publiccodenet/standard"
+tw:
+  countryExtensionVersion: "1.0.0"
+  vulnerability:
+    - "經上傳至 GitHub 及與上游社群溝通，無被檢查出嚴重漏洞。"
+  # GitHub API 有資訊可以取得, 暫時手動填寫
+  createdDate: "2022-11-24"
