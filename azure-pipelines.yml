@@ -1,0 +1,108 @@
+pool:
+  vmImage: ubuntu-latest
+
+stages:
+  - stage: Check
+    jobs:
+      - job: Linter
+        displayName: Lint Project
+        steps:
+          - task: NodeTool@0
+            inputs:
+              versionSpec: "18.x"
+          - task: CmdLine@2
+            displayName: Lint Project
+            inputs:
+              script: |
+                npm install
+                npm run lint
+      - job: Formatting
+        displayName: Format Project
+        steps:
+          - task: NodeTool@0
+            inputs:
+              versionSpec: "18.x"
+          - task: CmdLine@2
+            displayName: Format Project
+            inputs:
+              script: |
+                npm install
+                npm run fmt.check
+  - stage: Build
+    dependsOn: Check
+    jobs:
+      - job: Build
+        displayName: Build
+        steps:
+          - task: NodeTool@0
+            inputs:
+              versionSource: "spec"
+              versionSpec: "18.x"
+          - task: CmdLine@2
+            displayName: Build Project
+            inputs:
+              script: |
+                npm install
+                npm run build
+          - task: PublishPipelineArtifact@1
+            inputs:
+              targetPath: "./dist"
+              artifact: "build"
+              publishLocation: "pipeline"
+  - stage: Deploy
+    dependsOn: Build
+    condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/main'))
+    jobs:
+      - job: Deploy
+        displayName: Deploy
+        steps:
+          - task: GoTool@0
+            inputs:
+              version: "1.22.1"
+          - task: CmdLine@2
+            displayName: Install pinata-go-cli and auth
+            inputs:
+              script: |
+                echo Write your commands here
+                git clone https://github.com/PinataCloud/pinata-go-cli
+                ls -al
+                cd pinata-go-cli
+                go build
+                mv pinata ../
+                cd ..
+                ./pinata auth $(PINATA_JWT)
+          - task: DownloadPipelineArtifact@2
+            inputs:
+              buildType: "current"
+              artifactName: "build"
+              targetPath: "./dist"
+          - task: CmdLine@2
+            name: pinata
+            displayName: Publish to Pinata
+            inputs:
+              script: |
+                name=`git log -n 1 --format=format:%h`
+                cid=`./pinata upload --name $name --cid-only ./dist | tail -n 1`
+                cidlist=`./pinata list | grep "ipfs_pin_hash" | cut -d '"' -f 4`
+                count=`echo $cidlist | wc -l`
+                if [ "$count" -gt 2 ]; then 
+                  lastcid=`echo $cidlist | tail -n 1`
+                  ./pinata unpin $lastcid;
+                fi
+                echo "##vso[task.setvariable variable=cid]$cid"
+          - task: CmdLine@2
+            displayName: Update Web3 Gateway with CID
+            inputs:
+              script: |
+                echo $(cid)
+                curl -X PATCH \
+                  --url "https://api.cloudflare.com/client/v4/zones/$(ZONE_ID)/web3/hostnames/$(HOSTNAME_ID)" \
+                  -H "Content-Type: application/json" \
+                  -H "Authorization: Bearer $(CLOUDFLARE_API_TOKEN)" \
+                  -d '{"dnslink": "'/ipfs/$(cid)'"}' > response.json
+                cat response.json
+                result=`grep "success" response.json | awk '{print $2}' | tr -d ','`
+                if [ "$result" != "true" ]; then
+                  echo "Failed to update DNS"
+                  exit 1
+                fi
