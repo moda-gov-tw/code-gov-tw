@@ -45,4 +45,4 @@ tw:
   vulnerability:
     - "OWASP ZAP"
     - "SonarQube"
-  accessibility: "AAA"
+  accessibilityConformance: "AAA"

@@ -43,8 +43,10 @@ tw:
     - name: "Qwik"
     - name: "Tailwind CSS"
   vulnerability:
+    - "GitHub CodeQL"
+    - "GitHub Dependabot Alerts"
     - "OWASP ZAP"
     - "SonarQube"
-  accessibility: "AAA"
+  accessibilityConformance: "AAA"
   # GitHub API 有資訊可以取得, 暫時手動填寫
   createdDate: "2024-02-01"

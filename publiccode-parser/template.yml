@@ -16,6 +16,7 @@ description:
     localisedName: 公共程式平臺 # 顯示在網站上的名稱
     shortDescription: >
       簡易描述, 最多只有150字
+    # 詳細描述, 會顯示在細節頁面, 假如沒有填寫, 就會顯示簡易描述
     longDescription: >
       詳細描述, 至少有150字以上
     features:
@@ -24,7 +25,7 @@ description:
     screenshots:
       - screenshots/screenshot1.png
       - screenshots/screenshot2.png
-  # 可以使用多個語系
+  # 可以使用多個語系, 但目前還沒支援
   en:
     shortDescription: >
       This is a short description of my awesome software, it is at most 150 words long
@@ -52,20 +53,25 @@ localisation:
   availableLanguages:
     - zh-Hant
     - en
+# 這裡是寫系統層級依賴的技術
 dependsOn:
   open:
     - name: Node.js
       version: "18"
 usedBy:
+  # 單純文字
   - Ministry of Awesome
   # 使用 Markdown 語法顯示網站連結
   - "[Ministry of Awesome, Ministry of Awesome 2](https://example.com) (無障礙檢測結果：尚未檢測)"
 tw:
   countryExtensionVersion: "1.0.0"
+  # 相較於 dependsOn, 這裡更細節的列出使用的技術
   techStacks:
     - name: "TypeScript"
     - name: "Qwik"
     - name: "Tailwind CSS"
   vulnerability:
     - "OWASP"
-  accessibility: "AA"
+  accessibilityConformance: "AA"
+  # GitHub API 有資訊可以取得, 暫時手動填寫
+  createdDate: "2024-02-01"

@@ -3,8 +3,8 @@ name: privacybydesign.pbdf-schememanager
 url: "https://github.com/moda-gov-tw/privacybydesign.pbdf-schememanager"
 releaseDate: "2023-11-08"
 platforms:
-  - Android
-  - iOS
+  - android
+  - ios
 categories:
   - data-collection
   - digital-citizenship

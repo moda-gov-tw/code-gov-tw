@@ -54,4 +54,5 @@ tw:
     - name: 資料集搜尋選項API
       description: "提供資料集進階搜尋功能，可透過如服務分類等選項進行搜尋"
       url: "https://beta.file.data.nat.gov.tw/openapi.json"
+  # GitHub API 有資訊可以取得, 暫時手動填寫
   createdDate: "2013-11-22"

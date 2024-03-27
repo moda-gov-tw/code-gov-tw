@@ -19,6 +19,12 @@
 
 ### 使用方式
 
-1. 將您的 YAML 檔案放置在 `./projects` 目錄中。
+1. 將您的 YAML 檔案放置在 `publiccode-parser/projects` 目錄中。
 2. 使用命令 `npx tsx publiccode-parser/main.ts` 運行腳本。
 3. 腳本將解析 YAML 檔案，取得必要的資料，並將其儲存為 `./outputs` 目錄中的 JSON 檔案。
+4. 將此檔案覆蓋網站的 `src/data/filters.json` 與 `src/data/filters.json` 即可。
+
+```sh
+# 快速更新的指令
+npx tsx publiccode-parser/main.ts && cp -r publiccode-parser/outputs/* src/data
+```

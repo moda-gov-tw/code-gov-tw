@@ -1,5 +1,5 @@
 {
-  "platforms": ["web", "windows", "Android", "iOS"],
+  "platforms": ["web", "windows", "android", "ios"],
   "categories": [
     "data-collection",
     "data-visualization",
@@ -31,6 +31,7 @@
     "即時通訊",
     "文書處理",
     "靜態網站產生器",
+    "自動翻譯",
     "身份驗證"
   ],
   "techStacks": [

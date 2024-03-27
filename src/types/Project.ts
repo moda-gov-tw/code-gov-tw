@@ -63,8 +63,10 @@ export type Project = {
     countryExtensionVersion: string;
     techStacks?: Dependency[];
     vulnerability?: string[];
-    // Workaround for the missing field
+    accessibilityConformance?: string;
+    // Workaround field for the missing data in this time
     createdDate: string;
+    // Workaround field for the missing data in this time
     openapi?: OpenAPI[];
   };
 };

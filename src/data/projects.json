@@ -365,8 +365,13 @@
           "name": "Tailwind CSS"
         }
       ],
-      "vulnerability": ["OWASP ZAP", "SonarQube"],
-      "accessibility": "AAA",
+      "vulnerability": [
+        "GitHub CodeQL",
+        "GitHub Dependabot Alerts",
+        "OWASP ZAP",
+        "SonarQube"
+      ],
+      "accessibilityConformance": "AAA",
       "createdDate": "2024-02-01"
     },
     "filterTags": {
@@ -960,7 +965,7 @@
     "softwareType": "standalone/web",
     "description": {
       "zh-Hant": {
-        "localisedName": "lighthouse 平台",
+        "localisedName": "Lighthouse 平台",
         "shortDescription": "Lighthouse 平台使用 GitHub Actions 自動執行 Lighthouse 掃描，將報告集中展示。Lighthouse 是一個開源的自動化工具，用於改善網頁的效能、品質和正確性。Lighthouse 對網頁進行一系列測試並產生一份報告及評分。透過報告，我們可以審視未通過測試的項目，了解如何改進。\n",
         "features": ["數據呈現"]
       }
@@ -991,11 +996,16 @@
       ]
     },
     "usedBy": [
-      "[https://lighthouse.pdis.run/](https://lighthouse.pdis.run/ ) (無障礙檢測結果：尚未檢測)"
+      "[Lighthouse 平台](https://lighthouse.pdis.run/) (無障礙檢測結果：尚未檢測)"
     ],
     "tw": {
       "countryExtensionVersion": "1.0.0",
-      "vulnerability": ["未掃描"],
+      "techStack": [
+        {
+          "name": "Lighthouse"
+        }
+      ],
+      "vulnerability": ["GitHub CodeQL", "GitHub Dependabot Alerts"],
       "createdDate": "2023-07-18"
     },
     "filterTags": {
@@ -1017,9 +1027,9 @@
     "softwareType": "standalone/web",
     "description": {
       "zh-Hant": {
-        "localisedName": "PDIS 官網",
-        "shortDescription": "PDIS 官網（含部落格），一套使用 Jekyll 靜態網站生成器從純文字的 markdown 文件產生靜態 HTML 的系統。具備中、英文雙語系。\n",
-        "features": ["靜態網站產生器"]
+        "localisedName": "行政院公共數位創新空間（PDIS）部落格",
+        "shortDescription": "行政院公共數位創新空間（PDIS）部落格。一套使用 Jekyll 靜態網站生成器，從純文字的 markdown 文件產生靜態 HTML 的系統。具備中、英文雙語系。\n",
+        "features": ["靜態網站產生器", "自動翻譯"]
       }
     },
     "legal": {
@@ -1048,23 +1058,23 @@
       ]
     },
     "usedBy": [
-      "[PDIS 官網](https://pdis.nat.gov.tw) (無障礙檢測結果：尚未檢測)"
+      "[行政院公共數位創新空間（PDIS）部落格](https://pdis.nat.gov.tw/) (無障礙檢測結果：尚未檢測)"
     ],
     "tw": {
       "countryExtensionVersion": "1.0.0",
       "techStack": [
         {
-          "name": "Markdown"
+          "name": "Jekyll"
         },
         {
-          "name": "Jekyll"
+          "name": "Cloud Translation API"
         }
       ],
-      "vulnerability": ["未掃描。（本系統為靜態網站，且無身分識別機制)"],
+      "vulnerability": ["GitHub CodeQL", "GitHub Dependabot Alerts"],
       "createdDate": "2017-09-05"
     },
     "filterTags": {
-      "features": ["靜態網站產生器"],
+      "features": ["靜態網站產生器", "自動翻譯"],
       "techStacks": ["Ruby"],
       "repoOwners": ["國家資通安全研究院"]
     }
@@ -1075,7 +1085,7 @@
     "name": "privacybydesign.irmamobile",
     "url": "https://github.com/moda-gov-tw/privacybydesign.irmamobile/",
     "releaseDate": "2023-11-08",
-    "platforms": ["Android", "iOS"],
+    "platforms": ["android", "ios"],
     "categories": ["data-collection", "digital-citizenship"],
     "developmentStatus": "development",
     "softwareType": "standalone/web",
@@ -1138,7 +1148,7 @@
     "name": "privacybydesign.pbdf-schememanager",
     "url": "https://github.com/moda-gov-tw/privacybydesign.pbdf-schememanager",
     "releaseDate": "2023-11-08",
-    "platforms": ["Android", "iOS"],
+    "platforms": ["android", "ios"],
     "categories": ["data-collection", "digital-citizenship"],
     "developmentStatus": "development",
     "softwareType": "standalone/web",
