@@ -1,9 +1,14 @@
 import { component$ } from "@builder.io/qwik";
+import MODALogo from "~/media/logos/moda.svg?jsx";
+import DemocracyNetworkLogo from "~/media/logos/democracy-network.png?jsx";
 
 export default component$(() => {
   return (
     <div class="flex flex-col items-center gap-2 md:items-start">
-      <small>{$localize`數位發展部`}</small>
+      <small class="">
+        <MODALogo class="max-w-80 fill-white stroke-white" />
+        <DemocracyNetworkLogo class="ml-1.5 aspect-auto max-w-56 fill-white stroke-white invert" />
+      </small>
       <small>{$localize`100057 臺北市中正區延平南路143號`}</small>
       <small>
         {$localize`民意信箱: `}

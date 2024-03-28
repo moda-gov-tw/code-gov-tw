@@ -8,7 +8,7 @@ export default component$(() => {
       description: $localize`政府機關欲開發資訊服務時，可於公共程式一覽瀏覽公共程式，查看是否已存在類似功能的公共程式。`,
     },
     {
-      title: $localize`02 進行客製化`,
+      title: $localize`02 公共程式加值利用`,
       description: $localize`與廠商合作，在既存的公共程式碼基礎上，進行實際需求的客製化開發。`,
     },
     {
