@@ -9,7 +9,7 @@ export default component$(() => {
   return (
     <>
       <Section>
-        <h1 class="text-primary">{$localize`民眾參與`}</h1>
+        <h1 class="text-primary">{$localize`如何參與`}</h1>
       </Section>
 
       <Section>
@@ -17,7 +17,7 @@ export default component$(() => {
           <div class="h-0 w-20 border-t-2 border-primary" />
           <h2 class="mt-4">{$localize`在程式碼的世界裡實踐公共力`}</h2>
           <p class="mt-8">
-            {$localize`公共程式發展初期，你是否也想嘗試參與？那就開始練習使用協作平臺吧。協作平臺是一個存放與管理程式碼的服務，各政府機關都將其管理的公共程式存放於此。不同程式開放不同程度的民眾參與權限，因此在瀏覽找到你想參與的公共程式後，藉由閱讀以下說明，前往協作平臺給予意見回饋，或提供專業技術協助。`}
+            {$localize`公共程式發展初期，你是否也想嘗試參與？那就開始練習使用協作平臺吧。協作平臺是一個存放與管理程式碼的服務，各政府機關都將其管理的公共程式存放於此。不同程式開放不同程度的參與權限，因此在瀏覽找到你想參與的公共程式後，藉由閱讀以下說明，前往協作平臺給予意見回饋，或提供專業技術協助。`}
           </p>
         </div>
         <div class="mt-8 flex flex-col gap-8">

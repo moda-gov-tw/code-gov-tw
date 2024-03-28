@@ -48,10 +48,8 @@ export default component$(() => {
           <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
             <div class="flex flex-col items-center rounded-md border border-black p-6">
               <InfoCardGOV class="h-52 w-52" alt="Government agencies" />
-              <h3 class="mt-4 whitespace-nowrap text-center text-primary">
-                {$localize`我是政府機關承辦`}
-                <br />
-                {$localize`想進一步了解公共程式`}
+              <h3 class="mt-4 whitespace-nowrap text-center text-primary md:min-h-16">
+                {$localize`我想進一步了解公共程式`}
               </h3>
               <Button class="mt-8 w-full" href="/about">
                 {$localize`認識公共程式`}
@@ -61,12 +59,12 @@ export default component$(() => {
             <div class="flex flex-col items-center rounded-md border border-black p-6">
               <InfoCardPeople class="h-52 w-52" alt="contributor" />
               <h3 class="mt-4 text-center text-primary">
-                {$localize`我是有意願協作或給建議的民眾`}
+                {$localize`我是有意願協作或給建議`}
                 <br />
                 {$localize`想知道可以怎麼參與`}
               </h3>
               <Button class="mt-8 w-full" href="/participate">
-                {$localize`民眾參與方式`}
+                {$localize`了解參與方式`}
                 <ArrowRightIcon q:slot="icon-right" class="h-6 w-6" />
               </Button>
             </div>

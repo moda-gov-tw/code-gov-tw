@@ -26,7 +26,7 @@ export default component$(() => {
             <p class="h2-sub hover:text-gray-300">{$localize`提供公共程式`}</p>
           </Link>
           <Link href="/participate">
-            <p class="h2-sub hover:text-gray-300">{$localize`民眾參與`}</p>
+            <p class="h2-sub hover:text-gray-300">{$localize`如何參與`}</p>
           </Link>
         </div>
       </div>
