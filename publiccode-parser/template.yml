@@ -2,7 +2,7 @@ publiccodeYmlVersion: 0.3.0
 name: public code platform
 url: "https://awesome.com"
 landingURL: "https://demo.awesome.com"
-releaseDate: "2022-03-29"
+releaseDate: "2022-03-29" # YYYY-MM-DD, 這個專案最新的版本發布日期
 platforms:
   - web
 categories:
@@ -54,8 +54,8 @@ localisation:
     - zh-Hant
     - en
 # 這裡是寫系統層級依賴的技術
-dependsOn:
-  open:
+dependsOn: # 這個專案所依賴的技術, 系統層級的
+  open: # 開放原始碼的軟體
     - name: Node.js
       version: "18"
 usedBy:
@@ -65,13 +65,15 @@ usedBy:
   - "[Ministry of Awesome, Ministry of Awesome 2](https://example.com) (無障礙檢測結果：尚未檢測)"
 tw:
   countryExtensionVersion: "1.0.0"
-  # 相較於 dependsOn, 這裡更細節的列出使用的技術
+  # 這個專案所依賴的技術, 相較於 dependsOn, 這裡更細節的列出使用的技術
   techStacks:
     - name: "TypeScript"
     - name: "Qwik"
     - name: "Tailwind CSS"
-  vulnerability:
+  vulnerabilityScanners:
     - "OWASP"
   accessibilityConformance: "AA"
   # GitHub API 有資訊可以取得, 暫時手動填寫
-  createdDate: "2024-02-01"
+  createdDate: "2024-02-01" # YYYY-MM-DD, 這個專案的建立日期
+
+# 更多定義可以參考官方文件 https://yml.publiccode.tools/

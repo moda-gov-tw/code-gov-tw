@@ -42,6 +42,6 @@ usedBy:
   - "[數位產業自願性溫室氣體盤查系統](https://ghg.moda.gov.tw/Member/Login) (無障礙檢測結果：尚未檢測)"
 tw:
   countryExtensionVersion: "1.0.0"
-  vulnerability:
+  vulnerabilityScanners:
     - "HCL AppScan"
   createdDate: "2023-11-24"

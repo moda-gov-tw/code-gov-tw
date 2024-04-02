@@ -30,17 +30,17 @@ function extractFilterTags(data: Project) {
     );
   }
 
-  // Collect tw.techStacks
-  if (Array.isArray(data.tw.techStacks)) {
-    data.tw.techStacks.forEach((techStack: Dependency) =>
-      techStacksSet.add(techStack.name),
+  // Collect dependsOn.open.name (system dependencies)
+  if (data.dependsOn?.open) {
+    data.dependsOn.open.forEach((tech: Dependency) =>
+      techStacksSet.add(tech.name),
     );
   }
 
-  // Collect dependsOn.open.name
-  if (data.dependsOn?.open) {
-    data.dependsOn.open.forEach(({ name }: { name: string }) =>
-      techStacksSet.add(name),
+  // Collect tw.techStacks (detail dependencies)
+  if (Array.isArray(data.tw.techStacks)) {
+    data.tw.techStacks.forEach((tech: Dependency) =>
+      techStacksSet.add(tech.name),
     );
   }
 
@@ -138,10 +138,17 @@ function collectUniqueValues(filePaths: string[]): {
         );
       }
 
-      // Collect dependsOn.open.name
+      // Collect dependsOn.open.name (system dependencies)
       if (data?.dependsOn?.open) {
-        data.dependsOn.open.forEach(({ name }: { name: string }) =>
-          techStacksSet.add(name),
+        data.dependsOn.open.forEach((tech: Dependency) =>
+          techStacksSet.add(tech.name),
+        );
+      }
+
+      // Collect tw.techStacks (detail dependencies)
+      if (data?.tw?.techStacks) {
+        data.tw.techStacks.forEach((tech: Dependency) =>
+          techStacksSet.add(tech.name),
         );
       }
     } catch (e) {

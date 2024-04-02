@@ -9,12 +9,12 @@
     "content-management",
     "document-management",
     "office",
-    "website-builder",
+    "data-analytics",
     "blog"
   ],
   "repoOwners": [
     "數位發展部",
-    "國家資通安全研究院",
+    "行政院公共數位創新空間（PDIS）",
     "臺北市政府",
     "英國 gov.uk"
   ],
@@ -30,6 +30,7 @@
     "標準",
     "即時通訊",
     "文書處理",
+    "網頁效能檢測",
     "靜態網站產生器",
     "自動翻譯",
     "身份驗證"
@@ -37,15 +38,23 @@
   "techStacks": [
     "Node.js",
     "Firebase Realtime Database",
+    "Vue.js",
     "MongoDB",
     "PHP",
     "MySQL",
+    "TypeScript",
+    "Qwik",
+    "Tailwind CSS",
     "Ruby",
     "Python",
     "ASP.NET Core",
     "C#",
     "Open Document Format",
     "C++",
-    "Java"
+    "Lighthouse",
+    "Jekyll",
+    "Cloud Translation API",
+    "Java",
+    "Flutter"
   ]
 }

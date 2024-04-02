@@ -42,7 +42,7 @@ tw:
     - name: "TypeScript"
     - name: "Qwik"
     - name: "Tailwind CSS"
-  vulnerability:
+  vulnerabilityScanners:
     - "GitHub CodeQL"
     - "GitHub Dependabot Alerts"
     - "OWASP ZAP"

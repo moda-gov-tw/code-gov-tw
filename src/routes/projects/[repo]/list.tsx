@@ -18,7 +18,7 @@ const extractMarkdownLink = (content: string) => {
 
 type ListProps = {
   title: string;
-  contents?: (string | undefined)[];
+  contents?: (string | null | undefined)[];
   useMarkdown?: boolean;
 };
 
@@ -27,7 +27,7 @@ export default component$<ListProps>((props) => {
     return null;
   }
 
-  const renderContent = (content: string | undefined, index: number) => {
+  const renderContent = (content: string | null | undefined, index: number) => {
     if (!content) return null;
     const markdownLink = extractMarkdownLink(content);
     if (props.useMarkdown && markdownLink) {

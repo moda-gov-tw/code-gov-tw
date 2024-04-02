@@ -1,5 +1,4 @@
 publiccodeYmlVersion: 0.3.0
-
 name: opendata-frontend
 url: "https://github.com/moda-gov-tw/opendata-frontend"
 releaseDate: "2022-03-29"
@@ -43,9 +42,9 @@ usedBy:
   - "[政府資料開放平臺](https://data.gov.tw/) (無障礙檢測結果：AA)"
 tw:
   countryExtensionVersion: "1.0.0"
-  techStack:
+  techStacks:
     - name: "Vue.js"
-  vulnerability:
+  vulnerabilityScanners:
     - "SonarQube"
   openapi:
     - name: 資料集列表API

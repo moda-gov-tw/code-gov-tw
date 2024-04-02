@@ -40,7 +40,7 @@ usedBy:
   - 各政府機關
 tw:
   countryExtensionVersion: "1.0.0"
-  vulnerability:
+  vulnerabilityScanners:
     - "SonarQube"
   # GitHub API 有資訊可以取得, 暫時手動填寫
   createdDate: "2022-03-06"

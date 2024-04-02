@@ -42,7 +42,7 @@ tw:
     - name: "TypeScript"
     - name: "Qwik"
     - name: "Tailwind CSS"
-  vulnerability:
+  vulnerabilityScanners:
     - "OWASP ZAP"
     - "SonarQube"
   accessibilityConformance: "AAA"

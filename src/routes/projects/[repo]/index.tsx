@@ -43,7 +43,7 @@ export default component$(() => {
   const dependsOn = project.dependsOn?.open?.map((dep) => dep.name);
   const techStacks = project.tw.techStacks?.map((tech) => tech.name);
   const totalTechs = [...(techStacks ?? []), ...(dependsOn ?? [])];
-  const vulnerabilities = project.tw.vulnerability;
+  const vulnerabilityScanners = project.tw.vulnerabilityScanners;
   const license = project.legal.license;
   const usedBy = project.usedBy;
   const repoOwner = project.legal.repoOwner;
@@ -118,7 +118,7 @@ export default component$(() => {
           <List title={$localize`使用技術`} contents={totalTechs} />
           <List
             title={$localize`使用之弱點掃描工具`}
-            contents={vulnerabilities}
+            contents={vulnerabilityScanners}
           />
           <List title={$localize`授權方式`} contents={[license]} />
           <List useMarkdown title={$localize`目前使用案例`} contents={usedBy} />

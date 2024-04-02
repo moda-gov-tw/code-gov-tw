@@ -13,7 +13,7 @@ description:
   zh-Hant:
     localisedName: GOV.UK Forms Product Pages
     shortDescription: >
-      GOV.UK Forms 是英國 GDS 政府數位服務團隊維運之公部門線上表單平台。此服務開放程式原始碼，可提供政府各機關與單位利用該平台之模版，建立可供外部填寫之簡易表單。
+      GOV.UK Forms 是英國 GDS 政府數位服務團隊維運之公部門線上表單平臺。此服務開放程式原始碼，可提供政府各機關與單位利用該平臺之模版，建立可供外部填寫之簡易表單。
     features:
       - 表單填寫 / 資料上傳
 legal:
@@ -40,7 +40,7 @@ applicationSuite: "GOV.UK Forms"
 isBasedOn: "https://github.com/alphagov/forms-product-page"
 tw:
   countryExtensionVersion: "1.0.0"
-  vulnerability:
+  vulnerabilityScanners:
     - "經上傳至 GitHub 及與上游社群溝通，無被檢查出嚴重漏洞。"
   # GitHub API 有資訊可以取得, 暫時手動填寫
   createdDate: "2023-02-03"

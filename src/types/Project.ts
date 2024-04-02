@@ -6,7 +6,7 @@ export type Dependency = {
 type Contact = {
   name: string;
   email?: string;
-  phone?: string;
+  phone?: string | null;
   affiliation?: string;
 };
 
@@ -62,10 +62,10 @@ export type Project = {
   tw: {
     countryExtensionVersion: string;
     techStacks?: Dependency[];
-    vulnerability?: string[];
-    accessibilityConformance?: string;
+    vulnerabilityScanners?: string[];
+    accessibilityConformance?: string | null;
     // Workaround field for the missing data in this time
-    createdDate: string;
+    createdDate?: string;
     // Workaround field for the missing data in this time
     openapi?: OpenAPI[];
   };
