@@ -10,6 +10,7 @@ export const RepoBlock = component$(
     shortDescription,
     features = [],
     dependsOn = [],
+    techStacks = [],
     id,
   }: {
     name: string;
@@ -17,6 +18,7 @@ export const RepoBlock = component$(
     shortDescription: string;
     features?: string[];
     dependsOn?: { name: string }[];
+    techStacks?: { name: string }[];
     id: number;
   }) => {
     return (
@@ -45,6 +47,9 @@ export const RepoBlock = component$(
               <div class="flex flex-wrap gap-2">
                 {dependsOn.map((depend: { name: string }) => (
                   <LabelButton key={depend.name}>{depend.name}</LabelButton>
+                ))}
+                {techStacks.map((tech: { name: string }) => (
+                  <LabelButton key={tech.name}>{tech.name}</LabelButton>
                 ))}
               </div>
             </div>

@@ -166,6 +166,7 @@ export default component$(() => {
                     shortDescription={projectDescription}
                     features={projectFeatures}
                     dependsOn={project.dependsOn?.open}
+                    techStacks={project.tw.techStacks}
                   />
                 );
               })}
