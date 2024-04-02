@@ -72,13 +72,15 @@ export default component$<CarouselProps>(({ images }) => {
   return (
     <div class="flex flex-col items-center gap-4">
       <div class="flex items-center gap-4">
-        <button
-          class="hidden md:block"
-          onClick$={prevSlide}
-          aria-label="Previous Image"
-        >
-          <ChevronLeftIcon class="h-14 w-14" />
-        </button>
+        {images.length > 1 && (
+          <button
+            class="hidden md:block"
+            onClick$={prevSlide}
+            aria-label="Previous Image"
+          >
+            <ChevronLeftIcon class="h-14 w-14" />
+          </button>
+        )}
         <div
           ref={containerRef}
           onTouchStart$={handleTouchStart}
@@ -110,13 +112,15 @@ export default component$<CarouselProps>(({ images }) => {
             ))}
           </div>
         </div>
-        <button
-          class="hidden md:block"
-          onClick$={nextSlide}
-          aria-label="Next Image"
-        >
-          <ChevronRightIcon class="h-14 w-14" />
-        </button>
+        {images.length > 1 && (
+          <button
+            class="hidden md:block"
+            onClick$={nextSlide}
+            aria-label="Next Image"
+          >
+            <ChevronRightIcon class="h-14 w-14" />
+          </button>
+        )}
       </div>
       <div ref={pointsRef} class="flex gap-4">
         {images.map((_, index) => (
