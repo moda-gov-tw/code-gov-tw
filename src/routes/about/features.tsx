@@ -47,7 +47,7 @@ export default component$(() => {
             class="flex flex-col gap-9 rounded-md border border-black bg-white p-10"
           >
             <div>
-              <feature.image class="h-40 w-40" />
+              <feature.image class="h-40 w-40" alt={feature.imageAlt} />
             </div>
             <div class="flex flex-col">
               <h3 class="mt-8">{feature.title}</h3>

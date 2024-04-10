@@ -8,7 +8,7 @@ export default component$(() => {
       <button
         type="button"
         class="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-gray-900 hover:bg-gray-50"
-        aria-controls="disclosure-1"
+        aria-controls="disclosure-lang"
         aria-expanded="false"
         onClick$={() => {
           menu.value = !menu.value;
@@ -30,7 +30,7 @@ export default component$(() => {
       </button>
       <div
         class={["mt-2 space-y-2", { hidden: !menu.value }]}
-        id="disclosure-1"
+        id="disclosure-lang"
       >
         <a
           href="/zh"

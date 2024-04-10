@@ -18,6 +18,7 @@ export default component$(() => {
         <WhatIsPublicCode
           class="w-full md:h-80 md:w-80 md:shrink-0"
           alt="Page not found"
+          loading="eager"
         />
 
         <div class="flex flex-col items-center md:items-start md:justify-center">

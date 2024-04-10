@@ -15,7 +15,7 @@ export default component$<AccordionProps>(({ title, description }) => {
         class="flex items-center justify-between border-t border-gray-400 pt-8"
         onClick$={() => (isOpen.value = !isOpen.value)}
       >
-        <h4 class="text-left">{title}</h4>
+        <div class="text-left text-lg font-medium">{title}</div>
         <div>
           {isOpen.value ? (
             <ChevronUpIcon class="h-6 w-6" />
@@ -24,7 +24,11 @@ export default component$<AccordionProps>(({ title, description }) => {
           )}
         </div>
       </button>
-      {isOpen.value && <p class="pr-12 pt-4 text-left">{description}</p>}
+      {isOpen.value && (
+        <p class="pr-12 pt-4 text-left" aria-hidden={isOpen.value}>
+          {description}
+        </p>
+      )}
     </div>
   );
 });

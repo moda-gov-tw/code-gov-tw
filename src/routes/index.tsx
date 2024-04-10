@@ -31,7 +31,7 @@ export default component$(() => {
         <div class="flex flex-col gap-8 md:gap-20">
           <div class="flex flex-col gap-8 rounded-lg bg-primary-800 px-6 py-10 text-white md:p-16 lg:flex-row-reverse">
             <WhatIsPublicCode
-              class="mx-auto h-60 w-60 shrink-0 md:h-80 md:w-80"
+              class="mx-auto shrink-0 md:h-80 md:w-80"
               alt="What is Public Code?"
             />
             <div class="flex flex-col">

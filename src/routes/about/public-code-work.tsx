@@ -33,6 +33,7 @@ export default component$(() => {
           ))}
         </div>
         <WorkAll
+          loading="eager"
           class="m-auto mt-8 md:mt-0 md:max-w-xl lg:max-w-2xl xl:max-w-3xl"
           alt="The operation of Public Code"
         />
