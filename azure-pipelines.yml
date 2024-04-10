@@ -1,8 +1,18 @@
-pool:
-  vmImage: ubuntu-latest
+trigger:
+  branches:
+    include:
+      - main
+    exclude:
+      - refs/heads/release
+      - refs/heads/pre-release
+pr:
+  - main
 
 stages:
-  - stage: Check
+  - stage: checkBeforeBuild
+    pool:
+      name: CI
+    condition: eq(variables['Build.Reason'], 'PullRequest')
     jobs:
       - job: Linter
         displayName: Lint Project
@@ -11,25 +21,26 @@ stages:
             inputs:
               versionSpec: "18.x"
           - task: CmdLine@2
-            displayName: Lint Project
             inputs:
               script: |
                 npm install
                 npm run lint
       - job: Formatting
-        displayName: Format Project
+        displayName: Formatting Check
         steps:
           - task: NodeTool@0
             inputs:
               versionSpec: "18.x"
           - task: CmdLine@2
-            displayName: Format Project
             inputs:
               script: |
                 npm install
                 npm run fmt.check
-  - stage: Build
-    dependsOn: Check
+  - stage: build
+    pool:
+      name: CI
+    condition: eq(variables['Build.Reason'], 'PullRequest')
+    dependsOn: checkBeforeBuild
     jobs:
       - job: Build
         displayName: Build
@@ -39,7 +50,6 @@ stages:
               versionSource: "spec"
               versionSpec: "18.x"
           - task: CmdLine@2
-            displayName: Build Project
             inputs:
               script: |
                 npm install
@@ -49,12 +59,133 @@ stages:
               targetPath: "./dist"
               artifact: "build"
               publishLocation: "pipeline"
-  - stage: Deploy
-    dependsOn: Build
-    condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/main'))
+  - stage: checkAfterBuild
+    pool:
+      name: CI
+    condition: eq(variables['Build.Reason'], 'PullRequest')
+    dependsOn: build
     jobs:
-      - job: Deploy
-        displayName: Deploy
+      - job: accessibility
+        displayName: Accessibility Check
+        steps:
+          - task: NodeTool@0
+            inputs:
+              versionSpec: "18.x"
+          - task: DownloadPipelineArtifact@2
+            inputs:
+              buildType: "current"
+              artifactName: "build"
+              targetPath: "./dist"
+          - task: CmdLine@2
+            displayName: Accessibility Check
+            inputs:
+              script: |
+                npm install -g accessibility-checker
+                npm run a11y.check
+          - task: PublishPipelineArtifact@1
+            condition: succeededOrFailed()
+            inputs:
+              targetPath: "./accessibility-check-results"
+              artifact: "accessibility-check-results"
+              publishLocation: "pipeline"
+      - job: lighthouseci
+        displayName: Lighthouse Check
+        steps:
+          - task: NodeTool@0
+            inputs:
+              versionSpec: "18.x"
+          - task: DownloadPipelineArtifact@2
+            inputs:
+              buildType: "current"
+              artifactName: "build"
+              targetPath: "./dist"
+          - task: CmdLine@2
+            displayName: Lighthouse CI
+            inputs:
+              script: |
+                npm install -g @lhci/cli@0.13.x
+                lhci autorun
+          - task: PublishPipelineArtifact@1
+            condition: succeededOrFailed()
+            inputs:
+              targetPath: "./.lighthouseci"
+              artifact: "lighthouse-results"
+              publishLocation: "pipeline"
+  - stage: pre_release
+    pool:
+      name: CD
+    displayName: Pre-release
+    dependsOn: []
+    condition: and(eq(variables['Build.SourceBranch'], 'refs/heads/main'), eq(variables['Build.Reason'], 'IndividualCI'))
+    jobs:
+      - job: build
+        displayName: Build
+        steps:
+          - checkout: self
+            persistCredentials: true
+            clean: true
+          - task: NodeTool@0
+            inputs:
+              versionSpec: "18.x"
+          - task: CmdLine@2
+            inputs:
+              script: |
+                npm install
+                npm run build
+          - task: PublishPipelineArtifact@1
+            inputs:
+              targetPath: "./dist"
+              artifact: "pre-release-build"
+              publishLocation: "pipeline"
+          - task: CmdLine@2
+            displayName: "commit changes"
+            inputs:
+              script: |
+                git config --global user.email "can_yu@mutix.co"
+                git config --global user.name "AzurePipeline"
+                git checkout -b pre-release
+                git add -f ./dist
+                git commit -m "[skip ci] Pre-release build"
+                git push -u -f origin pre-release
+  - stage: release
+    pool:
+      name: CD
+    displayName: Release
+    dependsOn: []
+    condition: and(eq(variables['Build.SourceBranch'], 'refs/heads/main'), eq(variables['Build.Reason'], 'Manual'))
+    jobs:
+      - job: build_release
+        displayName: Build
+        steps:
+          - checkout: self
+            persistCredentials: true
+            clean: true
+          - task: NodeTool@0
+            inputs:
+              versionSpec: "18.x"
+          - task: CmdLine@2
+            inputs:
+              script: |
+                npm install
+                npm run build
+          - task: PublishPipelineArtifact@1
+            inputs:
+              targetPath: "./dist"
+              artifact: "release-build"
+              publishLocation: "pipeline"
+          - task: CmdLine@2
+            displayName: "Commit changes"
+            inputs:
+              script: |
+                git config --global user.email "can_yu@mutix.co"
+                git config --global user.name "AzurePipeline"
+                git checkout -b release
+                git add -f ./dist
+                git commit -m "[skip ci] Release build"
+                git push -u -f origin release
+      - job: deploy_production
+        dependsOn: build_release
+        displayName: Deploy production
         steps:
           - task: GoTool@0
             inputs:
@@ -63,7 +194,6 @@ stages:
             displayName: Install pinata-go-cli and auth
             inputs:
               script: |
-                echo Write your commands here
                 git clone https://github.com/PinataCloud/pinata-go-cli
                 ls -al
                 cd pinata-go-cli
@@ -74,7 +204,7 @@ stages:
           - task: DownloadPipelineArtifact@2
             inputs:
               buildType: "current"
-              artifactName: "build"
+              artifactName: "release-build"
               targetPath: "./dist"
           - task: CmdLine@2
             name: pinata
@@ -91,18 +221,11 @@ stages:
                 fi
                 echo "##vso[task.setvariable variable=cid]$cid"
           - task: CmdLine@2
-            displayName: Update Web3 Gateway with CID
+            displayName: Update DNS with CID
             inputs:
               script: |
-                echo $(cid)
                 curl -X PATCH \
-                  --url "https://api.cloudflare.com/client/v4/zones/$(ZONE_ID)/web3/hostnames/$(HOSTNAME_ID)" \
+                  --url "https://api.cloudflare.com/client/v4/zones/$(ZONE_ID)/dns_records/$(DNS_RECORD_ID)" \
                   -H "Content-Type: application/json" \
                   -H "Authorization: Bearer $(CLOUDFLARE_API_TOKEN)" \
-                  -d '{"dnslink": "'/ipfs/$(cid)'"}' > response.json
-                cat response.json
-                result=`grep "success" response.json | awk '{print $2}' | tr -d ','`
-                if [ "$result" != "true" ]; then
-                  echo "Failed to update DNS"
-                  exit 1
-                fi
+                  --data '{"content": "'dnslink=/ipfs/$(cid)'"}' -f -s > /dev/null

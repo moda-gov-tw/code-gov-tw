@@ -48,3 +48,6 @@ accessibility-check-results
 
 # SonarQube
 .scannerwork
+
+# Lighthouseci
+.lighthouseci
