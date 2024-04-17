@@ -46,6 +46,8 @@ usedBy:
   - "[臺南市登革熱防疫現場數位工具](https://dengue.tncghb.gov.tw) (無障礙檢測結果：尚未檢測)"
 tw:
   countryExtensionVersion: "1.0.0"
+  techStacks:
+    - name: "Vue.js"
   vulnerabilityScanners:
     - "OWASP"
   # GitHub API 有資訊可以取得, 暫時手動填寫

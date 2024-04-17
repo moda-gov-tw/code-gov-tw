@@ -1,0 +1,61 @@
+publiccodeYmlVersion: 0.3.0
+name: moda-official-website-full
+url: "https://github.com/moda-gov-tw/moda-official-website-full"
+landingURL: "https://moda.gov.tw/"
+releaseDate: "2024-04-16"
+platforms:
+  - web
+categories:
+  - data-collection
+  - digital-citizenship
+developmentStatus: stable
+softwareType: standalone/web
+description:
+  zh-Hant:
+    localisedName: 數位發展部全球資訊網
+    shortDescription: >
+      數位發展部全球資訊網，體現政府與民眾、政府與政府間傳遞數位發展規劃理念及施政成果的網站，是完整的內容管理系統（Content Management System）；發展之初即規劃整體程式原始碼開放予各界，提供一套可以參考的解決方案，方便應用情境相似的機關團體 Fork 使用；網站以使用者為中心設計、符合網站無障礙規範、提供多國語系架構、支援全站靜態化。
+    features:
+      - 表單填寫 / 資料上傳
+      - 資料一覽 / 檢索
+    screenshots:
+      - /images/projects/moda-official-website-full/screenshot-1.png
+      - /images/projects/moda-official-website-full/screenshot-2.png
+      - /images/projects/moda-official-website-full/screenshot-3.png
+legal:
+  license: MIT License
+  repoOwner: 數位發展部 資訊處
+maintenance:
+  type: internal
+  contacts:
+    - name: 許展銘
+      email: "targee@moda.gov.tw"
+      phone: "02-23800402"
+localisation:
+  localisationReady: true
+  availableLanguages:
+    - zh-Hant
+    - en
+
+dependsOn: # 這個專案所依賴的技術, 系統層級的
+  open: # 開放原始碼的軟體
+    - name: C#
+
+usedBy:
+  - "[數位發展部全球資訊網](https://moda.gov.tw/) (無障礙檢測結果：AA) "
+
+tw:
+  countryExtensionVersion: "1.0.0"
+  # 這個專案所依賴的技術, 相較於 dependsOn, 這裡更細節的列出使用的技術
+  techStacks:
+    - name: "ASP.NET Core"
+    - name: "SQL Server"
+    - name: "JavaScript"
+    - name: "HTML/CSS"
+  vulnerabilityScanners:
+    - "Checkmarx"
+  accessibilityConformance: "AA"
+  # GitHub API 有資訊可以取得, 暫時手動填寫
+  createdDate: "2024-04-03" # YYYY-MM-DD, 這個專案的建立日期
+
+# 更多定義可以參考官方文件 https://yml.publiccode.tools/

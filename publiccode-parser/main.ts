@@ -179,7 +179,7 @@ console.log("Collected filterValues values:", filterValues);
 const finalFilters = {
   platforms: [...filterValues.platforms],
   categories: [...filterValues.categories],
-  repoOwners: [...filterValues.repoOwners, "臺北市政府", "英國 gov.uk"],
+  repoOwners: [...filterValues.repoOwners, "英國 gov.uk"],
   features: [...filterValues.features],
   techStacks: [...filterValues.techStacks],
 };

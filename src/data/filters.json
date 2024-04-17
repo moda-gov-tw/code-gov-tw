@@ -1,5 +1,10 @@
 {
-  "platforms": ["web", "windows", "android", "ios"],
+  "platforms": [
+    "web",
+    "windows",
+    "android",
+    "ios"
+  ],
   "categories": [
     "data-collection",
     "data-visualization",
@@ -49,12 +54,18 @@
     "Python",
     "ASP.NET Core",
     "C#",
+    "SQL Server",
+    "JavaScript",
+    "HTML/CSS",
     "Open Document Format",
     "C++",
     "Lighthouse",
     "Jekyll",
     "Cloud Translation API",
     "Java",
-    "Flutter"
+    "Flutter",
+    "Go",
+    "PostgreSQL",
+    "Redis"
   ]
 }

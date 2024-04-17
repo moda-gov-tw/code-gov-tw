@@ -5,7 +5,9 @@
     "name": "civic-tech-experimental-field-dengue-backend",
     "url": "https://github.com/moda-gov-tw/civic-tech-experimental-field-dengue-backend",
     "releaseDate": "2023-12-14",
-    "platforms": ["web"],
+    "platforms": [
+      "web"
+    ],
     "categories": [
       "data-collection",
       "data-visualization",
@@ -26,7 +28,9 @@
           "資料一覽 / 檢索",
           "數據呈現"
         ],
-        "screenshots": ["/images/projects/dengue/backend.png"]
+        "screenshots": [
+          "/images/projects/dengue/backend.png"
+        ]
       }
     },
     "legal": {
@@ -67,7 +71,9 @@
           "name": "Vue.js"
         }
       ],
-      "vulnerabilityScanners": ["OWASP"],
+      "vulnerabilityScanners": [
+        "OWASP"
+      ],
       "createdDate": "2023-11-22"
     },
     "filterTags": {
@@ -78,8 +84,14 @@
         "資料一覽 / 檢索",
         "數據呈現"
       ],
-      "techStacks": ["Node.js", "Firebase Realtime Database", "Vue.js"],
-      "repoOwners": ["數位發展部"]
+      "techStacks": [
+        "Node.js",
+        "Firebase Realtime Database",
+        "Vue.js"
+      ],
+      "repoOwners": [
+        "數位發展部"
+      ]
     }
   },
   {
@@ -88,7 +100,9 @@
     "name": "civic-tech-experimental-field-dengue-frontend",
     "url": "https://github.com/moda-gov-tw/civic-tech-experimental-field-dengue-frontend",
     "releaseDate": "2023-12-14",
-    "platforms": ["web"],
+    "platforms": [
+      "web"
+    ],
     "categories": [
       "data-collection",
       "data-visualization",
@@ -109,7 +123,9 @@
           "資料一覽 / 檢索",
           "數據呈現"
         ],
-        "screenshots": ["/images/projects/dengue/frontend.png"]
+        "screenshots": [
+          "/images/projects/dengue/frontend.png"
+        ]
       }
     },
     "legal": {
@@ -146,7 +162,14 @@
     ],
     "tw": {
       "countryExtensionVersion": "1.0.0",
-      "vulnerabilityScanners": ["OWASP"],
+      "techStacks": [
+        {
+          "name": "Vue.js"
+        }
+      ],
+      "vulnerabilityScanners": [
+        "OWASP"
+      ],
       "createdDate": "2023-11-22"
     },
     "filterTags": {
@@ -157,8 +180,14 @@
         "資料一覽 / 檢索",
         "數據呈現"
       ],
-      "techStacks": ["Node.js", "MongoDB"],
-      "repoOwners": ["數位發展部"]
+      "techStacks": [
+        "Node.js",
+        "MongoDB",
+        "Vue.js"
+      ],
+      "repoOwners": [
+        "數位發展部"
+      ]
     }
   },
   {
@@ -168,7 +197,9 @@
     "url": "https://github.com/moda-gov-tw/civic-tech-experimental-field-find-babycare-backend",
     "landingURL": "https://findbabycare.com/",
     "releaseDate": "2023-12-14",
-    "platforms": ["web"],
+    "platforms": [
+      "web"
+    ],
     "categories": [
       "data-collection",
       "data-visualization",
@@ -182,7 +213,11 @@
       "zh-Hant": {
         "localisedName": "公托報名管理系統（後端）",
         "shortDescription": "本案為「112年數位發展部公民科技試驗場域示範案」由「一起加油陣線」團隊開發的「公托申請數位流程優化」透過與臺中市政府社會局的合作，提供既有公托申請流程解方，開發一申請公托的整合平臺，提供申請、查詢、審核及管理等功能。本案為示範案例尚未正式上線提供服務。\n",
-        "features": ["表單填寫/資料上傳", "個案管理", "地圖資訊呈現"],
+        "features": [
+          "表單填寫/資料上傳",
+          "個案管理",
+          "地圖資訊呈現"
+        ],
         "screenshots": [
           "/images/projects/find-babycare/01_daycare_map.png",
           "/images/projects/find-babycare/02_application _process.png",
@@ -226,13 +261,25 @@
           "name": "Vue.js"
         }
       ],
-      "vulnerabilityScanners": ["OWASP"],
+      "vulnerabilityScanners": [
+        "OWASP"
+      ],
       "createdDate": "2023-11-22"
     },
     "filterTags": {
-      "features": ["表單填寫/資料上傳", "個案管理", "地圖資訊呈現"],
-      "techStacks": ["PHP", "MySQL", "Vue.js"],
-      "repoOwners": ["數位發展部"]
+      "features": [
+        "表單填寫/資料上傳",
+        "個案管理",
+        "地圖資訊呈現"
+      ],
+      "techStacks": [
+        "PHP",
+        "MySQL",
+        "Vue.js"
+      ],
+      "repoOwners": [
+        "數位發展部"
+      ]
     }
   },
   {
@@ -242,7 +289,9 @@
     "url": "https://github.com/moda-gov-tw/civic-tech-experimental-field-find-babycare-frontend",
     "landingURL": "https://findbabycare.com/",
     "releaseDate": "2023-12-14",
-    "platforms": ["web"],
+    "platforms": [
+      "web"
+    ],
     "categories": [
       "data-collection",
       "data-visualization",
@@ -256,7 +305,11 @@
       "zh-Hant": {
         "localisedName": "公托報名管理系統（前端）",
         "shortDescription": "本案為「112年數位發展部公民科技試驗場域示範案」由「一起加油陣線」團隊開發的「公托申請數位流程優化」透過與臺中市政府社會局的合作，提供既有公托申請流程解方，開發一申請公托的整合平臺，提供申請、查詢、審核及管理等功能。本案為示範案例尚未正式上線提供服務。\n",
-        "features": ["表單填寫 / 資料上傳", "個案管理", "地圖資訊呈現"],
+        "features": [
+          "表單填寫 / 資料上傳",
+          "個案管理",
+          "地圖資訊呈現"
+        ],
         "screenshots": [
           "/images/projects/find-babycare/01_daycare_map.png",
           "/images/projects/find-babycare/02_application _process.png",
@@ -298,13 +351,24 @@
           "name": "Vue.js"
         }
       ],
-      "vulnerabilityScanners": ["OWASP"],
+      "vulnerabilityScanners": [
+        "OWASP"
+      ],
       "createdDate": "2023-11-22"
     },
     "filterTags": {
-      "features": ["表單填寫 / 資料上傳", "個案管理", "地圖資訊呈現"],
-      "techStacks": ["Node.js", "Vue.js"],
-      "repoOwners": ["數位發展部"]
+      "features": [
+        "表單填寫 / 資料上傳",
+        "個案管理",
+        "地圖資訊呈現"
+      ],
+      "techStacks": [
+        "Node.js",
+        "Vue.js"
+      ],
+      "repoOwners": [
+        "數位發展部"
+      ]
     }
   },
   {
@@ -314,15 +378,22 @@
     "url": "https://github.com/moda-gov-tw/code-gov-tw",
     "landingURL": "https://code.gov.tw",
     "releaseDate": "2024-03-29",
-    "platforms": ["web"],
-    "categories": ["data-collection", "digital-citizenship"],
+    "platforms": [
+      "web"
+    ],
+    "categories": [
+      "data-collection",
+      "digital-citizenship"
+    ],
     "developmentStatus": "development",
     "softwareType": "standalone/web",
     "description": {
       "zh-Hant": {
         "localisedName": "公共程式平臺",
         "shortDescription": "數位發展部 Ministry of Digital Affairs (moda) 作為臺灣數位發展的「mòda（馬達）」，將連結「公民」與「技術」、提升「產業」及「安全」，實現智慧國家的願景，並以臺灣模式持續引領世界。\n",
-        "features": ["資料一覽 / 檢索"]
+        "features": [
+          "資料一覽 / 檢索"
+        ]
       }
     },
     "legal": {
@@ -341,7 +412,9 @@
     },
     "localisation": {
       "localisationReady": true,
-      "availableLanguages": ["zh-Hant"]
+      "availableLanguages": [
+        "zh-Hant"
+      ]
     },
     "dependsOn": {
       "open": [
@@ -351,7 +424,9 @@
         }
       ]
     },
-    "usedBy": ["[公共程式平臺](https://code.gov.tw) (無障礙檢測結果：AAA)"],
+    "usedBy": [
+      "[公共程式平臺](https://code.gov.tw) (無障礙檢測結果：AAA)"
+    ],
     "tw": {
       "countryExtensionVersion": "1.0.0",
       "techStacks": [
@@ -375,9 +450,18 @@
       "createdDate": "2024-02-01"
     },
     "filterTags": {
-      "features": ["資料一覽 / 檢索"],
-      "techStacks": ["Node.js", "TypeScript", "Qwik", "Tailwind CSS"],
-      "repoOwners": ["數位發展部"]
+      "features": [
+        "資料一覽 / 檢索"
+      ],
+      "techStacks": [
+        "Node.js",
+        "TypeScript",
+        "Qwik",
+        "Tailwind CSS"
+      ],
+      "repoOwners": [
+        "數位發展部"
+      ]
     }
   },
   {
@@ -386,15 +470,22 @@
     "name": "gov-uk-forms-admin",
     "url": "https://github.com/moda-gov-tw/alphagov.forms-admin/",
     "releaseDate": "2023-11-08",
-    "platforms": ["web"],
-    "categories": ["data-collection", "digital-citizenship"],
+    "platforms": [
+      "web"
+    ],
+    "categories": [
+      "data-collection",
+      "digital-citizenship"
+    ],
     "developmentStatus": "development",
     "softwareType": "standalone/web",
     "description": {
       "zh-Hant": {
         "localisedName": "GOV.UK Forms Admin",
         "shortDescription": "GOV.UK Forms 是英國 GDS 政府數位服務團隊維運之公部門線上表單平臺。此服務開放程式原始碼，可提供政府各機關與單位利用該平臺之模版，建立可供外部填寫之簡易表單。\n",
-        "features": ["表單填寫 / 資料上傳"]
+        "features": [
+          "表單填寫 / 資料上傳"
+        ]
       }
     },
     "legal": {
@@ -413,7 +504,10 @@
     },
     "localisation": {
       "localisationReady": true,
-      "availableLanguages": ["en", "zh-Hant"]
+      "availableLanguages": [
+        "en",
+        "zh-Hant"
+      ]
     },
     "dependsOn": {
       "open": [
@@ -437,9 +531,16 @@
       "createdDate": "2023-02-03"
     },
     "filterTags": {
-      "features": ["表單填寫 / 資料上傳"],
-      "techStacks": ["Ruby", "Node.js"],
-      "repoOwners": ["數位發展部"]
+      "features": [
+        "表單填寫 / 資料上傳"
+      ],
+      "techStacks": [
+        "Ruby",
+        "Node.js"
+      ],
+      "repoOwners": [
+        "數位發展部"
+      ]
     }
   },
   {
@@ -448,15 +549,22 @@
     "name": "gov-uk-forms-product-pages",
     "url": "https://github.com/moda-gov-tw/alphagov.forms-product-page/",
     "releaseDate": "2023-11-08",
-    "platforms": ["web"],
-    "categories": ["data-collection", "digital-citizenship"],
+    "platforms": [
+      "web"
+    ],
+    "categories": [
+      "data-collection",
+      "digital-citizenship"
+    ],
     "developmentStatus": "development",
     "softwareType": "standalone/web",
     "description": {
       "zh-Hant": {
         "localisedName": "GOV.UK Forms Product Pages",
         "shortDescription": "GOV.UK Forms 是英國 GDS 政府數位服務團隊維運之公部門線上表單平臺。此服務開放程式原始碼，可提供政府各機關與單位利用該平臺之模版，建立可供外部填寫之簡易表單。\n",
-        "features": ["表單填寫 / 資料上傳"]
+        "features": [
+          "表單填寫 / 資料上傳"
+        ]
       }
     },
     "legal": {
@@ -475,7 +583,10 @@
     },
     "localisation": {
       "localisationReady": true,
-      "availableLanguages": ["en", "zh-Hant"]
+      "availableLanguages": [
+        "en",
+        "zh-Hant"
+      ]
     },
     "dependsOn": {
       "open": [
@@ -499,9 +610,16 @@
       "createdDate": "2023-02-03"
     },
     "filterTags": {
-      "features": ["表單填寫 / 資料上傳"],
-      "techStacks": ["Ruby", "Node.js"],
-      "repoOwners": ["數位發展部"]
+      "features": [
+        "表單填寫 / 資料上傳"
+      ],
+      "techStacks": [
+        "Ruby",
+        "Node.js"
+      ],
+      "repoOwners": [
+        "數位發展部"
+      ]
     }
   },
   {
@@ -510,7 +628,9 @@
     "name": "gov-uk-notify",
     "url": "https://github.com/moda-gov-tw/notifications-admin/",
     "releaseDate": "2023-11-08",
-    "platforms": ["web"],
+    "platforms": [
+      "web"
+    ],
     "categories": [
       "data-collection",
       "content-management",
@@ -522,7 +642,9 @@
       "zh-Hant": {
         "localisedName": "GOV.UK Notify",
         "shortDescription": "GOV.UK Notify 是英國 GDS 政府數位服務團隊維運的公部門業務訊息傳遞服務平臺。業務訊息包含電子郵件、簡訊、信函等。讓使用者無需程式編碼能力也可以編輯預設訊息範本、追蹤訊息傳送狀態、手動或自動傳送訊息。此程式提供開放原始碼，各單位可以整合需要的功能至自己的業務系統或平臺以增加訊息傳遞與通知的功能。\n",
-        "features": ["公共服務通知"]
+        "features": [
+          "公共服務通知"
+        ]
       }
     },
     "legal": {
@@ -542,7 +664,10 @@
     },
     "localisation": {
       "localisationReady": true,
-      "availableLanguages": ["en", "zh-Hant"]
+      "availableLanguages": [
+        "en",
+        "zh-Hant"
+      ]
     },
     "dependsOn": {
       "open": [
@@ -566,9 +691,16 @@
       "createdDate": "2022-11-16"
     },
     "filterTags": {
-      "features": ["公共服務通知"],
-      "techStacks": ["Python", "Node.js"],
-      "repoOwners": ["數位發展部"]
+      "features": [
+        "公共服務通知"
+      ],
+      "techStacks": [
+        "Python",
+        "Node.js"
+      ],
+      "repoOwners": [
+        "數位發展部"
+      ]
     }
   },
   {
@@ -577,15 +709,22 @@
     "name": "italia-publiccode-editor",
     "url": "https://github.com/moda-gov-tw/italia-publiccode-editor",
     "releaseDate": "2023-11-08",
-    "platforms": ["web"],
-    "categories": ["data-collection", "digital-citizenship"],
+    "platforms": [
+      "web"
+    ],
+    "categories": [
+      "data-collection",
+      "digital-citizenship"
+    ],
     "developmentStatus": "development",
     "softwareType": "standalone/web",
     "description": {
       "zh-Hant": {
         "localisedName": "publiccode.yml Editor",
         "shortDescription": "這個應用程式幫助您為您的專案創建並驗證一個 publiccode.yml 檔案。只需填寫表單即可生成一個符合最新標準的 YAML 檔案，然後您可以下載或複製到您的專案根目錄中。您也可以使用這個應用程式來檢查並糾正現有的 publiccode.yml 檔案。只需上傳檔案進行導入，應用程式將進行驗證並幫助修正任何問題。\n",
-        "features": ["編輯器"]
+        "features": [
+          "編輯器"
+        ]
       }
     },
     "legal": {
@@ -604,7 +743,10 @@
     },
     "localisation": {
       "localisationReady": true,
-      "availableLanguages": ["en", "zh-Hant"]
+      "availableLanguages": [
+        "en",
+        "zh-Hant"
+      ]
     },
     "dependsOn": {
       "open": [
@@ -623,9 +765,15 @@
       "createdDate": "2022-12-01"
     },
     "filterTags": {
-      "features": ["編輯器"],
-      "techStacks": ["Node.js"],
-      "repoOwners": ["數位發展部"]
+      "features": [
+        "編輯器"
+      ],
+      "techStacks": [
+        "Node.js"
+      ],
+      "repoOwners": [
+        "數位發展部"
+      ]
     }
   },
   {
@@ -634,15 +782,22 @@
     "name": "publiccodeyml-publiccode.yml",
     "url": "https://github.com/moda-gov-tw/publiccodeyml-publiccode.yml/",
     "releaseDate": "2023-11-08",
-    "platforms": ["web"],
-    "categories": ["data-collection", "digital-citizenship"],
+    "platforms": [
+      "web"
+    ],
+    "categories": [
+      "data-collection",
+      "digital-citizenship"
+    ],
     "developmentStatus": "development",
     "softwareType": "standalone/web",
     "description": {
       "zh-Hant": {
         "localisedName": "publiccode.yml Standard",
         "shortDescription": "一種針對公共軟體的詮釋資料（metadata）描述標準，這標準對開發者以及技術背景較淺的人士都易於使用，目的是讓由公共行政機關和公共組織開發的軟體容易被發現。\n",
-        "features": ["標準"]
+        "features": [
+          "標準"
+        ]
       }
     },
     "legal": {
@@ -661,7 +816,10 @@
     },
     "localisation": {
       "localisationReady": true,
-      "availableLanguages": ["en", "zh-Hant"]
+      "availableLanguages": [
+        "en",
+        "zh-Hant"
+      ]
     },
     "dependsOn": {
       "open": [
@@ -672,7 +830,9 @@
     },
     "applicationSuite": "publiccode.yml",
     "isBasedOn": "https://github.com/publiccodeyml/publiccode.yml",
-    "usedBy": ["[公共程式平臺](https://code.gov.tw) (無障礙檢測結果：AAA)"],
+    "usedBy": [
+      "[公共程式平臺](https://code.gov.tw) (無障礙檢測結果：AAA)"
+    ],
     "tw": {
       "countryExtensionVersion": "1.0.0",
       "vulnerabilityScanners": [
@@ -681,9 +841,15 @@
       "createdDate": "2022-12-01"
     },
     "filterTags": {
-      "features": ["標準"],
-      "techStacks": ["Node.js"],
-      "repoOwners": ["數位發展部"]
+      "features": [
+        "標準"
+      ],
+      "techStacks": [
+        "Node.js"
+      ],
+      "repoOwners": [
+        "數位發展部"
+      ]
     }
   },
   {
@@ -693,15 +859,24 @@
     "url": "https://github.com/moda-gov-tw/moda-ghg-inventory-system-frontend",
     "landingURL": "https://ghg.moda.gov.tw/Member/Login",
     "releaseDate": "2023-12-18",
-    "platforms": ["web"],
-    "categories": ["data-collection", "digital-citizenship"],
+    "platforms": [
+      "web"
+    ],
+    "categories": [
+      "data-collection",
+      "digital-citizenship"
+    ],
     "developmentStatus": "stable",
     "softwareType": "standalone/web",
     "description": {
       "zh-Hant": {
         "localisedName": "數位產業自願性溫室氣體盤查系統",
         "shortDescription": "為落實臺灣2050淨零目標, 基於公共程式碼的理念，以公私協力方式發展可行之數位工具, 以數位部為首，示範將公共程式碼模式導入公部門及數位產業，推動政府開放資料、與民協作的倡議, 建立碳盤查系統公共程式，提供各界運用，降低自主碳盤查門檻。\n",
-        "features": ["表單填寫 / 資料上傳", "個案管理", "數據呈現"],
+        "features": [
+          "表單填寫 / 資料上傳",
+          "個案管理",
+          "數據呈現"
+        ],
         "screenshots": [
           "/images/projects/moda-ghg-inventory-system-frontend/screenshot.png"
         ]
@@ -743,13 +918,25 @@
     ],
     "tw": {
       "countryExtensionVersion": "1.0.0",
-      "vulnerabilityScanners": ["HCL AppScan"],
+      "vulnerabilityScanners": [
+        "HCL AppScan"
+      ],
       "createdDate": "2023-11-24"
     },
     "filterTags": {
-      "features": ["表單填寫 / 資料上傳", "個案管理", "數據呈現"],
-      "techStacks": ["ASP.NET Core", "C#", "MySQL"],
-      "repoOwners": ["數位發展部"]
+      "features": [
+        "表單填寫 / 資料上傳",
+        "個案管理",
+        "數據呈現"
+      ],
+      "techStacks": [
+        "ASP.NET Core",
+        "C#",
+        "MySQL"
+      ],
+      "repoOwners": [
+        "數位發展部"
+      ]
     }
   },
   {
@@ -758,15 +945,22 @@
     "name": "matrix-org.matrix-react-sdk",
     "url": "https://github.com/moda-gov-tw/matrix-org.matrix-react-sdk/",
     "releaseDate": "2023-11-08",
-    "platforms": ["web"],
-    "categories": ["data-collection", "digital-citizenship"],
+    "platforms": [
+      "web"
+    ],
+    "categories": [
+      "data-collection",
+      "digital-citizenship"
+    ],
     "developmentStatus": "development",
     "softwareType": "standalone/web",
     "description": {
       "zh-Hant": {
         "localisedName": "Matrix Client (Element Series)",
         "shortDescription": "Element 是 Matrix 核心團隊基於去中心化標準開發的開放原始碼通訊軟體。可應用網際網路 IP based 進行即時通訊。基於其開放特性，可整合其他程式，快速建構即時交換資料系統。除此之外，亦可與 Slack、Telegram 等其它通訊軟體進行串聯。\n",
-        "features": ["即時通訊"]
+        "features": [
+          "即時通訊"
+        ]
       }
     },
     "legal": {
@@ -785,7 +979,10 @@
     },
     "localisation": {
       "localisationReady": true,
-      "availableLanguages": ["en", "zh-Hant"]
+      "availableLanguages": [
+        "en",
+        "zh-Hant"
+      ]
     },
     "dependsOn": {
       "open": [
@@ -809,27 +1006,142 @@
       "createdDate": "2022-12-16"
     },
     "filterTags": {
-      "features": ["即時通訊"],
-      "techStacks": ["Ruby", "Node.js"],
-      "repoOwners": ["數位發展部"]
+      "features": [
+        "即時通訊"
+      ],
+      "techStacks": [
+        "Ruby",
+        "Node.js"
+      ],
+      "repoOwners": [
+        "數位發展部"
+      ]
     }
   },
   {
     "id": 12,
     "publiccodeYmlVersion": "0.3.0",
+    "name": "moda-official-website-full",
+    "url": "https://github.com/moda-gov-tw/moda-official-website-full",
+    "landingURL": "https://moda.gov.tw/",
+    "releaseDate": "2024-04-16",
+    "platforms": [
+      "web"
+    ],
+    "categories": [
+      "data-collection",
+      "digital-citizenship"
+    ],
+    "developmentStatus": "stable",
+    "softwareType": "standalone/web",
+    "description": {
+      "zh-Hant": {
+        "localisedName": "數位發展部全球資訊網",
+        "shortDescription": "數位發展部全球資訊網，體現政府與民眾、政府與政府間傳遞數位發展規劃理念及施政成果的網站，是完整的內容管理系統（Content Management System）；發展之初即規劃整體程式原始碼開放予各界，提供一套可以參考的解決方案，方便應用情境相似的機關團體 Fork 使用；網站以使用者為中心設計、符合網站無障礙規範、提供多國語系架構、支援全站靜態化。\n",
+        "features": [
+          "表單填寫 / 資料上傳",
+          "資料一覽 / 檢索"
+        ],
+        "screenshots": [
+          "/images/projects/moda-official-website-full/screenshot-1.png",
+          "/images/projects/moda-official-website-full/screenshot-2.png",
+          "/images/projects/moda-official-website-full/screenshot-3.png"
+        ]
+      }
+    },
+    "legal": {
+      "license": "MIT License",
+      "repoOwner": "數位發展部 資訊處"
+    },
+    "maintenance": {
+      "type": "internal",
+      "contacts": [
+        {
+          "name": "許展銘",
+          "email": "targee@moda.gov.tw",
+          "phone": "02-23800402"
+        }
+      ]
+    },
+    "localisation": {
+      "localisationReady": true,
+      "availableLanguages": [
+        "zh-Hant",
+        "en"
+      ]
+    },
+    "dependsOn": {
+      "open": [
+        {
+          "name": "C#"
+        }
+      ]
+    },
+    "usedBy": [
+      "[數位發展部全球資訊網](https://moda.gov.tw/) (無障礙檢測結果：AA) "
+    ],
+    "tw": {
+      "countryExtensionVersion": "1.0.0",
+      "techStacks": [
+        {
+          "name": "ASP.NET Core"
+        },
+        {
+          "name": "SQL Server"
+        },
+        {
+          "name": "JavaScript"
+        },
+        {
+          "name": "HTML/CSS"
+        }
+      ],
+      "vulnerabilityScanners": [
+        "Checkmarx"
+      ],
+      "accessibilityConformance": "AA",
+      "createdDate": "2024-04-03"
+    },
+    "filterTags": {
+      "features": [
+        "表單填寫 / 資料上傳",
+        "資料一覽 / 檢索"
+      ],
+      "techStacks": [
+        "C#",
+        "ASP.NET Core",
+        "SQL Server",
+        "JavaScript",
+        "HTML/CSS"
+      ],
+      "repoOwners": [
+        "數位發展部"
+      ]
+    }
+  },
+  {
+    "id": 13,
+    "publiccodeYmlVersion": "0.3.0",
     "name": "MODA_ODF_Application_Tools",
     "url": "https://github.com/MODAODF/MODA_ODF_Application_Tools",
     "landingURL": "https://moda.gov.tw/digital-affairs/digital-service/app-services/248",
     "releaseDate": "2024-01-23",
-    "platforms": ["windows"],
-    "categories": ["document-management", "office"],
+    "platforms": [
+      "windows"
+    ],
+    "categories": [
+      "document-management",
+      "office"
+    ],
     "developmentStatus": "stable",
     "softwareType": "addon",
     "description": {
       "zh-Hant": {
         "localisedName": "ODF文件應用工具",
         "shortDescription": "為引導公務機關從文件製作、保存均以開放文件格式(ODF)處理，且使政府ODF文件能跨機關流通，本部基於開放文件軟體，發展適合公務機關使用之「ODF文件應用工具」，提供編輯標準ODF文件及支援CNS11643中文標準交換碼全字庫，並提供 Q＆A 問題回報程式，建立客服流程及諮詢服務，並將相關問題與回應提供其他使用者查詢。\n",
-        "features": ["文書處理"],
+        "features": [
+          "文書處理"
+        ],
         "screenshots": [
           "/images/projects/odf-application-tools/screenshot-1.png",
           "/images/projects/odf-application-tools/screenshot-2.png",
@@ -864,33 +1176,52 @@
         }
       ]
     },
-    "usedBy": ["各政府機關"],
+    "usedBy": [
+      "各政府機關"
+    ],
     "tw": {
       "countryExtensionVersion": "1.0.0",
-      "vulnerabilityScanners": ["SonarQube"],
+      "vulnerabilityScanners": [
+        "SonarQube"
+      ],
       "createdDate": "2022-03-06"
     },
     "filterTags": {
-      "features": ["文書處理"],
-      "techStacks": ["Open Document Format", "C++"],
-      "repoOwners": ["數位發展部"]
+      "features": [
+        "文書處理"
+      ],
+      "techStacks": [
+        "Open Document Format",
+        "C++"
+      ],
+      "repoOwners": [
+        "數位發展部"
+      ]
     }
   },
   {
-    "id": 13,
+    "id": 14,
     "publiccodeYmlVersion": "0.3.0",
     "name": "opendata-frontend",
     "url": "https://github.com/moda-gov-tw/opendata-frontend",
     "releaseDate": "2022-03-29",
-    "platforms": ["web"],
-    "categories": ["data-collection", "digital-citizenship"],
+    "platforms": [
+      "web"
+    ],
+    "categories": [
+      "data-collection",
+      "digital-citizenship"
+    ],
     "developmentStatus": "stable",
     "softwareType": "standalone/web",
     "description": {
       "zh-Hant": {
         "localisedName": "政府資料開放平臺前端",
         "shortDescription": "本專案為政府資料開放平臺前端開源，透過開源程式提供政府機關或民間團體，作為發展資料開放應用的參考，共同為政府開放資料盡一份心力。\n",
-        "features": ["資料一覽 / 檢索", "個案管理"],
+        "features": [
+          "資料一覽 / 檢索",
+          "個案管理"
+        ],
         "screenshots": [
           "/images/projects/opendata-frontend/screenshot-1.png",
           "/images/projects/opendata-frontend/screenshot-2.png"
@@ -913,7 +1244,10 @@
     },
     "localisation": {
       "localisationReady": true,
-      "availableLanguages": ["zh-Hant", "en"]
+      "availableLanguages": [
+        "zh-Hant",
+        "en"
+      ]
     },
     "dependsOn": {
       "open": [
@@ -923,7 +1257,9 @@
         }
       ]
     },
-    "usedBy": ["[政府資料開放平臺](https://data.gov.tw/) (無障礙檢測結果：AA)"],
+    "usedBy": [
+      "[政府資料開放平臺](https://data.gov.tw/) (無障礙檢測結果：AA)"
+    ],
     "tw": {
       "countryExtensionVersion": "1.0.0",
       "techStacks": [
@@ -931,7 +1267,9 @@
           "name": "Vue.js"
         }
       ],
-      "vulnerabilityScanners": ["SonarQube"],
+      "vulnerabilityScanners": [
+        "SonarQube"
+      ],
       "openapi": [
         {
           "name": "資料集列表API",
@@ -947,27 +1285,41 @@
       "createdDate": "2013-11-22"
     },
     "filterTags": {
-      "features": ["資料一覽 / 檢索", "個案管理"],
-      "techStacks": ["Node.js", "Vue.js"],
-      "repoOwners": ["數位發展部"]
+      "features": [
+        "資料一覽 / 檢索",
+        "個案管理"
+      ],
+      "techStacks": [
+        "Node.js",
+        "Vue.js"
+      ],
+      "repoOwners": [
+        "數位發展部"
+      ]
     }
   },
   {
-    "id": 14,
+    "id": 15,
     "publiccodeYmlVersion": "0.3.0",
     "name": "pdis/lighthouse",
     "url": "https://github.com/PDIS/lighthouse",
     "landingURL": "https://lighthouse.pdis.run/",
     "releaseDate": "2023-07-18",
-    "platforms": ["web"],
-    "categories": ["data-analytics"],
+    "platforms": [
+      "web"
+    ],
+    "categories": [
+      "data-analytics"
+    ],
     "developmentStatus": "stable",
     "softwareType": "standalone/web",
     "description": {
       "zh-Hant": {
         "localisedName": "Lighthouse 平臺",
         "shortDescription": "Lighthouse 平臺使用 GitHub Actions 自動執行 Lighthouse 掃描，將報告集中展示。 Lighthouse 是一個開源的自動化工具，用於改善網頁的效能、品質和正確性。 Lighthouse 對網頁進行一系列測試並產生一份報告及評分。透過報告，我們可以審視未通過測試的項目以了解如何改進。\n",
-        "features": ["網頁效能檢測"]
+        "features": [
+          "網頁效能檢測"
+        ]
       }
     },
     "legal": {
@@ -986,9 +1338,14 @@
     },
     "localisation": {
       "localisationReady": false,
-      "availableLanguages": ["zh-Hant", "en"]
+      "availableLanguages": [
+        "zh-Hant",
+        "en"
+      ]
     },
-    "usedBy": ["[Lighthouse 平臺](https://lighthouse.pdis.run/)"],
+    "usedBy": [
+      "[Lighthouse 平臺](https://lighthouse.pdis.run/)"
+    ],
     "tw": {
       "countryExtensionVersion": "1.0.0",
       "techStacks": [
@@ -996,31 +1353,47 @@
           "name": "Lighthouse"
         }
       ],
-      "vulnerabilityScanners": ["GitHub CodeQL", "GitHub Dependabot Alerts"],
+      "vulnerabilityScanners": [
+        "GitHub CodeQL",
+        "GitHub Dependabot Alerts"
+      ],
       "accessibilityConformance": null
     },
     "filterTags": {
-      "features": ["網頁效能檢測"],
-      "techStacks": ["Lighthouse"],
-      "repoOwners": ["行政院公共數位創新空間（PDIS）"]
+      "features": [
+        "網頁效能檢測"
+      ],
+      "techStacks": [
+        "Lighthouse"
+      ],
+      "repoOwners": [
+        "行政院公共數位創新空間（PDIS）"
+      ]
     }
   },
   {
-    "id": 15,
+    "id": 16,
     "publiccodeYmlVersion": "0.3.0",
     "name": "pdis/web-jekyll",
     "url": "https://github.com/PDIS/web-jekyll",
     "landingURL": "https://pdis.nat.gov.tw/",
     "releaseDate": "2017-09-05",
-    "platforms": ["web"],
-    "categories": ["blog"],
+    "platforms": [
+      "web"
+    ],
+    "categories": [
+      "blog"
+    ],
     "developmentStatus": "stable",
     "softwareType": "standalone/web",
     "description": {
       "zh-Hant": {
         "localisedName": "行政院公共數位創新空間（PDIS）部落格",
         "shortDescription": "行政院公共數位創新空間（PDIS）部落格。 一套使用 Jekyll 靜態網站生成器，從純文字的 markdown 文件產生靜態 HTML 的系統。具備中、英文雙語系。\n",
-        "features": ["靜態網站產生器", "自動翻譯"]
+        "features": [
+          "靜態網站產生器",
+          "自動翻譯"
+        ]
       }
     },
     "legal": {
@@ -1039,7 +1412,10 @@
     },
     "localisation": {
       "localisationReady": true,
-      "availableLanguages": ["zh-Hant", "en"]
+      "availableLanguages": [
+        "zh-Hant",
+        "en"
+      ]
     },
     "usedBy": [
       "[行政院公共數位創新空間（PDIS）部落格](https://pdis.nat.gov.tw/)"
@@ -1054,30 +1430,49 @@
           "name": "Cloud Translation API"
         }
       ],
-      "vulnerabilityScanners": ["GitHub CodeQL", "GitHub Dependabot Alerts"],
+      "vulnerabilityScanners": [
+        "GitHub CodeQL",
+        "GitHub Dependabot Alerts"
+      ],
       "accessibilityConformance": null
     },
     "filterTags": {
-      "features": ["靜態網站產生器", "自動翻譯"],
-      "techStacks": ["Jekyll", "Cloud Translation API"],
-      "repoOwners": ["行政院公共數位創新空間（PDIS）"]
+      "features": [
+        "靜態網站產生器",
+        "自動翻譯"
+      ],
+      "techStacks": [
+        "Jekyll",
+        "Cloud Translation API"
+      ],
+      "repoOwners": [
+        "行政院公共數位創新空間（PDIS）"
+      ]
     }
   },
   {
-    "id": 16,
+    "id": 17,
     "publiccodeYmlVersion": "0.3.0",
     "name": "privacybydesign.irmamobile",
     "url": "https://github.com/moda-gov-tw/privacybydesign.irmamobile/",
     "releaseDate": "2023-11-08",
-    "platforms": ["android", "ios"],
-    "categories": ["data-collection", "digital-citizenship"],
+    "platforms": [
+      "android",
+      "ios"
+    ],
+    "categories": [
+      "data-collection",
+      "digital-citizenship"
+    ],
     "developmentStatus": "development",
     "softwareType": "standalone/web",
     "description": {
       "zh-Hant": {
         "localisedName": "Yivi (IRMA)",
         "shortDescription": "Yivi 是開放原始碼的身份驗證服務。因應不同需求，使用者可選擇不同程度的身份資料揭露。個人資料將以 PIN 碼加密的方式儲存在裝置中。使用者可以自行掌控個人資料，進行無密碼驗證登入網站、簽署文件等目的。\n",
-        "features": ["身份驗證"]
+        "features": [
+          "身份驗證"
+        ]
       }
     },
     "legal": {
@@ -1096,7 +1491,10 @@
     },
     "localisation": {
       "localisationReady": true,
-      "availableLanguages": ["en", "zh-Hant"]
+      "availableLanguages": [
+        "en",
+        "zh-Hant"
+      ]
     },
     "dependsOn": {
       "open": [
@@ -1121,26 +1519,41 @@
       "createdDate": "2022-12-16"
     },
     "filterTags": {
-      "features": ["身份驗證"],
-      "techStacks": ["Java", "Flutter"],
-      "repoOwners": ["數位發展部"]
+      "features": [
+        "身份驗證"
+      ],
+      "techStacks": [
+        "Java",
+        "Flutter"
+      ],
+      "repoOwners": [
+        "數位發展部"
+      ]
     }
   },
   {
-    "id": 17,
+    "id": 18,
     "publiccodeYmlVersion": "0.3.0",
     "name": "privacybydesign.pbdf-schememanager",
     "url": "https://github.com/moda-gov-tw/privacybydesign.pbdf-schememanager",
     "releaseDate": "2023-11-08",
-    "platforms": ["android", "ios"],
-    "categories": ["data-collection", "digital-citizenship"],
+    "platforms": [
+      "android",
+      "ios"
+    ],
+    "categories": [
+      "data-collection",
+      "digital-citizenship"
+    ],
     "developmentStatus": "development",
     "softwareType": "standalone/web",
     "description": {
       "zh-Hant": {
         "localisedName": "Yivi (IRMA) scheme manager",
         "shortDescription": "Yivi 是開放原始碼的身份驗證服務。因應不同需求，使用者可選擇不同程度的身份資料揭露。個人資料將以 PIN 碼加密的方式儲存在裝置中。使用者可以自行掌控個人資料，進行無密碼驗證登入網站、簽署文件等目的。\n",
-        "features": ["身份驗證"]
+        "features": [
+          "身份驗證"
+        ]
       }
     },
     "legal": {
@@ -1159,7 +1572,10 @@
     },
     "localisation": {
       "localisationReady": true,
-      "availableLanguages": ["en", "zh-Hant"]
+      "availableLanguages": [
+        "en",
+        "zh-Hant"
+      ]
     },
     "applicationSuite": "Yivi (IRMA)",
     "isBasedOn": "https://github.com/privacybydesign/pbdf-schememanager",
@@ -1171,26 +1587,37 @@
       "createdDate": "2022-12-20"
     },
     "filterTags": {
-      "features": ["身份驗證"],
+      "features": [
+        "身份驗證"
+      ],
       "techStacks": [],
-      "repoOwners": ["數位發展部"]
+      "repoOwners": [
+        "數位發展部"
+      ]
     }
   },
   {
-    "id": 18,
+    "id": 19,
     "publiccodeYmlVersion": "0.3.0",
     "name": "vector-im.element-web",
     "url": "https://github.com/moda-gov-tw/vector-im.element-web/",
     "releaseDate": "2023-11-08",
-    "platforms": ["web"],
-    "categories": ["data-collection", "digital-citizenship"],
+    "platforms": [
+      "web"
+    ],
+    "categories": [
+      "data-collection",
+      "digital-citizenship"
+    ],
     "developmentStatus": "development",
     "softwareType": "standalone/web",
     "description": {
       "zh-Hant": {
         "localisedName": "Standard for Public Code",
         "shortDescription": "Standard for Public Code 是由公共程式碼基金會（Foundation for Public Code）所制定的公共程式標準。目的為提供政府不同部門或協作組織之間，依循標準及指南開發軟體時，以利後續進行互相協作開發，並且重複使用各自的成果。此標準有利於公家機關透過協作方式，創造出好用、開放、易懂、課責、近用、永續的程式基底。\n",
-        "features": ["標準"]
+        "features": [
+          "標準"
+        ]
       }
     },
     "legal": {
@@ -1209,7 +1636,10 @@
     },
     "localisation": {
       "localisationReady": true,
-      "availableLanguages": ["en", "zh-Hant"]
+      "availableLanguages": [
+        "en",
+        "zh-Hant"
+      ]
     },
     "dependsOn": {
       "open": [
@@ -1229,26 +1659,141 @@
       "createdDate": "2022-11-24"
     },
     "filterTags": {
-      "features": ["標準"],
-      "techStacks": ["Ruby"],
-      "repoOwners": ["數位發展部"]
+      "features": [
+        "標準"
+      ],
+      "techStacks": [
+        "Ruby"
+      ],
+      "repoOwners": [
+        "數位發展部"
+      ]
     }
   },
   {
-    "id": 19,
+    "id": 20,
+    "publiccodeYmlVersion": "0.3.0",
+    "name": "taipei-city-dashboard",
+    "url": "https://github.com/tpe-doit/Taipei-City-Dashboard",
+    "landingURL": "https://citydashboard.taipei/",
+    "releaseDate": "2024-04-11",
+    "platforms": [
+      "web"
+    ],
+    "categories": [
+      "data-collection",
+      "digital-citizenship"
+    ],
+    "developmentStatus": "stable",
+    "softwareType": "standalone/web",
+    "description": {
+      "zh-Hant": {
+        "localisedName": "臺北城市儀表板",
+        "shortDescription": "臺北城市儀表板提供使用者進行圖資及數據圖表的交叉查閱，以資料時間、空間及統計等多維度趨勢呈現，並供使用者可針對關注的重點資料，自行客製主題頁面，讓使用者能在虛擬的三維圖台內，更即時的掌握城市脈動與分析相關數據。\n",
+        "features": [
+          "地圖資訊呈現",
+          "數據呈現"
+        ],
+        "screenshots": [
+          "/images/projects/taipei-city-dashboard/screenshot-1.png"
+        ]
+      }
+    },
+    "legal": {
+      "license": "AGPL-3",
+      "repoOwner": "臺北市政府 資訊局"
+    },
+    "maintenance": {
+      "type": "internal",
+      "contacts": [
+        {
+          "name": "洪伯維",
+          "email": "q36862@gov.taipei",
+          "phone": "02-27208889-51752"
+        }
+      ]
+    },
+    "localisation": {
+      "localisationReady": false,
+      "availableLanguages": [
+        "zh-Hant"
+      ]
+    },
+    "dependsOn": {
+      "open": [
+        {
+          "name": "Python"
+        },
+        {
+          "name": "Go"
+        },
+        {
+          "name": "PostgreSQL"
+        },
+        {
+          "name": "Redis"
+        }
+      ]
+    },
+    "usedBy": [
+      "[臺北城市儀表板](https://citydashboard.taipei/) (無障礙檢測結果：尚未檢測)"
+    ],
+    "tw": {
+      "countryExtensionVersion": "1.0.0",
+      "techStacks": [
+        {
+          "name": "Vue.js"
+        },
+        {
+          "name": "SQL Server"
+        }
+      ],
+      "vulnerabilityScanners": [
+        "Checkmarx"
+      ],
+      "accessibilityConformance": "AA",
+      "createdDate": "2023-05-22"
+    },
+    "filterTags": {
+      "features": [
+        "地圖資訊呈現",
+        "數據呈現"
+      ],
+      "techStacks": [
+        "Python",
+        "Go",
+        "PostgreSQL",
+        "Redis",
+        "Vue.js",
+        "SQL Server"
+      ],
+      "repoOwners": [
+        "臺北市政府"
+      ]
+    }
+  },
+  {
+    "id": 21,
     "publiccodeYmlVersion": "0.3.0",
     "name": "vector-im.element-web",
     "url": "https://github.com/moda-gov-tw/vector-im.element-web/",
     "releaseDate": "2023-11-08",
-    "platforms": ["web"],
-    "categories": ["data-collection", "digital-citizenship"],
+    "platforms": [
+      "web"
+    ],
+    "categories": [
+      "data-collection",
+      "digital-citizenship"
+    ],
     "developmentStatus": "development",
     "softwareType": "standalone/web",
     "description": {
       "zh-Hant": {
         "localisedName": "Matrix Client (Element Series)",
         "shortDescription": "Element 是 Matrix 核心團隊基於去中心化標準開發的開放原始碼通訊軟體。可應用網際網路 IP based 進行即時通訊。基於其開放特性，可整合其他程式，快速建構即時交換資料系統。除此之外，亦可與 Slack、Telegram 等其它通訊軟體進行串聯。\n",
-        "features": ["即時通訊"]
+        "features": [
+          "即時通訊"
+        ]
       }
     },
     "legal": {
@@ -1267,7 +1812,10 @@
     },
     "localisation": {
       "localisationReady": true,
-      "availableLanguages": ["en", "zh-Hant"]
+      "availableLanguages": [
+        "en",
+        "zh-Hant"
+      ]
     },
     "dependsOn": {
       "open": [
@@ -1286,9 +1834,15 @@
       "createdDate": "2022-12-16"
     },
     "filterTags": {
-      "features": ["即時通訊"],
-      "techStacks": ["Node.js"],
-      "repoOwners": ["數位發展部"]
+      "features": [
+        "即時通訊"
+      ],
+      "techStacks": [
+        "Node.js"
+      ],
+      "repoOwners": [
+        "數位發展部"
+      ]
     }
   }
 ]

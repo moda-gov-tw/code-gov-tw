@@ -1,0 +1,59 @@
+publiccodeYmlVersion: 0.3.0
+name: taipei-city-dashboard
+url: "https://github.com/tpe-doit/Taipei-City-Dashboard"
+landingURL: "https://citydashboard.taipei/"
+releaseDate: "2024-04-11"
+platforms:
+  - web
+categories:
+  - data-collection
+  - digital-citizenship
+developmentStatus: stable
+softwareType: standalone/web
+description:
+  zh-Hant:
+    localisedName: 臺北城市儀表板
+    shortDescription: >
+      臺北城市儀表板提供使用者進行圖資及數據圖表的交叉查閱，以資料時間、空間及統計等多維度趨勢呈現，並供使用者可針對關注的重點資料，自行客製主題頁面，讓使用者能在虛擬的三維圖台內，更即時的掌握城市脈動與分析相關數據。
+    features:
+      - 地圖資訊呈現
+      - 數據呈現
+    screenshots:
+      - /images/projects/taipei-city-dashboard/screenshot-1.png
+legal:
+  license: AGPL-3
+  repoOwner: 臺北市政府 資訊局
+maintenance:
+  type: internal
+  contacts:
+    - name: 洪伯維
+      email: "q36862@gov.taipei"
+      phone: "02-27208889-51752"
+localisation:
+  localisationReady: false
+  availableLanguages:
+    - zh-Hant
+
+dependsOn: # 這個專案所依賴的技術, 系統層級的
+  open: # 開放原始碼的軟體
+    - name: Python
+    - name: Go
+    - name: PostgreSQL
+    - name: Redis
+
+usedBy:
+  - "[臺北城市儀表板](https://citydashboard.taipei/) (無障礙檢測結果：尚未檢測)"
+
+tw:
+  countryExtensionVersion: "1.0.0"
+  # 這個專案所依賴的技術, 相較於 dependsOn, 這裡更細節的列出使用的技術
+  techStacks:
+    - name: "Vue.js"
+    - name: "SQL Server"
+  vulnerabilityScanners:
+    - "Checkmarx"
+  accessibilityConformance: "AA"
+  # GitHub API 有資訊可以取得, 暫時手動填寫
+  createdDate: "2023-05-22" # YYYY-MM-DD, 這個專案的建立日期
+
+# 更多定義可以參考官方文件 https://yml.publiccode.tools/
