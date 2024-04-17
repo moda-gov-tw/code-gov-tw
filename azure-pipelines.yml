@@ -8,18 +8,28 @@ trigger:
 pr:
   - main
 
+pool:
+  name: CI
+
+variables:
+  npm_config_cache: $(Pipeline.Workspace)/.npm
+  cache_key: 'npm | "$(Agent.OS)" | package.json'
+
 stages:
   - stage: checkBeforeBuild
-    pool:
-      name: CI
-    condition: eq(variables['Build.Reason'], 'PullRequest')
+    condition: and(succeeded(), eq(variables['Build.Reason'], 'PullRequest'))
     jobs:
       - job: Linter
         displayName: Lint Project
         steps:
-          - task: NodeTool@0
+          - task: UseNode@1
             inputs:
-              versionSpec: "18.x"
+              version: "18.x"
+          - task: Cache@2
+            inputs:
+              key: $(cache_key)
+              path: $(npm_config_cache)
+            displayName: Use Cache
           - task: CmdLine@2
             inputs:
               script: |
@@ -28,27 +38,34 @@ stages:
       - job: Formatting
         displayName: Formatting Check
         steps:
-          - task: NodeTool@0
+          - task: UseNode@1
             inputs:
-              versionSpec: "18.x"
+              version: "18.x"
+          - task: Cache@2
+            inputs:
+              key: $(cache_key)
+              path: $(npm_config_cache)
+            displayName: Use Cache
           - task: CmdLine@2
             inputs:
               script: |
                 npm install
                 npm run fmt.check
   - stage: build
-    pool:
-      name: CI
-    condition: eq(variables['Build.Reason'], 'PullRequest')
+    condition: and(succeeded(), eq(variables['Build.Reason'], 'PullRequest'))
     dependsOn: checkBeforeBuild
     jobs:
       - job: Build
         displayName: Build
         steps:
-          - task: NodeTool@0
+          - task: UseNode@1
             inputs:
-              versionSource: "spec"
-              versionSpec: "18.x"
+              version: "18.x"
+          - task: Cache@2
+            inputs:
+              key: $(cache_key)
+              path: $(npm_config_cache)
+            displayName: Use Cache
           - task: CmdLine@2
             inputs:
               script: |
@@ -57,30 +74,36 @@ stages:
           - task: PublishPipelineArtifact@1
             inputs:
               targetPath: "./dist"
-              artifact: "build"
+              artifact: "pr-build"
               publishLocation: "pipeline"
   - stage: checkAfterBuild
-    pool:
-      name: CI
-    condition: eq(variables['Build.Reason'], 'PullRequest')
+    condition: and(succeeded(), eq(variables['Build.Reason'], 'PullRequest'))
     dependsOn: build
     jobs:
       - job: accessibility
         displayName: Accessibility Check
+        container:
+          image: mutix/azure-pipelines-ci:18-node
+          options: "--cap-add=SYS_ADMIN" # Required for Chrome to start sandbox
         steps:
-          - task: NodeTool@0
+          - task: UseNode@1
             inputs:
-              versionSpec: "18.x"
+              version: "18.x"
+          - task: Cache@2
+            inputs:
+              key: $(cache_key)
+              path: $(npm_config_cache)
+            displayName: Use Cache
           - task: DownloadPipelineArtifact@2
             inputs:
               buildType: "current"
-              artifactName: "build"
+              artifactName: "pr-build"
               targetPath: "./dist"
           - task: CmdLine@2
             displayName: Accessibility Check
             inputs:
               script: |
-                npm install -g accessibility-checker
+                npm install
                 npm run a11y.check
           - task: PublishPipelineArtifact@1
             condition: succeededOrFailed()
@@ -90,20 +113,27 @@ stages:
               publishLocation: "pipeline"
       - job: lighthouseci
         displayName: Lighthouse Check
+        container:
+          image: mutix/azure-pipelines-ci:18-node
+          options: "--cap-add=SYS_ADMIN" # Required for Chrome to start sandbox
         steps:
-          - task: NodeTool@0
+          - task: UseNode@1
             inputs:
-              versionSpec: "18.x"
+              version: "18.x"
+          - task: Cache@2
+            inputs:
+              key: $(cache_key)
+              path: $(npm_config_cache)
+            displayName: Use Cache
           - task: DownloadPipelineArtifact@2
             inputs:
               buildType: "current"
-              artifactName: "build"
+              artifactName: "pr-build"
               targetPath: "./dist"
           - task: CmdLine@2
             displayName: Lighthouse CI
             inputs:
               script: |
-                npm install -g @lhci/cli@0.13.x
                 lhci autorun
           - task: PublishPipelineArtifact@1
             condition: succeededOrFailed()
@@ -112,9 +142,9 @@ stages:
               artifact: "lighthouse-results"
               publishLocation: "pipeline"
   - stage: pre_release
+    displayName: Pre-release
     pool:
       name: CD
-    displayName: Pre-release
     dependsOn: []
     condition: and(eq(variables['Build.SourceBranch'], 'refs/heads/main'), eq(variables['Build.Reason'], 'IndividualCI'))
     jobs:
@@ -124,9 +154,14 @@ stages:
           - checkout: self
             persistCredentials: true
             clean: true
-          - task: NodeTool@0
+          - task: UseNode@1
             inputs:
-              versionSpec: "18.x"
+              version: "18.x"
+          - task: Cache@2
+            inputs:
+              key: $(cache_key)
+              path: $(npm_config_cache)
+            displayName: Use Cache
           - task: CmdLine@2
             inputs:
               script: |
