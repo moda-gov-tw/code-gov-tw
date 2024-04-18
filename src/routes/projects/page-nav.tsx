@@ -50,11 +50,13 @@ export const PageNav = component$<PageNavProps>(
         return;
       }
       currentPage.value++;
+      window.scrollTo({ top: 0, behavior: "smooth" });
     });
 
     const handlePrevPage = $(() => {
       if (currentPage.value === 1) return;
       currentPage.value--;
+      window.scrollTo({ top: 0, behavior: "smooth" });
     });
 
     const generatePageList = () => {
