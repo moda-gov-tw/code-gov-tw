@@ -25,11 +25,11 @@ export const RepoBlock = component$(
       <div class="flex flex-col rounded-[6px] border border-gray-400 bg-white lg:flex-row">
         <div class="flex flex-1 flex-col gap-7 p-6">
           <div class="flex flex-col gap-7 lg:flex-row lg:justify-between">
-            <h3>{name}</h3>
-            <h4>
+            <div class="text-xl font-medium">{name}</div>
+            <div class="text-lg font-medium">
               {$localize`提供單位：`}
               {repoOwner}
-            </h4>
+            </div>
           </div>
           <div class="leading-7">{shortDescription}</div>
           <hr class="border-gray-500" />

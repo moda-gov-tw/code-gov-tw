@@ -18,7 +18,7 @@ export const RouterHead = component$(() => {
         property="og:title"
         content="Public Code Platform — 數位發展部 Ministry of Digital Affairs"
       />
-      <meta property="og:image" content="/images/fbshare.jpg" />
+      <meta property="og:image" content="/images/fbshare.webp" />
       <meta property="og:image:type" content="image/jpeg" />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="628" />

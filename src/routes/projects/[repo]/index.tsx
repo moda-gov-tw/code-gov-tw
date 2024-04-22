@@ -69,20 +69,24 @@ export default component$(() => {
             },
           ]}
         />
-        <h1 class="mt-4 text-brand-primary">{projectName}</h1>
+        <h1 class="mt-4 text-primary">{projectName}</h1>
         <div class="mt-8 flex flex-col gap-4 md:flex-row">
           {demoURL && (
-            <Button class="md:w-auto" href={demoURL} target="_blank">
+            <Button
+              class="text-primary-700 md:w-auto"
+              href={demoURL}
+              target="_blank"
+            >
               {$localize`DEMO 網站`}
               <ArrowTopRightOnSquare
                 q:slot="icon-right"
-                class="w-5 text-brand-primary"
+                class="w-5 text-primary-700"
                 aria-hidden="true"
               />
             </Button>
           )}
           <Button
-            class="!bg-brand-primary !text-white md:w-auto"
+            class="!bg-primary-700 !text-white md:w-auto"
             href={`${project.url ?? "#"}`}
             target="_blank"
           >

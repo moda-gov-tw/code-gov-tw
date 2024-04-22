@@ -48,7 +48,7 @@ export default component$(() => {
           <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
             <div class="flex flex-col items-center rounded-md border border-black p-6">
               <InfoCardGOV class="h-52 w-52" alt="Government agencies" />
-              <h3 class="mt-4 whitespace-nowrap text-center text-primary md:min-h-16">
+              <h3 class="mt-4 whitespace-nowrap text-center text-primary-700 md:min-h-16">
                 {$localize`我想進一步了解公共程式`}
               </h3>
               <Button class="mt-8 w-full" href="/about">
@@ -58,9 +58,10 @@ export default component$(() => {
             </div>
             <div class="flex flex-col items-center rounded-md border border-black p-6">
               <InfoCardPeople class="h-52 w-52" alt="contributor" />
-              <h3 class="mt-4 text-center text-primary">
+              <h3 class="mt-4 text-center text-primary-700">
                 {$localize`我是有意願協作或給建議`}
-                <br />
+              </h3>
+              <h3 class="text-center text-primary-700">
                 {$localize`想知道可以怎麼參與`}
               </h3>
               <Button class="mt-8 w-full" href="/participate">

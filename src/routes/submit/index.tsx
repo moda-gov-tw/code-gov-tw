@@ -7,9 +7,9 @@ export default component$(() => {
     <>
       <Section>
         <h1 class="text-primary">{$localize`提供公共程式`}</h1>
-        <h3 class="mt-4">
+        <div class="h2-sub mt-4">
           {$localize`公共程式是各政府機關分享開放的系統程式碼。若貴機關也有可露出於本平臺的公共程式，歡迎填寫以下表單與我們聯絡。`}
-        </h3>
+        </div>
       </Section>
       <Section>
         <div class="relative flex flex-col">

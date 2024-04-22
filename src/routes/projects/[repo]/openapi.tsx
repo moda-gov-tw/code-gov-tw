@@ -12,7 +12,7 @@ export default component$<OpenAPIProps>((props) => {
   return (
     <div class="mt-8">
       <div class="flex flex-col items-start gap-4 rounded-md border border-gray-500 bg-white p-6">
-        <h4>{props.name}</h4>
+        <h3>{props.name}</h3>
         <div>{props.description}</div>
         <Button href={props.url}>
           {$localize`詳細資訊`}

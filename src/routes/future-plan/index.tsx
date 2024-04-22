@@ -55,7 +55,7 @@ export default component$(() => {
               pages={[
                 {
                   title: $localize`關於公共程式`,
-                  href: "future-plan",
+                  href: "/future-plan",
                 },
               ]}
             />
@@ -80,11 +80,12 @@ export default component$(() => {
               >
                 <div class="flex flex-col items-center gap-8 md:flex-row">
                   <feature.image
-                    class="mx-auto h-32 w-32 shrink-0"
+                    style={{ width: "164px" }}
+                    class="mx-auto aspect-auto"
                     alt={feature.imageAlt}
                   />
                   <div class="flex flex-col">
-                    <h4 class="text-center md:text-left">{feature.title}</h4>
+                    <h3 class="text-center md:text-left">{feature.title}</h3>
                     <p class="pt-4">{feature.description}</p>
                   </div>
                 </div>

@@ -93,7 +93,7 @@ export const PageNav = component$<PageNavProps>(
       <div class="flex justify-between border-t-[1px] pt-4">
         <button
           class={[
-            currentPage.value === 1 ? "pointer-events-none text-gray-300" : "",
+            currentPage.value === 1 ? "pointer-events-none opacity-0" : "",
           ]}
           onClick$={handlePrevPage}
         >
@@ -108,7 +108,7 @@ export const PageNav = component$<PageNavProps>(
         <button
           class={[
             currentPage.value * itemsPerPage >= totalItems
-              ? "pointer-events-none text-gray-300"
+              ? "pointer-events-none hidden"
               : "",
           ]}
           onClick$={handleNextPage}

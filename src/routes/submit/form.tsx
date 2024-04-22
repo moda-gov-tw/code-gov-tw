@@ -166,7 +166,7 @@ export default component$(() => {
           />
         )}
       </Field>
-      <button type="submit" class="w-24 rounded-md bg-brand-primary px-6 py-3">
+      <button type="submit" class="w-24 rounded-md bg-primary-700 px-6 py-3">
         <div class="text-base text-white">{$localize`送出`}</div>
       </button>
     </Form>
