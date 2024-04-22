@@ -24,7 +24,7 @@ description:
       - 資料一覽 / 檢索
       - 數據呈現
     screenshots:
-      - /images/projects/dengue/backend.png
+      - /images/projects/dengue/backend.webp
 legal:
   license: MIT License
   repoOwner: 數位發展部

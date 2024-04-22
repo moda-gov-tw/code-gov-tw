@@ -29,7 +29,7 @@
           "數據呈現"
         ],
         "screenshots": [
-          "/images/projects/dengue/backend.png"
+          "/images/projects/dengue/backend.webp"
         ]
       }
     },
@@ -124,7 +124,7 @@
           "數據呈現"
         ],
         "screenshots": [
-          "/images/projects/dengue/frontend.png"
+          "/images/projects/dengue/frontend.wepb"
         ]
       }
     },
@@ -214,16 +214,16 @@
         "localisedName": "公托報名管理系統（後端）",
         "shortDescription": "本案為「112年數位發展部公民科技試驗場域示範案」由「一起加油陣線」團隊開發的「公托申請數位流程優化」透過與臺中市政府社會局的合作，提供既有公托申請流程解方，開發一申請公托的整合平臺，提供申請、查詢、審核及管理等功能。本案為示範案例尚未正式上線提供服務。\n",
         "features": [
-          "表單填寫/資料上傳",
+          "表單填寫 / 資料上傳",
           "個案管理",
           "地圖資訊呈現"
         ],
         "screenshots": [
-          "/images/projects/find-babycare/01_daycare_map.png",
-          "/images/projects/find-babycare/02_application _process.png",
-          "/images/projects/find-babycare/03_application_dashboard.png",
-          "/images/projects/find-babycare/04_application_management.png",
-          "/images/projects/find-babycare/05_enrollment_management.png"
+          "/images/projects/find-babycare/01_daycare_map.webp",
+          "/images/projects/find-babycare/02_application _process.webp",
+          "/images/projects/find-babycare/03_application_dashboard.webp",
+          "/images/projects/find-babycare/04_application_management.webp",
+          "/images/projects/find-babycare/05_enrollment_management.webp"
         ]
       }
     },
@@ -268,7 +268,7 @@
     },
     "filterTags": {
       "features": [
-        "表單填寫/資料上傳",
+        "表單填寫 / 資料上傳",
         "個案管理",
         "地圖資訊呈現"
       ],
@@ -311,11 +311,11 @@
           "地圖資訊呈現"
         ],
         "screenshots": [
-          "/images/projects/find-babycare/01_daycare_map.png",
-          "/images/projects/find-babycare/02_application _process.png",
-          "/images/projects/find-babycare/03_application_dashboard.png",
-          "/images/projects/find-babycare/04_application_management.png",
-          "/images/projects/find-babycare/05_enrollment_management.png"
+          "/images/projects/find-babycare/01_daycare_map.webp",
+          "/images/projects/find-babycare/02_application _process.webp",
+          "/images/projects/find-babycare/03_application_dashboard.webp",
+          "/images/projects/find-babycare/04_application_management.webp",
+          "/images/projects/find-babycare/05_enrollment_management.webp"
         ]
       }
     },
@@ -1043,9 +1043,9 @@
           "資料一覽 / 檢索"
         ],
         "screenshots": [
-          "/images/projects/moda-official-website-full/screenshot-1.png",
-          "/images/projects/moda-official-website-full/screenshot-2.png",
-          "/images/projects/moda-official-website-full/screenshot-3.png"
+          "/images/projects/moda-official-website-full/screenshot-1.webp",
+          "/images/projects/moda-official-website-full/screenshot-2.webp",
+          "/images/projects/moda-official-website-full/screenshot-3.webp"
         ]
       }
     },
@@ -1143,9 +1143,9 @@
           "文書處理"
         ],
         "screenshots": [
-          "/images/projects/odf-application-tools/screenshot-1.png",
-          "/images/projects/odf-application-tools/screenshot-2.png",
-          "/images/projects/odf-application-tools/screenshot-3.png"
+          "/images/projects/odf-application-tools/screenshot-1.webp",
+          "/images/projects/odf-application-tools/screenshot-2.webp",
+          "/images/projects/odf-application-tools/screenshot-3.webp"
         ]
       }
     },
@@ -1223,8 +1223,8 @@
           "個案管理"
         ],
         "screenshots": [
-          "/images/projects/opendata-frontend/screenshot-1.png",
-          "/images/projects/opendata-frontend/screenshot-2.png"
+          "/images/projects/opendata-frontend/screenshot-1.webp",
+          "/images/projects/opendata-frontend/screenshot-2.webp"
         ]
       }
     },
@@ -1695,7 +1695,7 @@
           "數據呈現"
         ],
         "screenshots": [
-          "/images/projects/taipei-city-dashboard/screenshot-1.png"
+          "/images/projects/taipei-city-dashboard/screenshot-1.webp"
         ]
       }
     },

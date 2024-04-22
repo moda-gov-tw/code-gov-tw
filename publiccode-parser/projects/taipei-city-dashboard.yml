@@ -19,7 +19,7 @@ description:
       - 地圖資訊呈現
       - 數據呈現
     screenshots:
-      - /images/projects/taipei-city-dashboard/screenshot-1.png
+      - /images/projects/taipei-city-dashboard/screenshot-1.webp
 legal:
   license: AGPL-3
   repoOwner: 臺北市政府 資訊局
