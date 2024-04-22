@@ -9,7 +9,7 @@ pr:
   - main
 
 pool:
-  name: CI
+  vmImage: "ubuntu-latest"
 
 variables:
   npm_config_cache: $(Pipeline.Workspace)/.npm
@@ -82,9 +82,6 @@ stages:
     jobs:
       - job: accessibility
         displayName: Accessibility Check
-        container:
-          image: mutix/azure-pipelines-ci:18-node
-          options: "--cap-add=SYS_ADMIN" # Required for Chrome to start sandbox
         steps:
           - task: UseNode@1
             inputs:
@@ -113,9 +110,6 @@ stages:
               publishLocation: "pipeline"
       - job: lighthouseci
         displayName: Lighthouse Check
-        container:
-          image: mutix/azure-pipelines-ci:18-node
-          options: "--cap-add=SYS_ADMIN" # Required for Chrome to start sandbox
         steps:
           - task: UseNode@1
             inputs:
@@ -134,6 +128,7 @@ stages:
             displayName: Lighthouse CI
             inputs:
               script: |
+                npm install -g @lhci/cli@0.13.x
                 lhci autorun
           - task: PublishPipelineArtifact@1
             condition: succeededOrFailed()
@@ -143,8 +138,6 @@ stages:
               publishLocation: "pipeline"
   - stage: pre_release
     displayName: Pre-release
-    pool:
-      name: CD
     dependsOn: []
     condition: and(eq(variables['Build.SourceBranch'], 'refs/heads/main'), eq(variables['Build.Reason'], 'IndividualCI'))
     jobs:
