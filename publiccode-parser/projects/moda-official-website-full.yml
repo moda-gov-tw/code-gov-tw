@@ -19,9 +19,9 @@ description:
       - 表單填寫 / 資料上傳
       - 資料一覽 / 檢索
     screenshots:
-      - /images/projects/moda-official-website-full/screenshot-1.png
-      - /images/projects/moda-official-website-full/screenshot-2.png
-      - /images/projects/moda-official-website-full/screenshot-3.png
+      - /images/projects/moda-official-website-full/screenshot-1.webp
+      - /images/projects/moda-official-website-full/screenshot-2.webp
+      - /images/projects/moda-official-website-full/screenshot-3.webp
 legal:
   license: MIT License
   repoOwner: 數位發展部 資訊處

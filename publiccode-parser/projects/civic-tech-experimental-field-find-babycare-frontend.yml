@@ -23,11 +23,11 @@ description:
       - 個案管理
       - 地圖資訊呈現
     screenshots:
-      - /images/projects/find-babycare/01_daycare_map.png
-      - /images/projects/find-babycare/02_application _process.png
-      - /images/projects/find-babycare/03_application_dashboard.png
-      - /images/projects/find-babycare/04_application_management.png
-      - /images/projects/find-babycare/05_enrollment_management.png
+      - /images/projects/find-babycare/01_daycare_map.webp
+      - /images/projects/find-babycare/02_application _process.webp
+      - /images/projects/find-babycare/03_application_dashboard.webp
+      - /images/projects/find-babycare/04_application_management.webp
+      - /images/projects/find-babycare/05_enrollment_management.webp
 legal:
   license: MIT License
   repoOwner: 數位發展部

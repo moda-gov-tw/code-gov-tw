@@ -18,9 +18,9 @@ description:
     features:
       - 文書處理
     screenshots:
-      - /images/projects/odf-application-tools/screenshot-1.png
-      - /images/projects/odf-application-tools/screenshot-2.png
-      - /images/projects/odf-application-tools/screenshot-3.png
+      - /images/projects/odf-application-tools/screenshot-1.webp
+      - /images/projects/odf-application-tools/screenshot-2.webp
+      - /images/projects/odf-application-tools/screenshot-3.webp
 legal:
   license: LGPL-3.0、MPL-2.0
   repoOwner: 數位發展部 數位政府司

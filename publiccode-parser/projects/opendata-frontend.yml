@@ -18,8 +18,8 @@ description:
       - 資料一覽 / 檢索
       - 個案管理
     screenshots:
-      - /images/projects/opendata-frontend/screenshot-1.png
-      - /images/projects/opendata-frontend/screenshot-2.png
+      - /images/projects/opendata-frontend/screenshot-1.webp
+      - /images/projects/opendata-frontend/screenshot-2.webp
 legal:
   license: MIT License
   repoOwner: 數位發展部 多元創新司
