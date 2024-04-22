@@ -66,9 +66,9 @@ export default component$(() => {
       {!filter.value ? (
         <Section>
           <h1 class="text-primary">{$localize`公共程式專案一覽`}</h1>
-          <h3 class="mt-4">
+          <div class="h2-sub mt-4">
             {$localize`公共程式由各政府單位提供，以下匯集國內外不同單位的公共程式。`}
-          </h3>
+          </div>
         </Section>
       ) : (
         <div class="sticky top-0 flex items-center justify-between bg-white p-6 md:hidden">
@@ -89,7 +89,7 @@ export default component$(() => {
           {!filter.value && (
             <button
               class={[
-                "flex items-center justify-center gap-3 rounded-md border border-primary bg-white px-3.5 py-2.5 text-base font-semibold text-primary shadow-sm md:hidden",
+                "flex items-center justify-center gap-3 rounded-md border border-primary-700 bg-white px-3.5 py-2.5 text-base font-semibold text-primary-700 shadow-sm md:hidden",
                 "hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600",
               ]}
               onClick$={handleMobileFilter}
@@ -97,7 +97,7 @@ export default component$(() => {
               {$localize`設定篩選條件`}
               <FunnelIcon
                 q:slot="icon-right"
-                class="h-5 w-5 text-brand-primary"
+                class="h-5 w-5 text-primary-700"
               />
             </button>
           )}

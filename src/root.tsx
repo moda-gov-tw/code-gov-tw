@@ -15,12 +15,21 @@ export default component$(() => {
    *
    * Don't remove the `<head>` and `<body>` elements.
    */
+  const csp = [
+    `default-src 'none'`, // By default, block everything
+    `script-src 'self' 'unsafe-inline'`,
+    `connect-src 'self'`,
+    `img-src 'self'`,
+    `style-src 'self' 'unsafe-inline'`,
+    `manifest-src 'self' 'unsafe-inline'`,
+  ];
 
   useI18n();
   return (
     <QwikCityProvider>
       <head>
         <meta charSet="utf-8" />
+        <meta http-equiv="Content-Security-Policy" content={csp.join("; ")} />
         <link rel="manifest" href="/manifest.json" />
         <RouterHead />
       </head>

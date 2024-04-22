@@ -26,7 +26,7 @@ export default component$(() => {
           {features.map((feature) => (
             <div key={feature.title}>
               <div class="flex flex-col rounded-lg bg-gray-300 p-6 max-md:items-center">
-                <h4>{feature.title}</h4>
+                <h3>{feature.title}</h3>
                 <p class="mt-4">{feature.description}</p>
               </div>
             </div>

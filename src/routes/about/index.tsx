@@ -20,9 +20,9 @@ export default component$(() => {
           ]}
         />
         <h1 class="text-primary">{$localize`認識公共程式`}</h1>
-        <h3 class="mt-4">
+        <div class="h2-sub mt-4">
           {$localize`讓資訊系統的開發變得更有效率，優良政府數位服務可以更簡單地發生`}
-        </h3>
+        </div>
       </Section>
       <Section>
         <PublicCodeWork />
