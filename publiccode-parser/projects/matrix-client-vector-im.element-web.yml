@@ -35,6 +35,7 @@ dependsOn:
   open:
     - name: HTML/CSS
     - name: JavaScript
+    - name: TypeScript
 applicationSuite: "Matrix Element"
 isBasedOn: "https://github.com/element-hq/element-web"
 tw:
@@ -42,7 +43,7 @@ tw:
   techStacks:
     - name: "React"
   vulnerabilityScanners:
-    - "本專案為在地化成果，未涉及軟體開發作業，資訊安全檢測以上游結果為主。"
+    - "本專案為在地化成果，未涉及軟體開發"
   overrides:
     repoOwners:
       - "其他"

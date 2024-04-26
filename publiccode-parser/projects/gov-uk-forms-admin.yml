@@ -44,7 +44,7 @@ tw:
   techStacks:
     - name: SCSS
   vulnerabilityScanners:
-    - "經上傳至 GitHub 及與上游社群溝通，無被檢查出嚴重漏洞。"
+    - "本專案為在地化成果，未涉及軟體開發作業。"
   overrides:
     repoOwners:
       - "其他"

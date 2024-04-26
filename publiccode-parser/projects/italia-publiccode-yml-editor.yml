@@ -42,7 +42,7 @@ tw:
   techStacks:
     - name: SCSS
   vulnerabilityScanners:
-    - "本專案為在地化成果，未涉及軟體開發作業，資訊安全檢測以上游結果為主。"
+    - "本專案為在地化成果，未涉及軟體開發作業。"
   mainCopyrightOwnerLogo: "/images/projects/logos/foundation-for-public-code-logo.jpg"
   overrides:
     repoOwners:

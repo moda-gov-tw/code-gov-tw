@@ -41,7 +41,7 @@ isBasedOn: "https://github.com/matrix-org/matrix-react-sdk"
 tw:
   countryExtensionVersion: "1.0.0"
   vulnerabilityScanners:
-    - "本專案為在地化成果，未涉及軟體開發作業，資訊安全檢測以上游結果為主。"
+    - "本專案為在地化成果，未涉及軟體開發作業。"
   techStacks:
     - name: "React"
   mainCopyrightOwnerLogo: "/images/projects/logos/matrix-element-logo.jpg"
