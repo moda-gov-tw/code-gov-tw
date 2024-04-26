@@ -16,14 +16,16 @@ export default component$(() => {
    * Don't remove the `<head>` and `<body>` elements.
    */
   const csp = [
-    `default-src 'none'`, // By default, block everything
+    `default-src 'self'`,
+    `font-src 'self' data:`,
+    `img-src 'self' 'unsafe-inline' data:`,
     `script-src 'self' 'unsafe-inline'`,
-    `connect-src 'self'`,
-    `img-src 'self'`,
     `style-src 'self' 'unsafe-inline'`,
-    `manifest-src 'self' 'unsafe-inline'`,
+    `frame-src 'self'`,
+    `object-src 'none'`,
+    `base-uri 'self'`,
+    `form-action 'self'`,
   ];
-
   useI18n();
   return (
     <QwikCityProvider>
