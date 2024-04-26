@@ -11,13 +11,14 @@ developmentStatus: development
 softwareType: standalone/web
 description:
   zh-Hant:
-    localisedName: Matrix Client (Element Series)
+    localisedName: Matrix Client (Element Series) matrix-react-sdk
     shortDescription: >
-      Element 是 Matrix 核心團隊基於去中心化標準開發的開放原始碼通訊軟體。可應用網際網路 IP based 進行即時通訊。基於其開放特性，可整合其他程式，快速建構即時交換資料系統。除此之外，亦可與 Slack、Telegram 等其它通訊軟體進行串聯。
+      Element 是 Matrix 核心團隊基於去中心化標準開發的開放原始碼通訊軟體。此為該服務底層的 matrix-react-sdk ，可用於建置各種其他軟體。可應用網際網路 IP based 進行即時通訊。基於其開放特性，可整合其他程式，快速建構即時交換資料系統。除此之外，亦可與 Slack、Telegram 等其它通訊軟體進行串聯。
     features:
       - 即時通訊
 legal:
   license: Apache-2.0
+  mainCopyrightOwner: Element
   repoOwner: 數位發展部 民主網絡司 公民科技科
 maintenance:
   type: internal
@@ -32,15 +33,20 @@ localisation:
     - zh-Hant
 dependsOn:
   open:
-    - name: Ruby
-      version: "3"
-    - name: Node.js
-      version: "16"
+    - name: HTML/CSS
+    - name: JavaScript
+    - name: TypeScript
 applicationSuite: "Matrix Element"
 isBasedOn: "https://github.com/matrix-org/matrix-react-sdk"
 tw:
   countryExtensionVersion: "1.0.0"
   vulnerabilityScanners:
-    - "經上傳至 GitHub 及與上游社群溝通，無被檢查出嚴重漏洞。"
+    - "本專案為在地化成果，未涉及軟體開發作業，資訊安全檢測以上游結果為主。"
+  techStacks:
+    - name: "React"
+  mainCopyrightOwnerLogo: "/images/projects/logos/matrix-element-logo.jpg"
+  overrides:
+    repoOwners:
+      - "其他"
   # GitHub API 有資訊可以取得, 暫時手動填寫
   createdDate: "2022-12-16"

@@ -20,6 +20,7 @@ description:
       - 網頁效能檢測
 legal:
   license: CC0-1.0
+  mainCopyrightOwner: 行政院公共數位創新空間（PDIS）
   repoOwner: 行政院公共數位創新空間（PDIS）
 maintenance:
   type: internal
@@ -41,4 +42,5 @@ tw:
   vulnerabilityScanners:
     - "GitHub CodeQL"
     - "GitHub Dependabot Alerts"
+  mainCopyrightOwnerLogo: "/images/projects/logos/PDIS-logo.png"
   accessibilityConformance: null

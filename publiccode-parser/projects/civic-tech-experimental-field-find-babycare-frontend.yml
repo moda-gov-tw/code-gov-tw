@@ -30,6 +30,7 @@ description:
       - /images/projects/find-babycare/05_enrollment_management.webp
 legal:
   license: MIT License
+  mainCopyrightOwner: 數位發展部
   repoOwner: 數位發展部
 maintenance:
   type: internal
@@ -41,13 +42,17 @@ localisation:
   localisationReady: false
 dependsOn:
   open:
-    - name: Node.js
-      versionMin: "18"
+    - name: PHP
+    - name: MySQL
 tw:
   countryExtensionVersion: "1.0.0"
   techStacks:
     - name: "Vue.js"
+    - name: "HTML/CSS"
+    - name: "JavaScript"
+    - name: "Laravel"
   vulnerabilityScanners:
     - "OWASP"
+  mainCopyrightOwnerLogo: "/images/projects/logos/MODA-logo.svg"
   # GitHub API 有資訊可以取得, 暫時手動填寫
   createdDate: "2023-11-22"

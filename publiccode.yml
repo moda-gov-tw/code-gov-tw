@@ -2,7 +2,7 @@ publiccodeYmlVersion: 0.3.0
 name: code-gov-tw
 url: "https://github.com/moda-gov-tw/code-gov-tw"
 landingURL: "https://code.gov.tw"
-releaseDate: "2024-03-29"
+releaseDate: "2024-04-29"
 platforms:
   - web
 categories:
@@ -19,7 +19,8 @@ description:
       - 資料一覽 / 檢索
 legal:
   license: MIT
-  repoOwner: 數位發展部
+  mainCopyrightOwner: 數位發展部 民主網絡司
+  repoOwner: 數位發展部 民主網絡司
 maintenance:
   type: internal
   contacts:
@@ -39,10 +40,14 @@ usedBy:
 tw:
   countryExtensionVersion: "1.0.0"
   techStacks:
-    - name: "TypeScript"
     - name: "Qwik"
     - name: "Tailwind CSS"
   vulnerabilityScanners:
+    - "GitHub CodeQL"
+    - "GitHub Dependabot Alerts"
     - "OWASP ZAP"
     - "SonarQube"
   accessibilityConformance: "AAA"
+  mainCopyrightOwnerLogo: "/images/projects/logos/MODA-logo.svg"
+  # GitHub API 有資訊可以取得, 暫時手動填寫
+  createdDate: "2024-02-01"

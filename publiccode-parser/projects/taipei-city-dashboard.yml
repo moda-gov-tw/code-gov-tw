@@ -22,7 +22,8 @@ description:
       - /images/projects/taipei-city-dashboard/screenshot-1.webp
 legal:
   license: AGPL-3
-  repoOwner: 臺北市政府 資訊局
+  mainCopyrightOwner: 臺北市政府資訊局
+  repoOwner: 臺北市政府資訊局
 maintenance:
   type: internal
   contacts:
@@ -34,25 +35,23 @@ localisation:
   availableLanguages:
     - zh-Hant
 
-dependsOn: # 這個專案所依賴的技術, 系統層級的
-  open: # 開放原始碼的軟體
+dependsOn:
+  open:
     - name: Python
     - name: Go
     - name: PostgreSQL
     - name: Redis
-
 usedBy:
   - "[臺北城市儀表板](https://citydashboard.taipei/) (無障礙檢測結果：尚未檢測)"
-
 tw:
   countryExtensionVersion: "1.0.0"
-  # 這個專案所依賴的技術, 相較於 dependsOn, 這裡更細節的列出使用的技術
   techStacks:
     - name: "Vue.js"
     - name: "SQL Server"
   vulnerabilityScanners:
     - "Checkmarx"
   accessibilityConformance: "AA"
+  mainCopyrightOwnerLogo: "/images/projects/logos/department-of-informations-technology-taipei-city-government-logo.png"
   # GitHub API 有資訊可以取得, 暫時手動填寫
   createdDate: "2023-05-22" # YYYY-MM-DD, 這個專案的建立日期
 

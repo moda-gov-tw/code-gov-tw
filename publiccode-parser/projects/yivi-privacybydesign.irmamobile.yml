@@ -14,11 +14,12 @@ description:
   zh-Hant:
     localisedName: Yivi (IRMA)
     shortDescription: >
-      Yivi 是開放原始碼的身份驗證服務。因應不同需求，使用者可選擇不同程度的身份資料揭露。個人資料將以 PIN 碼加密的方式儲存在裝置中。使用者可以自行掌控個人資料，進行無密碼驗證登入網站、簽署文件等目的。
+      Yivi 是開放原始碼的身份驗證服務。此為該服務 App 的原始碼。此服務可因應不同需求，讓使用者可選擇不同程度的身份資料揭露。個人資料將以 PIN 碼加密的方式儲存在裝置中。使用者可以自行掌控個人資料，進行無密碼驗證登入網站、簽署文件等目的。
     features:
       - 身份驗證
 legal:
   license: GPL v3
+  mainCopyrightOwner: Yivi
   repoOwner: 數位發展部 民主網絡司 公民科技科
 maintenance:
   type: internal
@@ -33,15 +34,17 @@ localisation:
     - zh-Hant
 dependsOn:
   open:
-    - name: Java
-      version: "11"
+    - name: Dart
+    - name: Go
 applicationSuite: "Yivi (IRMA)"
 isBasedOn: "https://github.com/privacybydesign/irmamobile"
 tw:
   countryExtensionVersion: "1.0.0"
-  techStacks:
-    - name: "Flutter"
   vulnerabilityScanners:
-    - "經上傳至 GitHub 及與上游社群溝通，無被檢查出嚴重漏洞。"
+    - "本專案為在地化成果，未涉及軟體開發作業，資訊安全檢測以上游結果為主。"
+  overrides:
+    repoOwners:
+      - "其他"
+  mainCopyrightOwnerLogo: "/images/projects/logos/yivi-logo.jpg"
   # GitHub API 有資訊可以取得, 暫時手動填寫
   createdDate: "2022-12-16"

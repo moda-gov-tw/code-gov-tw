@@ -35,6 +35,7 @@
     },
     "legal": {
       "license": "MIT License",
+      "mainCopyrightOwner": "數位發展部",
       "repoOwner": "數位發展部"
     },
     "maintenance": {
@@ -69,11 +70,18 @@
       "techStacks": [
         {
           "name": "Vue.js"
+        },
+        {
+          "name": "HTML/CSS"
+        },
+        {
+          "name": "JavaScript"
         }
       ],
       "vulnerabilityScanners": [
         "OWASP"
       ],
+      "mainCopyrightOwnerLogo": "/images/projects/logos/MODA-logo.svg",
       "createdDate": "2023-11-22"
     },
     "filterTags": {
@@ -87,9 +95,14 @@
       "techStacks": [
         "Node.js",
         "Firebase Realtime Database",
-        "Vue.js"
+        "Vue.js",
+        "HTML/CSS",
+        "JavaScript"
       ],
       "repoOwners": [
+        "數位發展部"
+      ],
+      "mainCopyrightOwners": [
         "數位發展部"
       ]
     }
@@ -124,12 +137,13 @@
           "數據呈現"
         ],
         "screenshots": [
-          "/images/projects/dengue/frontend.wepb"
+          "/images/projects/dengue/frontend.webp"
         ]
       }
     },
     "legal": {
       "license": "MIT License",
+      "mainCopyrightOwner": "數位發展部",
       "repoOwner": "數位發展部"
     },
     "maintenance": {
@@ -165,11 +179,18 @@
       "techStacks": [
         {
           "name": "Vue.js"
+        },
+        {
+          "name": "HTML/CSS"
+        },
+        {
+          "name": "JavaScript"
         }
       ],
       "vulnerabilityScanners": [
         "OWASP"
       ],
+      "mainCopyrightOwnerLogo": "/images/projects/logos/MODA-logo.svg",
       "createdDate": "2023-11-22"
     },
     "filterTags": {
@@ -183,9 +204,14 @@
       "techStacks": [
         "Node.js",
         "MongoDB",
-        "Vue.js"
+        "Vue.js",
+        "HTML/CSS",
+        "JavaScript"
       ],
       "repoOwners": [
+        "數位發展部"
+      ],
+      "mainCopyrightOwners": [
         "數位發展部"
       ]
     }
@@ -229,6 +255,7 @@
     },
     "legal": {
       "license": "MIT License",
+      "mainCopyrightOwner": "數位發展部",
       "repoOwner": "數位發展部"
     },
     "maintenance": {
@@ -259,11 +286,21 @@
       "techStacks": [
         {
           "name": "Vue.js"
+        },
+        {
+          "name": "HTML/CSS"
+        },
+        {
+          "name": "JavaScript"
+        },
+        {
+          "name": "Laravel"
         }
       ],
       "vulnerabilityScanners": [
         "OWASP"
       ],
+      "mainCopyrightOwnerLogo": "/images/projects/logos/MODA-logo.svg",
       "createdDate": "2023-11-22"
     },
     "filterTags": {
@@ -275,9 +312,15 @@
       "techStacks": [
         "PHP",
         "MySQL",
-        "Vue.js"
+        "Vue.js",
+        "HTML/CSS",
+        "JavaScript",
+        "Laravel"
       ],
       "repoOwners": [
+        "數位發展部"
+      ],
+      "mainCopyrightOwners": [
         "數位發展部"
       ]
     }
@@ -321,6 +364,7 @@
     },
     "legal": {
       "license": "MIT License",
+      "mainCopyrightOwner": "數位發展部",
       "repoOwner": "數位發展部"
     },
     "maintenance": {
@@ -339,8 +383,10 @@
     "dependsOn": {
       "open": [
         {
-          "name": "Node.js",
-          "versionMin": "18"
+          "name": "PHP"
+        },
+        {
+          "name": "MySQL"
         }
       ]
     },
@@ -349,11 +395,21 @@
       "techStacks": [
         {
           "name": "Vue.js"
+        },
+        {
+          "name": "HTML/CSS"
+        },
+        {
+          "name": "JavaScript"
+        },
+        {
+          "name": "Laravel"
         }
       ],
       "vulnerabilityScanners": [
         "OWASP"
       ],
+      "mainCopyrightOwnerLogo": "/images/projects/logos/MODA-logo.svg",
       "createdDate": "2023-11-22"
     },
     "filterTags": {
@@ -363,10 +419,17 @@
         "地圖資訊呈現"
       ],
       "techStacks": [
-        "Node.js",
-        "Vue.js"
+        "PHP",
+        "MySQL",
+        "Vue.js",
+        "HTML/CSS",
+        "JavaScript",
+        "Laravel"
       ],
       "repoOwners": [
+        "數位發展部"
+      ],
+      "mainCopyrightOwners": [
         "數位發展部"
       ]
     }
@@ -377,7 +440,7 @@
     "name": "code-gov-tw",
     "url": "https://github.com/moda-gov-tw/code-gov-tw",
     "landingURL": "https://code.gov.tw",
-    "releaseDate": "2024-03-29",
+    "releaseDate": "2024-04-29",
     "platforms": [
       "web"
     ],
@@ -398,7 +461,8 @@
     },
     "legal": {
       "license": "MIT",
-      "repoOwner": "數位發展部"
+      "mainCopyrightOwner": "數位發展部 民主網絡司",
+      "repoOwner": "數位發展部 民主網絡司"
     },
     "maintenance": {
       "type": "internal",
@@ -431,9 +495,6 @@
       "countryExtensionVersion": "1.0.0",
       "techStacks": [
         {
-          "name": "TypeScript"
-        },
-        {
           "name": "Qwik"
         },
         {
@@ -447,6 +508,7 @@
         "SonarQube"
       ],
       "accessibilityConformance": "AAA",
+      "mainCopyrightOwnerLogo": "/images/projects/logos/MODA-logo.svg",
       "createdDate": "2024-02-01"
     },
     "filterTags": {
@@ -455,11 +517,13 @@
       ],
       "techStacks": [
         "Node.js",
-        "TypeScript",
         "Qwik",
         "Tailwind CSS"
       ],
       "repoOwners": [
+        "數位發展部"
+      ],
+      "mainCopyrightOwners": [
         "數位發展部"
       ]
     }
@@ -482,7 +546,7 @@
     "description": {
       "zh-Hant": {
         "localisedName": "GOV.UK Forms Admin",
-        "shortDescription": "GOV.UK Forms 是英國 GDS 政府數位服務團隊維運之公部門線上表單平臺。此服務開放程式原始碼，可提供政府各機關與單位利用該平臺之模版，建立可供外部填寫之簡易表單。\n",
+        "shortDescription": "GOV.UK Forms 是英國 GDS 政府數位服務團隊維運之公部門線上表單平台。此為該服務背後的管理軟體。此服務開放程式原始碼，可提供政府各機關與單位利用該平台之模版，建立可供外部填寫之簡易表單。 此服務具有自動檢查遞交內容功能，確認回填資料正確性；範本功能讓使用更便利；可追蹤表單遞交狀態，衡量表單的易用性。程式設計符合英國政府制定之網路安全標準，保護資料安全。\n",
         "features": [
           "表單填寫 / 資料上傳"
         ]
@@ -490,6 +554,7 @@
     },
     "legal": {
       "license": "MIT License",
+      "mainCopyrightOwner": "英國政府數位服務團 Government Digital Service",
       "repoOwner": "數位發展部 民主網絡司 公民科技科"
     },
     "maintenance": {
@@ -516,8 +581,7 @@
           "version": "3"
         },
         {
-          "name": "Node.js",
-          "version": "16"
+          "name": "HTML/CSS"
         }
       ]
     },
@@ -525,9 +589,20 @@
     "isBasedOn": "https://github.com/alphagov/forms-admin",
     "tw": {
       "countryExtensionVersion": "1.0.0",
+      "techStacks": [
+        {
+          "name": "SCSS"
+        }
+      ],
       "vulnerabilityScanners": [
         "經上傳至 GitHub 及與上游社群溝通，無被檢查出嚴重漏洞。"
       ],
+      "overrides": {
+        "repoOwners": [
+          "其他"
+        ]
+      },
+      "mainCopyrightOwnerLogo": "/images/projects/logos/gov-uk-logo.png",
       "createdDate": "2023-02-03"
     },
     "filterTags": {
@@ -536,10 +611,14 @@
       ],
       "techStacks": [
         "Ruby",
-        "Node.js"
+        "HTML/CSS",
+        "SCSS"
       ],
       "repoOwners": [
-        "數位發展部"
+        "其他"
+      ],
+      "mainCopyrightOwners": [
+        "英國政府數位服務團"
       ]
     }
   },
@@ -561,7 +640,7 @@
     "description": {
       "zh-Hant": {
         "localisedName": "GOV.UK Forms Product Pages",
-        "shortDescription": "GOV.UK Forms 是英國 GDS 政府數位服務團隊維運之公部門線上表單平臺。此服務開放程式原始碼，可提供政府各機關與單位利用該平臺之模版，建立可供外部填寫之簡易表單。\n",
+        "shortDescription": "GOV.UK Forms 是英國 GDS 政府數位服務團隊維運之公部門線上表單平台。此為該服務的頁面產生器。此服務開放程式原始碼，可提供政府各機關與單位利用該平台之模版，建立可供外部填寫之簡易表單。 此服務具有自動檢查遞交內容功能，確認回填資料正確性；範本功能讓使用更便利；可追蹤表單遞交狀態，衡量表單的易用性。程式設計符合英國政府制定之網路安全標準，保護資料安全。\n",
         "features": [
           "表單填寫 / 資料上傳"
         ]
@@ -569,6 +648,7 @@
     },
     "legal": {
       "license": "MIT License",
+      "mainCopyrightOwner": "英國政府數位服務團 Government Digital Service",
       "repoOwner": "數位發展部 民主網絡司 公民科技科"
     },
     "maintenance": {
@@ -591,12 +671,11 @@
     "dependsOn": {
       "open": [
         {
-          "name": "Ruby",
-          "version": "3"
+          "name": "HTML/CSS"
         },
         {
-          "name": "Node.js",
-          "version": "16"
+          "name": "Ruby",
+          "version": "3"
         }
       ]
     },
@@ -604,9 +683,20 @@
     "isBasedOn": "https://github.com/alphagov/forms-product-page",
     "tw": {
       "countryExtensionVersion": "1.0.0",
-      "vulnerabilityScanners": [
-        "經上傳至 GitHub 及與上游社群溝通，無被檢查出嚴重漏洞。"
+      "techStacks": [
+        {
+          "name": "SCSS"
+        }
       ],
+      "vulnerabilityScanners": [
+        "本專案為在地化成果，未涉及軟體開發作業，資訊安全檢測以上游結果為主。"
+      ],
+      "overrides": {
+        "repoOwners": [
+          "其他"
+        ]
+      },
+      "mainCopyrightOwnerLogo": "/images/projects/logos/gov-uk-logo.png",
       "createdDate": "2023-02-03"
     },
     "filterTags": {
@@ -614,18 +704,22 @@
         "表單填寫 / 資料上傳"
       ],
       "techStacks": [
+        "HTML/CSS",
         "Ruby",
-        "Node.js"
+        "SCSS"
       ],
       "repoOwners": [
-        "數位發展部"
+        "其他"
+      ],
+      "mainCopyrightOwners": [
+        "英國政府數位服務團"
       ]
     }
   },
   {
     "id": 7,
     "publiccodeYmlVersion": "0.3.0",
-    "name": "gov-uk-notify",
+    "name": "gov-uk-notifications-admin",
     "url": "https://github.com/moda-gov-tw/notifications-admin/",
     "releaseDate": "2023-11-08",
     "platforms": [
@@ -641,7 +735,7 @@
     "description": {
       "zh-Hant": {
         "localisedName": "GOV.UK Notify",
-        "shortDescription": "GOV.UK Notify 是英國 GDS 政府數位服務團隊維運的公部門業務訊息傳遞服務平臺。業務訊息包含電子郵件、簡訊、信函等。讓使用者無需程式編碼能力也可以編輯預設訊息範本、追蹤訊息傳送狀態、手動或自動傳送訊息。此程式提供開放原始碼，各單位可以整合需要的功能至自己的業務系統或平臺以增加訊息傳遞與通知的功能。\n",
+        "shortDescription": "GOV.UK Notify 是英國 GDS 政府數位服務團隊維運的公部門業務訊息傳遞服務平台。業務訊息包含電子郵件、簡訊、信函等。此為該服務背後的 Admin 管理頁面。這服務讓使用者無需程式編碼能力也可以編輯預設訊息範本、追蹤訊息傳送狀態、手動或自動傳送訊息。此程式提供開放原始碼，各單位可以整合需要的功能至自己的業務系統或平台以增加訊息傳遞與通知的功能。\n",
         "features": [
           "公共服務通知"
         ]
@@ -649,8 +743,8 @@
     },
     "legal": {
       "license": "MIT License",
-      "repoOwner": "數位發展部 民主網絡司 公民科技科",
-      "mainCopyrightOwner": "Government Digital Service"
+      "mainCopyrightOwner": "英國政府數位服務團 Government Digital Service",
+      "repoOwner": "數位發展部 民主網絡司 公民科技科"
     },
     "maintenance": {
       "type": "internal",
@@ -676,8 +770,10 @@
           "version": "3.9"
         },
         {
-          "name": "Node.js",
-          "version": "18"
+          "name": "HTML/CSS"
+        },
+        {
+          "name": "JavaScript"
         }
       ]
     },
@@ -686,8 +782,14 @@
     "tw": {
       "countryExtensionVersion": "1.0.0",
       "vulnerabilityScanners": [
-        "經上傳至 GitHub 及與上游社群溝通，無被檢查出嚴重漏洞。"
+        "本專案為在地化成果，未涉及軟體開發作業，資訊安全檢測以上游結果為主。"
       ],
+      "overrides": {
+        "repoOwners": [
+          "其他"
+        ]
+      },
+      "mainCopyrightOwnerLogo": "/images/projects/logos/gov-uk-logo.png",
       "createdDate": "2022-11-16"
     },
     "filterTags": {
@@ -696,10 +798,14 @@
       ],
       "techStacks": [
         "Python",
-        "Node.js"
+        "HTML/CSS",
+        "JavaScript"
       ],
       "repoOwners": [
-        "數位發展部"
+        "其他"
+      ],
+      "mainCopyrightOwners": [
+        "英國政府數位服務團"
       ]
     }
   },
@@ -729,6 +835,7 @@
     },
     "legal": {
       "license": "AGPL-3.0",
+      "mainCopyrightOwner": "Foundation for Public Code",
       "repoOwner": "數位發展部 民主網絡司 公民科技科"
     },
     "maintenance": {
@@ -751,7 +858,10 @@
     "dependsOn": {
       "open": [
         {
-          "name": "Node.js"
+          "name": "HTML/CSS"
+        },
+        {
+          "name": "JavaScript"
         }
       ]
     },
@@ -759,9 +869,20 @@
     "isBasedOn": "https://github.com/italia/publiccode-editor",
     "tw": {
       "countryExtensionVersion": "1.0.0",
-      "vulnerabilityScanners": [
-        "經上傳至 GitHub 及與上游社群溝通，無被檢查出嚴重漏洞。"
+      "techStacks": [
+        {
+          "name": "SCSS"
+        }
       ],
+      "vulnerabilityScanners": [
+        "本專案為在地化成果，未涉及軟體開發作業，資訊安全檢測以上游結果為主。"
+      ],
+      "mainCopyrightOwnerLogo": "/images/projects/logos/foundation-for-public-code-logo.jpg",
+      "overrides": {
+        "repoOwners": [
+          "其他"
+        ]
+      },
       "createdDate": "2022-12-01"
     },
     "filterTags": {
@@ -769,10 +890,15 @@
         "編輯器"
       ],
       "techStacks": [
-        "Node.js"
+        "HTML/CSS",
+        "JavaScript",
+        "SCSS"
       ],
       "repoOwners": [
-        "數位發展部"
+        "其他"
+      ],
+      "mainCopyrightOwners": [
+        "Foundation"
       ]
     }
   },
@@ -802,6 +928,7 @@
     },
     "legal": {
       "license": "CC0 v1.0",
+      "mainCopyrightOwner": "Foundation for Public Code",
       "repoOwner": "數位發展部 民主網絡司 公民科技科"
     },
     "maintenance": {
@@ -824,7 +951,7 @@
     "dependsOn": {
       "open": [
         {
-          "name": "Node.js"
+          "name": "Python"
         }
       ]
     },
@@ -836,24 +963,228 @@
     "tw": {
       "countryExtensionVersion": "1.0.0",
       "vulnerabilityScanners": [
-        "經上傳至 GitHub 及與上游社群溝通，無被檢查出嚴重漏洞。"
+        "本專案為在地化成果，未涉及軟體開發作業，資訊安全檢測以上游結果為主。"
       ],
-      "createdDate": "2022-12-01"
+      "overrides": {
+        "repoOwners": [
+          "其他"
+        ]
+      },
+      "mainCopyrightOwnerLogo": "/images/projects/logos/foundation-for-public-code-logo.jpg",
+      "createdDate": "2022-12-01",
+      "overwriteFilterTags": {
+        "mainCopyrightOwner": [
+          "其他"
+        ]
+      }
     },
     "filterTags": {
       "features": [
         "標準"
       ],
       "techStacks": [
-        "Node.js"
+        "Python"
       ],
       "repoOwners": [
-        "數位發展部"
+        "其他"
+      ],
+      "mainCopyrightOwners": [
+        "Foundation"
       ]
     }
   },
   {
     "id": 10,
+    "publiccodeYmlVersion": "0.3.0",
+    "name": "matrix-org.matrix-react-sdk",
+    "url": "https://github.com/moda-gov-tw/matrix-org.matrix-react-sdk/",
+    "releaseDate": "2023-11-08",
+    "platforms": [
+      "web"
+    ],
+    "categories": [
+      "data-collection",
+      "digital-citizenship"
+    ],
+    "developmentStatus": "development",
+    "softwareType": "standalone/web",
+    "description": {
+      "zh-Hant": {
+        "localisedName": "Matrix Client (Element Series) matrix-react-sdk",
+        "shortDescription": "Element 是 Matrix 核心團隊基於去中心化標準開發的開放原始碼通訊軟體。此為該服務底層的 matrix-react-sdk ，可用於建置各種其他軟體。可應用網際網路 IP based 進行即時通訊。基於其開放特性，可整合其他程式，快速建構即時交換資料系統。除此之外，亦可與 Slack、Telegram 等其它通訊軟體進行串聯。\n",
+        "features": [
+          "即時通訊"
+        ]
+      }
+    },
+    "legal": {
+      "license": "Apache-2.0",
+      "mainCopyrightOwner": "Element",
+      "repoOwner": "數位發展部 民主網絡司 公民科技科"
+    },
+    "maintenance": {
+      "type": "internal",
+      "contacts": [
+        {
+          "name": "關涵蓁 分析師",
+          "email": "hckuan@moda.gov.tw",
+          "phone": "02-2380-0322"
+        }
+      ]
+    },
+    "localisation": {
+      "localisationReady": true,
+      "availableLanguages": [
+        "en",
+        "zh-Hant"
+      ]
+    },
+    "dependsOn": {
+      "open": [
+        {
+          "name": "HTML/CSS"
+        },
+        {
+          "name": "JavaScript"
+        },
+        {
+          "name": "TypeScript"
+        }
+      ]
+    },
+    "applicationSuite": "Matrix Element",
+    "isBasedOn": "https://github.com/matrix-org/matrix-react-sdk",
+    "tw": {
+      "countryExtensionVersion": "1.0.0",
+      "vulnerabilityScanners": [
+        "本專案為在地化成果，未涉及軟體開發作業，資訊安全檢測以上游結果為主。"
+      ],
+      "techStacks": [
+        {
+          "name": "React"
+        }
+      ],
+      "mainCopyrightOwnerLogo": "/images/projects/logos/matrix-element-logo.jpg",
+      "overrides": {
+        "repoOwners": [
+          "其他"
+        ]
+      },
+      "createdDate": "2022-12-16"
+    },
+    "filterTags": {
+      "features": [
+        "即時通訊"
+      ],
+      "techStacks": [
+        "HTML/CSS",
+        "JavaScript",
+        "TypeScript",
+        "React"
+      ],
+      "repoOwners": [
+        "其他"
+      ],
+      "mainCopyrightOwners": [
+        "Element"
+      ]
+    }
+  },
+  {
+    "id": 11,
+    "publiccodeYmlVersion": "0.3.0",
+    "name": "matrix-client-vector-im.element-web",
+    "url": "https://github.com/moda-gov-tw/vector-im.element-web/",
+    "releaseDate": "2023-11-08",
+    "platforms": [
+      "web"
+    ],
+    "categories": [
+      "data-collection",
+      "digital-citizenship"
+    ],
+    "developmentStatus": "development",
+    "softwareType": "standalone/web",
+    "description": {
+      "zh-Hant": {
+        "localisedName": "Matrix Client (Element Series) Web",
+        "shortDescription": "Element 是 Matrix 核心團隊基於去中心化標準開發的開放原始碼通訊軟體。此為該服務基於 matrix-react-sdk 建置的網頁版軟體。可應用網際網路 IP based 進行即時通訊。基於其開放特性，可整合其他程式，快速建構即時交換資料系統。除此之外，亦可與 Slack、Telegram 等其它通訊軟體進行串聯。\n",
+        "features": [
+          "即時通訊"
+        ]
+      }
+    },
+    "legal": {
+      "license": "Apache-2.0",
+      "mainCopyrightOwner": "Element",
+      "repoOwner": "數位發展部 民主網絡司 公民科技科"
+    },
+    "maintenance": {
+      "type": "internal",
+      "contacts": [
+        {
+          "name": "關涵蓁 分析師",
+          "email": "hckuan@moda.gov.tw",
+          "phone": "02-2380-0322"
+        }
+      ]
+    },
+    "localisation": {
+      "localisationReady": true,
+      "availableLanguages": [
+        "en",
+        "zh-Hant"
+      ]
+    },
+    "dependsOn": {
+      "open": [
+        {
+          "name": "HTML/CSS"
+        },
+        {
+          "name": "JavaScript"
+        }
+      ]
+    },
+    "applicationSuite": "Matrix Element",
+    "isBasedOn": "https://github.com/element-hq/element-web",
+    "tw": {
+      "countryExtensionVersion": "1.0.0",
+      "techStacks": [
+        {
+          "name": "React"
+        }
+      ],
+      "vulnerabilityScanners": [
+        "本專案為在地化成果，未涉及軟體開發作業，資訊安全檢測以上游結果為主。"
+      ],
+      "overrides": {
+        "repoOwners": [
+          "其他"
+        ]
+      },
+      "mainCopyrightOwnerLogo": "/images/projects/logos/matrix-element-logo.jpg",
+      "createdDate": "2022-12-16"
+    },
+    "filterTags": {
+      "features": [
+        "即時通訊"
+      ],
+      "techStacks": [
+        "HTML/CSS",
+        "JavaScript",
+        "React"
+      ],
+      "repoOwners": [
+        "其他"
+      ],
+      "mainCopyrightOwners": [
+        "Element"
+      ]
+    }
+  },
+  {
+    "id": 12,
     "publiccodeYmlVersion": "0.3.0",
     "name": "moda-ghg-inventory-system-frontend",
     "url": "https://github.com/moda-gov-tw/moda-ghg-inventory-system-frontend",
@@ -884,6 +1215,7 @@
     },
     "legal": {
       "license": "「網頁文字圖片採取 CC0 授權方式，程式碼採取 MIT 的授權方式」",
+      "mainCopyrightOwner": "數位發展部 民主網路司",
       "repoOwner": "數位發展部 民主網路司"
     },
     "maintenance": {
@@ -921,6 +1253,7 @@
       "vulnerabilityScanners": [
         "HCL AppScan"
       ],
+      "mainCopyrightOwnerLogo": "/images/projects/logos/MODA-logo.svg",
       "createdDate": "2023-11-24"
     },
     "filterTags": {
@@ -936,90 +1269,14 @@
       ],
       "repoOwners": [
         "數位發展部"
-      ]
-    }
-  },
-  {
-    "id": 11,
-    "publiccodeYmlVersion": "0.3.0",
-    "name": "matrix-org.matrix-react-sdk",
-    "url": "https://github.com/moda-gov-tw/matrix-org.matrix-react-sdk/",
-    "releaseDate": "2023-11-08",
-    "platforms": [
-      "web"
-    ],
-    "categories": [
-      "data-collection",
-      "digital-citizenship"
-    ],
-    "developmentStatus": "development",
-    "softwareType": "standalone/web",
-    "description": {
-      "zh-Hant": {
-        "localisedName": "Matrix Client (Element Series)",
-        "shortDescription": "Element 是 Matrix 核心團隊基於去中心化標準開發的開放原始碼通訊軟體。可應用網際網路 IP based 進行即時通訊。基於其開放特性，可整合其他程式，快速建構即時交換資料系統。除此之外，亦可與 Slack、Telegram 等其它通訊軟體進行串聯。\n",
-        "features": [
-          "即時通訊"
-        ]
-      }
-    },
-    "legal": {
-      "license": "Apache-2.0",
-      "repoOwner": "數位發展部 民主網絡司 公民科技科"
-    },
-    "maintenance": {
-      "type": "internal",
-      "contacts": [
-        {
-          "name": "關涵蓁 分析師",
-          "email": "hckuan@moda.gov.tw",
-          "phone": "02-2380-0322"
-        }
-      ]
-    },
-    "localisation": {
-      "localisationReady": true,
-      "availableLanguages": [
-        "en",
-        "zh-Hant"
-      ]
-    },
-    "dependsOn": {
-      "open": [
-        {
-          "name": "Ruby",
-          "version": "3"
-        },
-        {
-          "name": "Node.js",
-          "version": "16"
-        }
-      ]
-    },
-    "applicationSuite": "Matrix Element",
-    "isBasedOn": "https://github.com/matrix-org/matrix-react-sdk",
-    "tw": {
-      "countryExtensionVersion": "1.0.0",
-      "vulnerabilityScanners": [
-        "經上傳至 GitHub 及與上游社群溝通，無被檢查出嚴重漏洞。"
       ],
-      "createdDate": "2022-12-16"
-    },
-    "filterTags": {
-      "features": [
-        "即時通訊"
-      ],
-      "techStacks": [
-        "Ruby",
-        "Node.js"
-      ],
-      "repoOwners": [
+      "mainCopyrightOwners": [
         "數位發展部"
       ]
     }
   },
   {
-    "id": 12,
+    "id": 13,
     "publiccodeYmlVersion": "0.3.0",
     "name": "moda-official-website-full",
     "url": "https://github.com/moda-gov-tw/moda-official-website-full",
@@ -1051,6 +1308,7 @@
     },
     "legal": {
       "license": "MIT License",
+      "mainCopyrightOwner": "數位發展部 資訊處",
       "repoOwner": "數位發展部 資訊處"
     },
     "maintenance": {
@@ -1100,6 +1358,7 @@
         "Checkmarx"
       ],
       "accessibilityConformance": "AA",
+      "mainCopyrightOwnerLogo": "/images/projects/logos/MODA-logo.svg",
       "createdDate": "2024-04-03"
     },
     "filterTags": {
@@ -1116,11 +1375,14 @@
       ],
       "repoOwners": [
         "數位發展部"
+      ],
+      "mainCopyrightOwners": [
+        "數位發展部"
       ]
     }
   },
   {
-    "id": 13,
+    "id": 14,
     "publiccodeYmlVersion": "0.3.0",
     "name": "MODA_ODF_Application_Tools",
     "url": "https://github.com/MODAODF/MODA_ODF_Application_Tools",
@@ -1151,6 +1413,7 @@
     },
     "legal": {
       "license": "LGPL-3.0、MPL-2.0",
+      "mainCopyrightOwner": "數位發展部 數位政府司",
       "repoOwner": "數位發展部 數位政府司"
     },
     "maintenance": {
@@ -1184,6 +1447,7 @@
       "vulnerabilityScanners": [
         "SonarQube"
       ],
+      "mainCopyrightOwnerLogo": "/images/projects/logos/MODA-logo.svg",
       "createdDate": "2022-03-06"
     },
     "filterTags": {
@@ -1196,15 +1460,18 @@
       ],
       "repoOwners": [
         "數位發展部"
+      ],
+      "mainCopyrightOwners": [
+        "數位發展部"
       ]
     }
   },
   {
-    "id": 14,
+    "id": 15,
     "publiccodeYmlVersion": "0.3.0",
     "name": "opendata-frontend",
     "url": "https://github.com/moda-gov-tw/opendata-frontend",
-    "releaseDate": "2022-03-29",
+    "releaseDate": "2024-03-31",
     "platforms": [
       "web"
     ],
@@ -1219,8 +1486,7 @@
         "localisedName": "政府資料開放平臺前端",
         "shortDescription": "本專案為政府資料開放平臺前端開源，透過開源程式提供政府機關或民間團體，作為發展資料開放應用的參考，共同為政府開放資料盡一份心力。\n",
         "features": [
-          "資料一覽 / 檢索",
-          "個案管理"
+          "資料一覽 / 檢索"
         ],
         "screenshots": [
           "/images/projects/opendata-frontend/screenshot-1.webp",
@@ -1230,6 +1496,7 @@
     },
     "legal": {
       "license": "MIT License",
+      "mainCopyrightOwner": "數位發展部 多元創新司",
       "repoOwner": "數位發展部 多元創新司"
     },
     "maintenance": {
@@ -1252,8 +1519,7 @@
     "dependsOn": {
       "open": [
         {
-          "name": "Node.js",
-          "version": "18"
+          "name": "JavaScript"
         }
       ]
     },
@@ -1264,42 +1530,53 @@
       "countryExtensionVersion": "1.0.0",
       "techStacks": [
         {
+          "name": "HTML/CSS"
+        },
+        {
+          "name": "TypeScript"
+        },
+        {
           "name": "Vue.js"
         }
       ],
       "vulnerabilityScanners": [
         "SonarQube"
       ],
+      "mainCopyrightOwnerLogo": "/images/projects/logos/MODA-logo.svg",
       "openapi": [
         {
           "name": "資料集列表API",
           "description": "提供政府資料開放平臺資料集瀏覽與資料集搜尋功能",
-          "url": "https://beta.file.data.nat.gov.tw/openapi.json"
+          "url": "https://file.data.gov.tw/APIdocument.json"
         },
         {
           "name": "資料集搜尋選項API",
           "description": "提供資料集進階搜尋功能，可透過如服務分類等選項進行搜尋",
-          "url": "https://beta.file.data.nat.gov.tw/openapi.json"
+          "url": "https://file.data.gov.tw/APIdocument.json"
         }
       ],
-      "createdDate": "2013-11-22"
+      "createdDate": "2024-03-31"
     },
     "filterTags": {
       "features": [
-        "資料一覽 / 檢索",
-        "個案管理"
+        "資料一覽 / 檢索"
       ],
       "techStacks": [
-        "Node.js",
+        "JavaScript",
+        "HTML/CSS",
+        "TypeScript",
         "Vue.js"
       ],
       "repoOwners": [
+        "數位發展部"
+      ],
+      "mainCopyrightOwners": [
         "數位發展部"
       ]
     }
   },
   {
-    "id": 15,
+    "id": 16,
     "publiccodeYmlVersion": "0.3.0",
     "name": "pdis/lighthouse",
     "url": "https://github.com/PDIS/lighthouse",
@@ -1324,6 +1601,7 @@
     },
     "legal": {
       "license": "CC0-1.0",
+      "mainCopyrightOwner": "行政院公共數位創新空間（PDIS）",
       "repoOwner": "行政院公共數位創新空間（PDIS）"
     },
     "maintenance": {
@@ -1357,6 +1635,7 @@
         "GitHub CodeQL",
         "GitHub Dependabot Alerts"
       ],
+      "mainCopyrightOwnerLogo": "/images/projects/logos/PDIS-logo.png",
       "accessibilityConformance": null
     },
     "filterTags": {
@@ -1368,11 +1647,14 @@
       ],
       "repoOwners": [
         "行政院公共數位創新空間（PDIS）"
+      ],
+      "mainCopyrightOwners": [
+        "行政院公共數位創新空間（PDIS）"
       ]
     }
   },
   {
-    "id": 16,
+    "id": 17,
     "publiccodeYmlVersion": "0.3.0",
     "name": "pdis/web-jekyll",
     "url": "https://github.com/PDIS/web-jekyll",
@@ -1398,6 +1680,7 @@
     },
     "legal": {
       "license": "除另有標示外，內容以創用 CC BY 4.0 授權條款釋出。",
+      "mainCopyrightOwner": "行政院公共數位創新空間（PDIS）",
       "repoOwner": "行政院公共數位創新空間（PDIS）"
     },
     "maintenance": {
@@ -1434,6 +1717,7 @@
         "GitHub CodeQL",
         "GitHub Dependabot Alerts"
       ],
+      "mainCopyrightOwnerLogo": "/images/projects/logos/PDIS-logo.png",
       "accessibilityConformance": null
     },
     "filterTags": {
@@ -1447,160 +1731,17 @@
       ],
       "repoOwners": [
         "行政院公共數位創新空間（PDIS）"
-      ]
-    }
-  },
-  {
-    "id": 17,
-    "publiccodeYmlVersion": "0.3.0",
-    "name": "privacybydesign.irmamobile",
-    "url": "https://github.com/moda-gov-tw/privacybydesign.irmamobile/",
-    "releaseDate": "2023-11-08",
-    "platforms": [
-      "android",
-      "ios"
-    ],
-    "categories": [
-      "data-collection",
-      "digital-citizenship"
-    ],
-    "developmentStatus": "development",
-    "softwareType": "standalone/web",
-    "description": {
-      "zh-Hant": {
-        "localisedName": "Yivi (IRMA)",
-        "shortDescription": "Yivi 是開放原始碼的身份驗證服務。因應不同需求，使用者可選擇不同程度的身份資料揭露。個人資料將以 PIN 碼加密的方式儲存在裝置中。使用者可以自行掌控個人資料，進行無密碼驗證登入網站、簽署文件等目的。\n",
-        "features": [
-          "身份驗證"
-        ]
-      }
-    },
-    "legal": {
-      "license": "GPL v3",
-      "repoOwner": "數位發展部 民主網絡司 公民科技科"
-    },
-    "maintenance": {
-      "type": "internal",
-      "contacts": [
-        {
-          "name": "關涵蓁 分析師",
-          "email": "hckuan@moda.gov.tw",
-          "phone": "02-2380-0322"
-        }
-      ]
-    },
-    "localisation": {
-      "localisationReady": true,
-      "availableLanguages": [
-        "en",
-        "zh-Hant"
-      ]
-    },
-    "dependsOn": {
-      "open": [
-        {
-          "name": "Java",
-          "version": "11"
-        }
-      ]
-    },
-    "applicationSuite": "Yivi (IRMA)",
-    "isBasedOn": "https://github.com/privacybydesign/irmamobile",
-    "tw": {
-      "countryExtensionVersion": "1.0.0",
-      "techStacks": [
-        {
-          "name": "Flutter"
-        }
       ],
-      "vulnerabilityScanners": [
-        "經上傳至 GitHub 及與上游社群溝通，無被檢查出嚴重漏洞。"
-      ],
-      "createdDate": "2022-12-16"
-    },
-    "filterTags": {
-      "features": [
-        "身份驗證"
-      ],
-      "techStacks": [
-        "Java",
-        "Flutter"
-      ],
-      "repoOwners": [
-        "數位發展部"
+      "mainCopyrightOwners": [
+        "行政院公共數位創新空間（PDIS）"
       ]
     }
   },
   {
     "id": 18,
     "publiccodeYmlVersion": "0.3.0",
-    "name": "privacybydesign.pbdf-schememanager",
-    "url": "https://github.com/moda-gov-tw/privacybydesign.pbdf-schememanager",
-    "releaseDate": "2023-11-08",
-    "platforms": [
-      "android",
-      "ios"
-    ],
-    "categories": [
-      "data-collection",
-      "digital-citizenship"
-    ],
-    "developmentStatus": "development",
-    "softwareType": "standalone/web",
-    "description": {
-      "zh-Hant": {
-        "localisedName": "Yivi (IRMA) scheme manager",
-        "shortDescription": "Yivi 是開放原始碼的身份驗證服務。因應不同需求，使用者可選擇不同程度的身份資料揭露。個人資料將以 PIN 碼加密的方式儲存在裝置中。使用者可以自行掌控個人資料，進行無密碼驗證登入網站、簽署文件等目的。\n",
-        "features": [
-          "身份驗證"
-        ]
-      }
-    },
-    "legal": {
-      "license": "GPL v3",
-      "repoOwner": "數位發展部 民主網絡司 公民科技科"
-    },
-    "maintenance": {
-      "type": "internal",
-      "contacts": [
-        {
-          "name": "關涵蓁 分析師",
-          "email": "hckuan@moda.gov.tw",
-          "phone": "02-2380-0322"
-        }
-      ]
-    },
-    "localisation": {
-      "localisationReady": true,
-      "availableLanguages": [
-        "en",
-        "zh-Hant"
-      ]
-    },
-    "applicationSuite": "Yivi (IRMA)",
-    "isBasedOn": "https://github.com/privacybydesign/pbdf-schememanager",
-    "tw": {
-      "countryExtensionVersion": "1.0.0",
-      "vulnerabilityScanners": [
-        "經上傳至 GitHub 及與上游社群溝通，無被檢查出嚴重漏洞。"
-      ],
-      "createdDate": "2022-12-20"
-    },
-    "filterTags": {
-      "features": [
-        "身份驗證"
-      ],
-      "techStacks": [],
-      "repoOwners": [
-        "數位發展部"
-      ]
-    }
-  },
-  {
-    "id": 19,
-    "publiccodeYmlVersion": "0.3.0",
-    "name": "vector-im.element-web",
-    "url": "https://github.com/moda-gov-tw/vector-im.element-web/",
+    "name": "publiccodenet.standard",
+    "url": "https://github.com/moda-gov-tw/publiccodenet.standard/",
     "releaseDate": "2023-11-08",
     "platforms": [
       "web"
@@ -1622,6 +1763,7 @@
     },
     "legal": {
       "license": "CC0 v1.0",
+      "mainCopyrightOwner": "Foundation for Public Code",
       "repoOwner": "數位發展部 民主網絡司 公民科技科"
     },
     "maintenance": {
@@ -1644,8 +1786,10 @@
     "dependsOn": {
       "open": [
         {
-          "name": "Ruby",
-          "version": "3"
+          "name": "HTML/CSS"
+        },
+        {
+          "name": "Shell"
         }
       ]
     },
@@ -1654,8 +1798,14 @@
     "tw": {
       "countryExtensionVersion": "1.0.0",
       "vulnerabilityScanners": [
-        "經上傳至 GitHub 及與上游社群溝通，無被檢查出嚴重漏洞。"
+        "本專案為在地化成果，未涉及軟體開發作業，資訊安全檢測以上游結果為主。"
       ],
+      "overrides": {
+        "repoOwners": [
+          "其他"
+        ]
+      },
+      "mainCopyrightOwnerLogo": "/images/projects/logos/MODA-logo.svg",
       "createdDate": "2022-11-24"
     },
     "filterTags": {
@@ -1663,15 +1813,19 @@
         "標準"
       ],
       "techStacks": [
-        "Ruby"
+        "HTML/CSS",
+        "Shell"
       ],
       "repoOwners": [
-        "數位發展部"
+        "其他"
+      ],
+      "mainCopyrightOwners": [
+        "Foundation"
       ]
     }
   },
   {
-    "id": 20,
+    "id": 19,
     "publiccodeYmlVersion": "0.3.0",
     "name": "taipei-city-dashboard",
     "url": "https://github.com/tpe-doit/Taipei-City-Dashboard",
@@ -1701,7 +1855,8 @@
     },
     "legal": {
       "license": "AGPL-3",
-      "repoOwner": "臺北市政府 資訊局"
+      "mainCopyrightOwner": "臺北市政府資訊局",
+      "repoOwner": "臺北市政府資訊局"
     },
     "maintenance": {
       "type": "internal",
@@ -1752,6 +1907,7 @@
         "Checkmarx"
       ],
       "accessibilityConformance": "AA",
+      "mainCopyrightOwnerLogo": "/images/projects/logos/department-of-informations-technology-taipei-city-government-logo.png",
       "createdDate": "2023-05-22"
     },
     "filterTags": {
@@ -1768,18 +1924,22 @@
         "SQL Server"
       ],
       "repoOwners": [
-        "臺北市政府"
+        "臺北市政府資訊局"
+      ],
+      "mainCopyrightOwners": [
+        "臺北市政府資訊局"
       ]
     }
   },
   {
-    "id": 21,
+    "id": 20,
     "publiccodeYmlVersion": "0.3.0",
-    "name": "vector-im.element-web",
-    "url": "https://github.com/moda-gov-tw/vector-im.element-web/",
+    "name": "privacybydesign.irmamobile",
+    "url": "https://github.com/moda-gov-tw/privacybydesign.irmamobile/",
     "releaseDate": "2023-11-08",
     "platforms": [
-      "web"
+      "android",
+      "ios"
     ],
     "categories": [
       "data-collection",
@@ -1789,15 +1949,16 @@
     "softwareType": "standalone/web",
     "description": {
       "zh-Hant": {
-        "localisedName": "Matrix Client (Element Series)",
-        "shortDescription": "Element 是 Matrix 核心團隊基於去中心化標準開發的開放原始碼通訊軟體。可應用網際網路 IP based 進行即時通訊。基於其開放特性，可整合其他程式，快速建構即時交換資料系統。除此之外，亦可與 Slack、Telegram 等其它通訊軟體進行串聯。\n",
+        "localisedName": "Yivi (IRMA)",
+        "shortDescription": "Yivi 是開放原始碼的身份驗證服務。此為該服務 App 的原始碼。此服務可因應不同需求，讓使用者可選擇不同程度的身份資料揭露。個人資料將以 PIN 碼加密的方式儲存在裝置中。使用者可以自行掌控個人資料，進行無密碼驗證登入網站、簽署文件等目的。\n",
         "features": [
-          "即時通訊"
+          "身份驗證"
         ]
       }
     },
     "legal": {
-      "license": "Apache-2.0",
+      "license": "GPL v3",
+      "mainCopyrightOwner": "Yivi",
       "repoOwner": "數位發展部 民主網絡司 公民科技科"
     },
     "maintenance": {
@@ -1820,28 +1981,129 @@
     "dependsOn": {
       "open": [
         {
-          "name": "Node.js"
+          "name": "Dart"
+        },
+        {
+          "name": "Go"
         }
       ]
     },
-    "applicationSuite": "Matrix Element",
-    "isBasedOn": "https://github.com/element-hq/element-web",
+    "applicationSuite": "Yivi (IRMA)",
+    "isBasedOn": "https://github.com/privacybydesign/irmamobile",
     "tw": {
       "countryExtensionVersion": "1.0.0",
       "vulnerabilityScanners": [
-        "經上傳至 GitHub 及與上游社群溝通，無被檢查出嚴重漏洞。"
+        "本專案為在地化成果，未涉及軟體開發作業，資訊安全檢測以上游結果為主。"
       ],
+      "overrides": {
+        "repoOwners": [
+          "其他"
+        ]
+      },
+      "mainCopyrightOwnerLogo": "/images/projects/logos/yivi-logo.jpg",
       "createdDate": "2022-12-16"
     },
     "filterTags": {
       "features": [
-        "即時通訊"
+        "身份驗證"
       ],
       "techStacks": [
-        "Node.js"
+        "Dart",
+        "Go"
       ],
       "repoOwners": [
-        "數位發展部"
+        "其他"
+      ],
+      "mainCopyrightOwners": [
+        "Yivi"
+      ]
+    }
+  },
+  {
+    "id": 21,
+    "publiccodeYmlVersion": "0.3.0",
+    "name": "privacybydesign.pbdf-schememanager",
+    "url": "https://github.com/moda-gov-tw/privacybydesign.pbdf-schememanager",
+    "releaseDate": "2023-11-08",
+    "platforms": [
+      "android",
+      "ios"
+    ],
+    "categories": [
+      "data-collection",
+      "digital-citizenship"
+    ],
+    "developmentStatus": "development",
+    "softwareType": "standalone/web",
+    "description": {
+      "zh-Hant": {
+        "localisedName": "Yivi (IRMA) scheme manager",
+        "shortDescription": "Yivi 是開放原始碼的身份驗證服務。此為該服務管理器的原始碼。因應不同需求，使用者可選擇不同程度的身份資料揭露。個人資料將以 PIN 碼加密的方式儲存在裝置中。使用者可以自行掌控個人資料，進行無密碼驗證登入網站、簽署文件等目的。\n",
+        "features": [
+          "身份驗證"
+        ]
+      }
+    },
+    "legal": {
+      "license": "GPL v3",
+      "mainCopyrightOwner": "Yivi",
+      "repoOwner": "數位發展部 民主網絡司 公民科技科"
+    },
+    "maintenance": {
+      "type": "internal",
+      "contacts": [
+        {
+          "name": "關涵蓁 分析師",
+          "email": "hckuan@moda.gov.tw",
+          "phone": "02-2380-0322"
+        }
+      ]
+    },
+    "localisation": {
+      "localisationReady": true,
+      "availableLanguages": [
+        "en",
+        "zh-Hant"
+      ]
+    },
+    "dependsOn": {
+      "open": [
+        {
+          "name": "Python"
+        },
+        {
+          "name": "Shell"
+        }
+      ]
+    },
+    "applicationSuite": "Yivi (IRMA)",
+    "isBasedOn": "https://github.com/privacybydesign/pbdf-schememanager",
+    "tw": {
+      "countryExtensionVersion": "1.0.0",
+      "vulnerabilityScanners": [
+        "本專案為在地化成果，未涉及軟體開發作業，資訊安全檢測以上游結果為主。"
+      ],
+      "overrides": {
+        "repoOwners": [
+          "其他"
+        ]
+      },
+      "mainCopyrightOwnerLogo": "/images/projects/logos/yivi-logo.jpg",
+      "createdDate": "2022-12-20"
+    },
+    "filterTags": {
+      "features": [
+        "身份驗證"
+      ],
+      "techStacks": [
+        "Python",
+        "Shell"
+      ],
+      "repoOwners": [
+        "其他"
+      ],
+      "mainCopyrightOwners": [
+        "Yivi"
       ]
     }
   }

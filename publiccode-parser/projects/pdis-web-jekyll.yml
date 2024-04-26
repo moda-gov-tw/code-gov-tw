@@ -20,6 +20,7 @@ description:
       - 自動翻譯
 legal:
   license: 除另有標示外，內容以創用 CC BY 4.0 授權條款釋出。
+  mainCopyrightOwner: 行政院公共數位創新空間（PDIS）
   repoOwner: 行政院公共數位創新空間（PDIS）
 maintenance:
   type: internal
@@ -42,4 +43,5 @@ tw:
   vulnerabilityScanners:
     - "GitHub CodeQL"
     - "GitHub Dependabot Alerts"
+  mainCopyrightOwnerLogo: "/images/projects/logos/PDIS-logo.png"
   accessibilityConformance: null

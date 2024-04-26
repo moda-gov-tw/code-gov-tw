@@ -1,7 +1,7 @@
 publiccodeYmlVersion: 0.3.0
 name: opendata-frontend
 url: "https://github.com/moda-gov-tw/opendata-frontend"
-releaseDate: "2022-03-29"
+releaseDate: "2024-03-31"
 platforms:
   - web
 categories:
@@ -16,12 +16,12 @@ description:
       本專案為政府資料開放平臺前端開源，透過開源程式提供政府機關或民間團體，作為發展資料開放應用的參考，共同為政府開放資料盡一份心力。
     features:
       - 資料一覽 / 檢索
-      - 個案管理
     screenshots:
       - /images/projects/opendata-frontend/screenshot-1.webp
       - /images/projects/opendata-frontend/screenshot-2.webp
 legal:
   license: MIT License
+  mainCopyrightOwner: 數位發展部 多元創新司
   repoOwner: 數位發展部 多元創新司
 maintenance:
   type: internal
@@ -36,22 +36,24 @@ localisation:
     - en
 dependsOn:
   open:
-    - name: Node.js
-      version: "18"
+    - name: JavaScript
 usedBy:
   - "[政府資料開放平臺](https://data.gov.tw/) (無障礙檢測結果：AA)"
 tw:
   countryExtensionVersion: "1.0.0"
   techStacks:
+    - name: "HTML/CSS"
+    - name: "TypeScript"
     - name: "Vue.js"
   vulnerabilityScanners:
     - "SonarQube"
+  mainCopyrightOwnerLogo: "/images/projects/logos/MODA-logo.svg"
   openapi:
     - name: 資料集列表API
       description: "提供政府資料開放平臺資料集瀏覽與資料集搜尋功能"
-      url: "https://beta.file.data.nat.gov.tw/openapi.json"
+      url: "https://file.data.gov.tw/APIdocument.json"
     - name: 資料集搜尋選項API
       description: "提供資料集進階搜尋功能，可透過如服務分類等選項進行搜尋"
-      url: "https://beta.file.data.nat.gov.tw/openapi.json"
+      url: "https://file.data.gov.tw/APIdocument.json"
   # GitHub API 有資訊可以取得, 暫時手動填寫
-  createdDate: "2013-11-22"
+  createdDate: "2024-03-31"

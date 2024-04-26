@@ -1,6 +1,6 @@
 publiccodeYmlVersion: 0.3.0
-name: vector-im.element-web
-url: "https://github.com/moda-gov-tw/vector-im.element-web/"
+name: publiccodenet.standard
+url: "https://github.com/moda-gov-tw/publiccodenet.standard/"
 releaseDate: "2023-11-08"
 platforms:
   - web
@@ -18,6 +18,7 @@ description:
       - 標準
 legal:
   license: CC0 v1.0
+  mainCopyrightOwner: Foundation for Public Code
   repoOwner: 數位發展部 民主網絡司 公民科技科
 maintenance:
   type: internal
@@ -32,13 +33,17 @@ localisation:
     - zh-Hant
 dependsOn:
   open:
-    - name: Ruby
-      version: "3"
+    - name: HTML/CSS
+    - name: Shell
 applicationSuite: "Standard for Public Code"
 isBasedOn: "https://github.com/publiccodenet/standard"
 tw:
   countryExtensionVersion: "1.0.0"
   vulnerabilityScanners:
-    - "經上傳至 GitHub 及與上游社群溝通，無被檢查出嚴重漏洞。"
+    - "本專案為在地化成果，未涉及軟體開發作業，資訊安全檢測以上游結果為主。"
+  overrides:
+    repoOwners:
+      - "其他"
+  mainCopyrightOwnerLogo: "/images/projects/logos/MODA-logo.svg"
   # GitHub API 有資訊可以取得, 暫時手動填寫
   createdDate: "2022-11-24"

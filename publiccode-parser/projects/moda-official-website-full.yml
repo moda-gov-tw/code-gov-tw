@@ -24,6 +24,7 @@ description:
       - /images/projects/moda-official-website-full/screenshot-3.webp
 legal:
   license: MIT License
+  mainCopyrightOwner: 數位發展部 資訊處
   repoOwner: 數位發展部 資訊處
 maintenance:
   type: internal
@@ -37,8 +38,8 @@ localisation:
     - zh-Hant
     - en
 
-dependsOn: # 這個專案所依賴的技術, 系統層級的
-  open: # 開放原始碼的軟體
+dependsOn:
+  open:
     - name: C#
 
 usedBy:
@@ -55,6 +56,7 @@ tw:
   vulnerabilityScanners:
     - "Checkmarx"
   accessibilityConformance: "AA"
+  mainCopyrightOwnerLogo: "/images/projects/logos/MODA-logo.svg"
   # GitHub API 有資訊可以取得, 暫時手動填寫
   createdDate: "2024-04-03" # YYYY-MM-DD, 這個專案的建立日期
 
