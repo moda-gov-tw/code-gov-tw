@@ -44,6 +44,6 @@ tw:
   overrides:
     repoOwners:
       - "其他"
-  mainCopyrightOwnerLogo: "/images/projects/logos/MODA-logo.svg"
+  mainCopyrightOwnerLogo: "/images/projects/logos/foundation-for-public-code-logo.jpg"
   # GitHub API 有資訊可以取得, 暫時手動填寫
   createdDate: "2022-11-24"

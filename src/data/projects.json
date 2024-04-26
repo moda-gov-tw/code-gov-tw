@@ -595,7 +595,7 @@
         }
       ],
       "vulnerabilityScanners": [
-        "經上傳至 GitHub 及與上游社群溝通，無被檢查出嚴重漏洞。"
+        "本專案為在地化成果，未涉及軟體開發作業。"
       ],
       "overrides": {
         "repoOwners": [
@@ -689,7 +689,7 @@
         }
       ],
       "vulnerabilityScanners": [
-        "本專案為在地化成果，未涉及軟體開發作業，資訊安全檢測以上游結果為主。"
+        "本專案為在地化成果，未涉及軟體開發作業。"
       ],
       "overrides": {
         "repoOwners": [
@@ -782,7 +782,7 @@
     "tw": {
       "countryExtensionVersion": "1.0.0",
       "vulnerabilityScanners": [
-        "本專案為在地化成果，未涉及軟體開發作業，資訊安全檢測以上游結果為主。"
+        "本專案為在地化成果，未涉及軟體開發作業。"
       ],
       "overrides": {
         "repoOwners": [
@@ -875,7 +875,7 @@
         }
       ],
       "vulnerabilityScanners": [
-        "本專案為在地化成果，未涉及軟體開發作業，資訊安全檢測以上游結果為主。"
+        "本專案為在地化成果，未涉及軟體開發作業。"
       ],
       "mainCopyrightOwnerLogo": "/images/projects/logos/foundation-for-public-code-logo.jpg",
       "overrides": {
@@ -963,7 +963,7 @@
     "tw": {
       "countryExtensionVersion": "1.0.0",
       "vulnerabilityScanners": [
-        "本專案為在地化成果，未涉及軟體開發作業，資訊安全檢測以上游結果為主。"
+        "本專案為在地化成果，未涉及軟體開發作業。"
       ],
       "overrides": {
         "repoOwners": [
@@ -1057,7 +1057,7 @@
     "tw": {
       "countryExtensionVersion": "1.0.0",
       "vulnerabilityScanners": [
-        "本專案為在地化成果，未涉及軟體開發作業，資訊安全檢測以上游結果為主。"
+        "本專案為在地化成果，未涉及軟體開發作業。"
       ],
       "techStacks": [
         {
@@ -1143,6 +1143,9 @@
         },
         {
           "name": "JavaScript"
+        },
+        {
+          "name": "TypeScript"
         }
       ]
     },
@@ -1156,7 +1159,7 @@
         }
       ],
       "vulnerabilityScanners": [
-        "本專案為在地化成果，未涉及軟體開發作業，資訊安全檢測以上游結果為主。"
+        "本專案為在地化成果，未涉及軟體開發"
       ],
       "overrides": {
         "repoOwners": [
@@ -1173,6 +1176,7 @@
       "techStacks": [
         "HTML/CSS",
         "JavaScript",
+        "TypeScript",
         "React"
       ],
       "repoOwners": [
@@ -1798,14 +1802,14 @@
     "tw": {
       "countryExtensionVersion": "1.0.0",
       "vulnerabilityScanners": [
-        "本專案為在地化成果，未涉及軟體開發作業，資訊安全檢測以上游結果為主。"
+        "本專案為在地化成果，未涉及軟體開發作業。"
       ],
       "overrides": {
         "repoOwners": [
           "其他"
         ]
       },
-      "mainCopyrightOwnerLogo": "/images/projects/logos/MODA-logo.svg",
+      "mainCopyrightOwnerLogo": "/images/projects/logos/foundation-for-public-code-logo.jpg",
       "createdDate": "2022-11-24"
     },
     "filterTags": {
@@ -1993,7 +1997,7 @@
     "tw": {
       "countryExtensionVersion": "1.0.0",
       "vulnerabilityScanners": [
-        "本專案為在地化成果，未涉及軟體開發作業，資訊安全檢測以上游結果為主。"
+        "本專案為在地化成果，未涉及軟體開發作業。"
       ],
       "overrides": {
         "repoOwners": [
@@ -2081,7 +2085,7 @@
     "tw": {
       "countryExtensionVersion": "1.0.0",
       "vulnerabilityScanners": [
-        "本專案為在地化成果，未涉及軟體開發作業，資訊安全檢測以上游結果為主。"
+        "本專案為在地化成果，未涉及軟體開發作業。"
       ],
       "overrides": {
         "repoOwners": [
