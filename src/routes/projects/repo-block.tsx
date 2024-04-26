@@ -6,7 +6,8 @@ import Link from "~/components/link";
 export const RepoBlock = component$(
   ({
     name,
-    repoOwner,
+    mainCopyrightOwner,
+    mainCopyrightOwnerLogo,
     shortDescription,
     features = [],
     dependsOn = [],
@@ -14,21 +15,33 @@ export const RepoBlock = component$(
     id,
   }: {
     name: string;
-    repoOwner: string;
+    repoOwner?: string;
+    mainCopyrightOwner: string;
+    mainCopyrightOwnerLogo?: string;
     shortDescription: string;
     features?: string[];
     dependsOn?: { name: string }[];
     techStacks?: { name: string }[];
     id: number;
   }) => {
+    const mainCopyrightOwnerString = $localize`提供單位：`;
     return (
       <div class="flex flex-col rounded-[6px] border border-gray-400 bg-white lg:flex-row">
         <div class="flex flex-1 flex-col gap-7 p-6">
           <div class="flex flex-col gap-7 lg:flex-row lg:justify-between">
             <div class="text-xl font-medium">{name}</div>
-            <div class="text-lg font-medium">
-              {$localize`提供單位：`}
-              {repoOwner}
+            <div class="flex max-w-52 shrink-0 text-lg font-medium md:max-h-20 md:max-w-40">
+              {mainCopyrightOwnerLogo ? (
+                <img
+                  class="h-full max-h-20 w-full object-contain"
+                  width={100}
+                  height={100}
+                  src={mainCopyrightOwnerLogo}
+                  alt={mainCopyrightOwner}
+                />
+              ) : (
+                mainCopyrightOwnerString + mainCopyrightOwner
+              )}
             </div>
           </div>
           <div class="leading-7">{shortDescription}</div>

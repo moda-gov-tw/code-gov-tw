@@ -52,10 +52,12 @@ export type Project = {
   legal: {
     license: string;
     repoOwner: string;
+    mainCopyrightOwner: string;
   };
   filterTags: {
     features: string[];
     techStacks: string[];
+    mainCopyrightOwners: string[];
     repoOwners: string[];
   };
   usedBy?: string[];
@@ -64,6 +66,11 @@ export type Project = {
     techStacks?: Dependency[];
     vulnerabilityScanners?: string[];
     accessibilityConformance?: string | null;
+    overrides?: {
+      repoOwners?: string[];
+      mainCopyrightOwners?: string[];
+    };
+    mainCopyrightOwnerLogo?: string;
     // Workaround field for the missing data in this time
     createdDate?: string;
     // Workaround field for the missing data in this time

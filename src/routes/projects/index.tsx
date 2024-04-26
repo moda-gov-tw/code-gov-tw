@@ -153,16 +153,21 @@ export default component$(() => {
               {computedProjects.value.data.map((project) => {
                 const projectName =
                   project.description["zh-Hant"].localisedName || project.name;
+                const mainCopyrightOwner = project.legal.mainCopyrightOwner;
                 const repoOwner = project.legal.repoOwner.split(" ")[0];
                 const projectDescription =
                   project.description["zh-Hant"].shortDescription;
                 const projectFeatures = project.description["zh-Hant"].features;
+                const mainCopyrightOwnerLogo =
+                  project.tw.mainCopyrightOwnerLogo;
                 return (
                   <RepoBlock
                     id={project.id}
                     key={project.name}
                     name={projectName}
                     repoOwner={repoOwner}
+                    mainCopyrightOwner={mainCopyrightOwner}
+                    mainCopyrightOwnerLogo={mainCopyrightOwnerLogo}
                     shortDescription={projectDescription}
                     features={projectFeatures}
                     dependsOn={project.dependsOn?.open}

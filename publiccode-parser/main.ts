@@ -22,6 +22,7 @@ function extractFilterTags(data: Project) {
   const featuresSet = new Set<string>();
   const techStacksSet = new Set<string>();
   const repoOwnersSet = new Set<string>();
+  const mainCopyrightOwnerSet = new Set<string>();
 
   // Collect description."zh-Hant".features
   if (Array.isArray(data.description["zh-Hant"].features)) {
@@ -50,10 +51,27 @@ function extractFilterTags(data: Project) {
     repoOwnersSet.add(firstPart);
   }
 
+  // Collect legal.mainCopyrightOwner
+  if (data.legal.mainCopyrightOwner) {
+    const firstPart = data.legal.mainCopyrightOwner.split(" ")[0];
+    mainCopyrightOwnerSet.add(firstPart);
+  }
+
+  // override repoOwners for filterTags
+  if (data.tw.overrides) {
+    if (data.tw.overrides.repoOwners) {
+      repoOwnersSet.clear();
+      data.tw.overrides.repoOwners.forEach((repoOwner: string) =>
+        repoOwnersSet.add(repoOwner),
+      );
+    }
+  }
+
   return {
     features: Array.from(featuresSet),
     techStacks: Array.from(techStacksSet),
     repoOwners: Array.from(repoOwnersSet),
+    mainCopyrightOwners: Array.from(mainCopyrightOwnerSet),
   };
 }
 
@@ -94,12 +112,14 @@ function collectProjects(filePaths: string[]): object[] {
 function collectUniqueValues(filePaths: string[]): {
   platforms: string[];
   categories: string[];
+  mainCopyrightOwners: string[];
   repoOwners: string[];
   features: string[];
   techStacks: string[];
 } {
   const platformsSet = new Set<string>();
   const categoriesSet = new Set<string>();
+  const mainCopyrightOwnerSet = new Set<string>();
   const repoOwnersSet = new Set<string>();
   const featuresSet = new Set<string>();
   const techStacksSet = new Set<string>();
@@ -120,6 +140,14 @@ function collectUniqueValues(filePaths: string[]): {
         data.categories.forEach((category: string) =>
           categoriesSet.add(category),
         );
+      }
+
+      // Collect legal.mainCopyrightOwner
+      if (
+        data?.legal?.mainCopyrightOwner &&
+        typeof data.legal.mainCopyrightOwner === "string"
+      ) {
+        mainCopyrightOwnerSet.add(data.legal.mainCopyrightOwner);
       }
 
       // Collect legal.repoOwner
@@ -162,6 +190,7 @@ function collectUniqueValues(filePaths: string[]): {
   return {
     platforms: Array.from(platformsSet),
     categories: Array.from(categoriesSet),
+    mainCopyrightOwners: Array.from(mainCopyrightOwnerSet),
     repoOwners: Array.from(repoOwnersSet),
     features: Array.from(featuresSet),
     techStacks: Array.from(techStacksSet),
@@ -174,15 +203,16 @@ const baseDir = new URL(".", import.meta.url).pathname;
 const directoryPath = join(baseDir, "./projects"); // Replace with your directory path
 const yamlFiles = getYamlFiles(directoryPath);
 const filterValues = collectUniqueValues(yamlFiles);
-console.log("Collected filterValues values:", filterValues);
 
 const finalFilters = {
   platforms: [...filterValues.platforms],
   categories: [...filterValues.categories],
-  repoOwners: [...filterValues.repoOwners, "英國 gov.uk"],
+  mainCopyrightOwners: [...filterValues.mainCopyrightOwners],
+  repoOwners: [...filterValues.repoOwners, "其他"],
   features: [...filterValues.features],
   techStacks: [...filterValues.techStacks],
 };
+console.log("Collected finalFilters values:", finalFilters);
 const projects = collectProjects(yamlFiles);
 
 const outputFiltersFile = join(baseDir, "./outputs/filters.json");
