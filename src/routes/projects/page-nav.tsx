@@ -72,7 +72,10 @@ export const PageNav = component$<PageNavProps>(
               : "text-gray-300",
             "transition-colors duration-[50ms] ease-out",
           ]}
-          onClick$={() => (currentPage.value = page)}
+          onClick$={() => {
+            currentPage.value = page;
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }}
           disabled={page === -1}
         >
           {page === -1 ? "..." : page}
@@ -108,7 +111,7 @@ export const PageNav = component$<PageNavProps>(
         <button
           class={[
             currentPage.value * itemsPerPage >= totalItems
-              ? "pointer-events-none hidden"
+              ? "pointer-events-none opacity-0"
               : "",
           ]}
           onClick$={handleNextPage}
