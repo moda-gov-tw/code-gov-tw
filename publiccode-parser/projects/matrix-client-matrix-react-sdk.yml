@@ -44,7 +44,7 @@ tw:
     - "本專案為在地化成果，未涉及軟體開發作業。"
   techStacks:
     - name: "React"
-  mainCopyrightOwnerLogo: "/images/projects/logos/matrix-element-logo.jpg"
+  mainCopyrightOwnerLogo: "/images/projects/logos/matrix-element-logo.webp"
   overrides:
     repoOwners:
       - "其他"

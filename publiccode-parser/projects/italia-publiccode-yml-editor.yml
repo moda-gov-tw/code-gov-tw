@@ -43,7 +43,7 @@ tw:
     - name: SCSS
   vulnerabilityScanners:
     - "本專案為在地化成果，未涉及軟體開發作業。"
-  mainCopyrightOwnerLogo: "/images/projects/logos/foundation-for-public-code-logo.jpg"
+  mainCopyrightOwnerLogo: "/images/projects/logos/foundation-for-public-code-logo.webp"
   overrides:
     repoOwners:
       - "其他"

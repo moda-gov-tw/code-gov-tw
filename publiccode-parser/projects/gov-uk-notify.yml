@@ -48,5 +48,5 @@ tw:
   overrides:
     repoOwners:
       - "其他"
-  mainCopyrightOwnerLogo: "/images/projects/logos/gov-uk-logo.png"
+  mainCopyrightOwnerLogo: "/images/projects/logos/gov-uk-logo.webp"
   createdDate: "2022-11-16"

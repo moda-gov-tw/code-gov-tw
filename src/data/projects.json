@@ -602,7 +602,7 @@
           "其他"
         ]
       },
-      "mainCopyrightOwnerLogo": "/images/projects/logos/gov-uk-logo.png",
+      "mainCopyrightOwnerLogo": "/images/projects/logos/gov-uk-logo.webp",
       "createdDate": "2023-02-03"
     },
     "filterTags": {
@@ -696,7 +696,7 @@
           "其他"
         ]
       },
-      "mainCopyrightOwnerLogo": "/images/projects/logos/gov-uk-logo.png",
+      "mainCopyrightOwnerLogo": "/images/projects/logos/gov-uk-logo.webp",
       "createdDate": "2023-02-03"
     },
     "filterTags": {
@@ -789,7 +789,7 @@
           "其他"
         ]
       },
-      "mainCopyrightOwnerLogo": "/images/projects/logos/gov-uk-logo.png",
+      "mainCopyrightOwnerLogo": "/images/projects/logos/gov-uk-logo.webp",
       "createdDate": "2022-11-16"
     },
     "filterTags": {
@@ -877,7 +877,7 @@
       "vulnerabilityScanners": [
         "本專案為在地化成果，未涉及軟體開發作業。"
       ],
-      "mainCopyrightOwnerLogo": "/images/projects/logos/foundation-for-public-code-logo.jpg",
+      "mainCopyrightOwnerLogo": "/images/projects/logos/foundation-for-public-code-logo.webp",
       "overrides": {
         "repoOwners": [
           "其他"
@@ -970,7 +970,7 @@
           "其他"
         ]
       },
-      "mainCopyrightOwnerLogo": "/images/projects/logos/foundation-for-public-code-logo.jpg",
+      "mainCopyrightOwnerLogo": "/images/projects/logos/foundation-for-public-code-logo.webp",
       "createdDate": "2022-12-01",
       "overwriteFilterTags": {
         "mainCopyrightOwner": [
@@ -1064,7 +1064,7 @@
           "name": "React"
         }
       ],
-      "mainCopyrightOwnerLogo": "/images/projects/logos/matrix-element-logo.jpg",
+      "mainCopyrightOwnerLogo": "/images/projects/logos/matrix-element-logo.webp",
       "overrides": {
         "repoOwners": [
           "其他"
@@ -1166,7 +1166,7 @@
           "其他"
         ]
       },
-      "mainCopyrightOwnerLogo": "/images/projects/logos/matrix-element-logo.jpg",
+      "mainCopyrightOwnerLogo": "/images/projects/logos/matrix-element-logo.webp",
       "createdDate": "2022-12-16"
     },
     "filterTags": {
@@ -1639,7 +1639,7 @@
         "GitHub CodeQL",
         "GitHub Dependabot Alerts"
       ],
-      "mainCopyrightOwnerLogo": "/images/projects/logos/PDIS-logo.png",
+      "mainCopyrightOwnerLogo": "/images/projects/logos/PDIS-logo.webp",
       "accessibilityConformance": null
     },
     "filterTags": {
@@ -1721,7 +1721,7 @@
         "GitHub CodeQL",
         "GitHub Dependabot Alerts"
       ],
-      "mainCopyrightOwnerLogo": "/images/projects/logos/PDIS-logo.png",
+      "mainCopyrightOwnerLogo": "/images/projects/logos/PDIS-logo.webp",
       "accessibilityConformance": null
     },
     "filterTags": {
@@ -1809,7 +1809,7 @@
           "其他"
         ]
       },
-      "mainCopyrightOwnerLogo": "/images/projects/logos/foundation-for-public-code-logo.jpg",
+      "mainCopyrightOwnerLogo": "/images/projects/logos/foundation-for-public-code-logo.webp",
       "createdDate": "2022-11-24"
     },
     "filterTags": {
@@ -1911,7 +1911,7 @@
         "Checkmarx"
       ],
       "accessibilityConformance": "AA",
-      "mainCopyrightOwnerLogo": "/images/projects/logos/department-of-informations-technology-taipei-city-government-logo.png",
+      "mainCopyrightOwnerLogo": "/images/projects/logos/department-of-informations-technology-taipei-city-government-logo.webp",
       "createdDate": "2023-05-22"
     },
     "filterTags": {
@@ -2004,7 +2004,7 @@
           "其他"
         ]
       },
-      "mainCopyrightOwnerLogo": "/images/projects/logos/yivi-logo.jpg",
+      "mainCopyrightOwnerLogo": "/images/projects/logos/yivi-logo.webp",
       "createdDate": "2022-12-16"
     },
     "filterTags": {
@@ -2092,7 +2092,7 @@
           "其他"
         ]
       },
-      "mainCopyrightOwnerLogo": "/images/projects/logos/yivi-logo.jpg",
+      "mainCopyrightOwnerLogo": "/images/projects/logos/yivi-logo.webp",
       "createdDate": "2022-12-20"
     },
     "filterTags": {

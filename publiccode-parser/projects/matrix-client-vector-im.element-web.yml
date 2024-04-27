@@ -47,6 +47,6 @@ tw:
   overrides:
     repoOwners:
       - "其他"
-  mainCopyrightOwnerLogo: "/images/projects/logos/matrix-element-logo.jpg"
+  mainCopyrightOwnerLogo: "/images/projects/logos/matrix-element-logo.webp"
   # GitHub API 有資訊可以取得, 暫時手動填寫
   createdDate: "2022-12-16"
