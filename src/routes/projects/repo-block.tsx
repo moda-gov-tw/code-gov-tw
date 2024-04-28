@@ -33,8 +33,8 @@ export const RepoBlock = component$(
             <div class="flex max-w-52 shrink-0 text-lg font-medium md:max-h-20 md:max-w-40">
               {mainCopyrightOwnerLogo ? (
                 <img
-                  class="h-full max-h-20 w-fit object-contain lg:w-full"
-                  width={100}
+                  class="h-full max-h-20 w-full object-contain"
+                  width={200}
                   height={100}
                   src={mainCopyrightOwnerLogo}
                   alt={mainCopyrightOwner}
