@@ -15,12 +15,13 @@ export default component$(() => {
    *
    * Don't remove the `<head>` and `<body>` elements.
    */
+  const nonce = "q9Wxu3i-H-RYysHVncGjiFv__BwHb7DzNVfUVr4gxlQ";
   const csp = [
     `default-src 'self'`,
     `font-src 'self' data:`,
     `img-src 'self' 'unsafe-inline' data:`,
-    `script-src 'self' 'unsafe-inline'`,
-    `style-src 'self' 'unsafe-inline'`,
+    `script-src 'self' 'unsafe-inline' 'nonce-${nonce}'`,
+    `style-src 'self' 'unsafe-inline' 'nonce-${nonce}'`,
     `frame-src 'self'`,
     `object-src 'none'`,
     `base-uri 'self'`,
@@ -37,7 +38,7 @@ export default component$(() => {
       </head>
       <body>
         <RouterOutlet />
-        <ServiceWorkerRegister />
+        <ServiceWorkerRegister nonce={nonce} />
       </body>
     </QwikCityProvider>
   );
