@@ -63,7 +63,7 @@
       ]
     },
     "usedBy": [
-      "[臺南市登革熱防疫現場數位工具](https://dengue.tncghb.gov.tw/dashboard) (無障礙檢測結果：尚未檢測)"
+      "臺南市政府衛生局內部用於登革熱防疫作業"
     ],
     "tw": {
       "countryExtensionVersion": "1.0.0",
@@ -172,7 +172,7 @@
       ]
     },
     "usedBy": [
-      "[臺南市登革熱防疫現場數位工具](https://dengue.tncghb.gov.tw) (無障礙檢測結果：尚未檢測)"
+      "臺南市政府衛生局內部用於登革熱防疫作業"
     ],
     "tw": {
       "countryExtensionVersion": "1.0.0",
