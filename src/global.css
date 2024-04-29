@@ -44,6 +44,10 @@
   }
 }
 
+:root{
+  view-transition-name: none;
+}
+
 html {
   @apply text-base font-normal leading-relaxed text-black;
   -webkit-text-size-adjust: 100%;

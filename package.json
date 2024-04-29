@@ -10,7 +10,7 @@
   ],
   "type": "module",
   "scripts": {
-    "build": "qwik build && npm run add-nonce",
+    "build": "qwik build && npm run remove-view-transition",
     "build.client": "vite build && npm run i18n-translate && npm run i18n-translate-zh-hant",
     "build.preview": "vite build --ssr src/entry.preview.tsx",
     "build.server": "vite build -c adapters/static/vite.config.ts",
@@ -29,7 +29,7 @@
     "preview": "qwik build preview && vite preview --open",
     "start": "vite --open --mode ssr",
     "qwik": "qwik",
-    "add-nonce": "find ./dist -type f -name \"*.html\" -exec sed -i -e 's/<script/<script nonce=\"q9Wxu3i-H-RYysHVncGjiFv__BwHb7DzNVfUVr4gxlQ\"/g' -e 's/<style/<style nonce=\"q9Wxu3i-H-RYysHVncGjiFv__BwHb7DzNVfUVr4gxlQ\"/g' {} +"
+    "remove-view-transition": "find ./dist -type f -name \"*.html\" -exec sed -i -e 's/<style q:style=\"[^\"]*\" hidden>:root{view-transition-name:none}<\\/style>/ /g' {} +"
   },
   "devDependencies": {
     "@angular/compiler": "^17.3.6",

@@ -25,6 +25,11 @@ export const onGet: RequestHandler = async ({ cacheControl }) => {
     maxAge: 5,
   });
 };
+ 
+export const onRequest: RequestHandler = event => {
+  const nonce = "q9Wxu3i-H-RYysHVncGjiFv__BwHb7DzNVfUVr4gxlQ";
+  event.sharedMap.set("@nonce", nonce);
+};
 
 export default component$(() => {
   const theme = useSignal<Theme>(Theme.light);

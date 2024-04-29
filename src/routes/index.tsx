@@ -2,7 +2,7 @@ import { component$ } from "@builder.io/qwik";
 import Section from "~/components/section";
 import Promotion from "~/components/promotion";
 import Button from "~/components/button";
-import HeroSvg from "~/media/images/hero.svg?jsx";
+import HeroSvg from "~/media/images/hero.png?jsx";
 import WhatIsPublicCode from "~/media/images/index-what-is-public-code.png?jsx";
 import InfoCardGOV from "~/media/images/index-info-card-gov.png?jsx";
 import InfoCardPeople from "~/media/images/index-info-card-people.png?jsx";

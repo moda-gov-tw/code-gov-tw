@@ -3,6 +3,7 @@ import QuestionMark from "~/media/icons/question-mark.svg?jsx";
 import ExclamationCircle from "~/media/icons/exclamation-circle.svg?jsx";
 
 type TextareaInputProps = {
+  id?: string;
   name: string;
   label?: string;
   placeholder?: string;
@@ -17,7 +18,7 @@ type TextareaInputProps = {
 };
 
 export default component$<TextareaInputProps>(({ label, error, ...props }) => {
-  const { name, required } = props;
+  const { id, name, required } = props;
   return (
     <div class="flex max-w-lg flex-col">
       <label class="flex items-center" for={name}>
@@ -46,7 +47,7 @@ export default component$<TextareaInputProps>(({ label, error, ...props }) => {
             "invalid:border-[#EF4444] hover:border-gray-600",
           ]}
           {...props}
-          id={name}
+          id={id || name}
         />
         <div
           class={[
@@ -58,7 +59,7 @@ export default component$<TextareaInputProps>(({ label, error, ...props }) => {
         </div>
       </div>
       {error && (
-        <small id={`${name}-error`} class="w-full text-end text-[#EF4444]">
+        <small id={`${id || name}-error`} class="w-full text-end text-[#EF4444]">
           {error}
         </small>
       )}
