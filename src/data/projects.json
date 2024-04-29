@@ -453,7 +453,7 @@
     "description": {
       "zh-Hant": {
         "localisedName": "公共程式平臺",
-        "shortDescription": "數位發展部 Ministry of Digital Affairs (moda) 作為臺灣數位發展的「mòda（馬達）」，將連結「公民」與「技術」、提升「產業」及「安全」，實現智慧國家的願景，並以臺灣模式持續引領世界。\n",
+        "shortDescription": "公共程式平臺鼓勵跨機關、產業和公眾都可共同使用、 檢視、修正政府數位服務或系統的程式碼，將可促進機關數位交流，共同提升政府公共服務品質、提升政府公開透明。\n",
         "features": [
           "資料一覽 / 檢索"
         ]
@@ -1475,7 +1475,7 @@
     "publiccodeYmlVersion": "0.3.0",
     "name": "opendata-frontend",
     "url": "https://github.com/moda-gov-tw/opendata-frontend",
-    "releaseDate": "2024-03-31",
+    "releaseDate": "2024-04-30",
     "platforms": [
       "web"
     ],
@@ -1989,6 +1989,9 @@
         },
         {
           "name": "Go"
+        },
+        {
+          "name": "Java"
         }
       ]
     },
@@ -2013,7 +2016,8 @@
       ],
       "techStacks": [
         "Dart",
-        "Go"
+        "Go",
+        "Java"
       ],
       "repoOwners": [
         "其他"

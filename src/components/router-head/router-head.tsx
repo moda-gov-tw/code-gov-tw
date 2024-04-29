@@ -24,12 +24,12 @@ export const RouterHead = component$(() => {
       <meta property="og:image:height" content="628" />
       <meta
         property="og:description"
-        content="數位發展部 Ministry of Digital Affairs (moda) 作為臺灣數位發展的「mòda（馬達）」，將連結「公民」與「技術」、提升「產業」及「安全」，實現智慧國家的願景，並以臺灣模式持續引領世界。"
+        content="公共程式平臺鼓勵跨機關、產業和公眾都可共同使用、 檢視、修正政府數位服務或系統的程式碼，將可促進機關數位交流，共同提升政府公共服務品質、提升政府公開透明。"
       />
       <meta name="keywords" content="" />
       <meta
         name="description"
-        content="數位發展部 Ministry of Digital Affairs (moda) 作為臺灣數位發展的「mòda（馬達）」，將連結「公民」與「技術」、提升「產業」及「安全」，實現智慧國家的願景，並以臺灣模式持續引領世界。"
+        content="公共程式平臺鼓勵跨機關、產業和公眾都可共同使用、 檢視、修正政府數位服務或系統的程式碼，將可促進機關數位交流，共同提升政府公共服務品質、提升政府公開透明。"
       />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="canonical" href={loc.url.href} />
