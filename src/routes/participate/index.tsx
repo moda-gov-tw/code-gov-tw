@@ -57,7 +57,15 @@ export default component$(() => {
           <div class="h-0 w-20 border-t-2 border-primary" />
           <h2 class="mt-4">{$localize`其他合作`}</h2>
           <div class="mt-8">
-            {$localize`若您為學術單位，有興趣與我們進行更深度的合作，如共同發展示範案例、研究公共程式相關的規範等，或是任何其他想法，歡迎直接與我們聯繫。聯繫方式：test@test.com`}
+            {$localize`若您為學術單位，有興趣與我們進行更深度的合作，如共同發展示範案例、研究公共程式相關的規範等，或是任何其他想法，歡迎直接與我們聯繫。聯繫方式：`}
+            <a
+              href="https://www-mailbox.moda.gov.tw"
+              target="mailbox"
+              title="moda mailbox(另開新視窗)"
+              class="underline"
+              >
+              www-mailbox.moda.gov.tw
+            </a>
           </div>
         </div>
       </Section>
