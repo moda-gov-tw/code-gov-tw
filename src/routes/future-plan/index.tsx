@@ -79,11 +79,7 @@ export default component$(() => {
                 class="rounded-lg border border-gray-400 p-8"
               >
                 <div class="flex flex-col items-center gap-8 md:flex-row">
-                  <feature.image
-                    style={{ width: "164px" }}
-                    class="mx-auto aspect-auto"
-                    alt={feature.imageAlt}
-                  />
+                  <feature.image class="h-36 w-36" alt={feature.imageAlt} />
                   <div class="flex flex-col">
                     <h3 class="text-center md:text-left">{feature.title}</h3>
                     <p class="pt-4">{feature.description}</p>
