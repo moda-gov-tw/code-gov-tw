@@ -33,15 +33,15 @@ pnpm start
 
 ## 如何貢獻
 
-如果您想要為這個專案貢獻，請查閱[CONTRIBUTING.md](/docs/CONTRIBUTING.md)。
+如果您想要為這個專案貢獻，請查閱[CONTRIBUTING.md](/CONTRIBUTING.md)。
 
 ## 資訊安全問題
 
-如果您發現本平台存在資訊安全問題，請查閱[SECURITY.md](/docs/SECURITY.md)。
+如果您發現本平台存在資訊安全問題，請查閱[SECURITY.md](/SECURITY.md)。
 
 ## 授權
 
-© [作者與貢獻者](/docs/AUTHORS.md)
+© [作者與貢獻者](/AUTHORS.md)
 
-此專案程式碼採用 MIT 授權。詳細內容請查閱[LICENSE.md](/docs/LICENSE.md)。
+此專案程式碼採用 MIT 授權。詳細內容請查閱[LICENSE.md](/LICENSE.md)。
 此專案文件採用 CC0 授權。
