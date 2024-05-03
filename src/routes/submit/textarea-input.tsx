@@ -59,7 +59,10 @@ export default component$<TextareaInputProps>(({ label, error, ...props }) => {
         </div>
       </div>
       {error && (
-        <small id={`${id || name}-error`} class="w-full text-end text-[#EF4444]">
+        <small
+          id={`${id || name}-error`}
+          class="w-full text-end text-[#EF4444]"
+        >
           {error}
         </small>
       )}

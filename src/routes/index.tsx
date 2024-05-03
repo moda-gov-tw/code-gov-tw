@@ -24,7 +24,10 @@ export default component$(() => {
               {$localize`因此，公共程式 (Public code) 是一種不可或缺的數位基礎建設，讓政府的數位環境邁向下個科技時代。`}
             </p>
           </div>
-          <HeroSvg class="mx-auto lg:w-1/2 lg:shrink-0" />
+          <HeroSvg
+            class="mx-auto lg:w-1/2 lg:shrink-0"
+            alt="Public Code Platform"
+          />
         </div>
       </Section>
       <Section>

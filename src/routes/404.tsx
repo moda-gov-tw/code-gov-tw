@@ -16,7 +16,7 @@ export default component$(() => {
         ]}
       >
         <WhatIsPublicCode
-          class="w-full md:h-80 md:w-80 md:shrink-0"
+          class="mx-auto h-32 w-32 md:h-60 md:w-60"
           alt="Page not found"
           loading="eager"
         />

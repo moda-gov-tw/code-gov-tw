@@ -63,7 +63,7 @@ export default component$(() => {
               target="mailbox"
               title="moda mailbox(另開新視窗)"
               class="underline"
-              >
+            >
               www-mailbox.moda.gov.tw
             </a>
           </div>
