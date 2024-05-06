@@ -37,13 +37,15 @@ maintenance:
       phone: "02-23800325"
 localisation:
   localisationReady: false
+  availableLanguages:
+    - zh-Hant
 dependsOn:
   open:
     - name: Node.js
       versionMin: "18"
     - name: "Firebase Realtime Database"
 usedBy:
-  - "[臺南市登革熱防疫現場數位工具](https://dengue.tncghb.gov.tw/dashboard) (無障礙檢測結果：尚未檢測)"
+  - "臺南市政府衛生局內部用於登革熱防疫作業"
 tw:
   countryExtensionVersion: "1.0.0"
   techStacks:

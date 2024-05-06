@@ -34,7 +34,6 @@ localisation:
   localisationReady: false
   availableLanguages:
     - zh-Hant
-
 dependsOn:
   open:
     - name: Python

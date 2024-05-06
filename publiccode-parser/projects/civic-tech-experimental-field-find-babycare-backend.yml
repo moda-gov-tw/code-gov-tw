@@ -40,6 +40,8 @@ maintenance:
       phone: "02-23800325"
 localisation:
   localisationReady: false
+  availableLanguages:
+    - zh-Hant
 dependsOn:
   open:
     - name: PHP

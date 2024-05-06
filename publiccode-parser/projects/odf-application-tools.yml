@@ -33,6 +33,8 @@ maintenance:
       phone: "02-2380-0225"
 localisation:
   localisationReady: false
+  availableLanguages:
+    - zh-Hant
 dependsOn:
   open:
     - name: Open Document Format
