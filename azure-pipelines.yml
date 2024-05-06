@@ -146,59 +146,58 @@ stages:
     dependsOn: checkAfterBuild
     condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/main'), eq(variables['Build.Reason'], 'IndividualCI'))
     jobs:
-      - job: prepare
-        displayName: Prepare
+      - job: upload_to_ipfs
+        displayName: Update DNS
         steps:
-          - task: GoTool@0
-            displayName: "Use Go 1.22.1"
-            inputs:
-              version: 1.22.1
-          - script: |
-              #!/bin/bash
-              git clone https://github.com/PinataCloud/pinata-go-cli
-              ls -al
-              cd pinata-go-cli
-              go build
-              mv pinata ../
-              cd ..
-              ./pinata auth $(PINATA_JWT)
           - task: DownloadPipelineArtifact@2
             inputs:
               buildType: "current"
               artifactName: $(artifact_name)
               targetPath: $(artifact_path)
-      - job: upload_to_ipfs
-        displayName: Upload to IPFS
-        dependsOn: prepare
-        steps:
-          - script: |
-              #!/bin/bash
-              name=`git log -n 1 --format=format:%h`
-              cid=`./pinata upload --name $name --cid-only ./dist | tail -n 1`
-              cidlist=`./pinata list | grep "ipfs_pin_hash" | cut -d '"' -f 4`
-              count=`echo $cidlist | wc -l`
-              if [ "$count" -gt 2 ]; then 
-                lastcid=`echo $cidlist | tail -n 1`
-                ./pinata unpin $lastcid;
-                echo "$lastcid"
-                echo "unpin status: $?"
-              fi
-              echo "##vso[task.setvariable variable=cid]$cid"
-              displayName: 'Publish to Pinata'
-      - job: update_dns
-        displayName: Update DNS
-        dependsOn: upload_to_ipfs
-        steps:
-          - script: |
-              #!/bin/bash
-              echo "get cid: $(cid)"
-              if [[ -z "$(cid)" ]]; then
-                  echo "CID is empty"
-                  exit 1
-              fi
-              curl -X PATCH \
-                --url "https://api.cloudflare.com/client/v4/zones/$(ZONE_ID)/dns_records/$(DNS_RECORD_ID)" \
-                -H "Content-Type: application/json" \
-                -H "Authorization: Bearer $(CLOUDFLARE_API_TOKEN)" \
-                --data '{"content": "'dnslink=/ipfs/$(cid)'"}' -f -s
-              displayName: 'Update DNS with CID'
+          - task: GoTool@0
+            displayName: "Use Go 1.22.1"
+            inputs:
+              version: 1.22.1
+          - task: CmdLine@2
+            displayName: "Build and Upload to IPFS"
+            inputs:
+              script: |
+                #!/bin/bash
+                git clone https://github.com/PinataCloud/pinata-go-cli
+                ls -al
+                cd pinata-go-cli
+                go build
+                mv pinata ../
+                cd ..
+                ./pinata auth $(PINATA_JWT)
+          - task: CmdLine@2
+            displayName: "Upload to IPFS"
+            inputs:
+              script: |
+                #!/bin/bash
+                name=`git log -n 1 --format=format:%h`
+                cid=`./pinata upload --name $name --cid-only ./dist | tail -n 1`
+                cidlist=`./pinata list | grep "ipfs_pin_hash" | cut -d '"' -f 4`
+                count=`echo $cidlist | wc -l`
+                if [ "$count" -gt 2 ]; then 
+                  lastcid=`echo $cidlist | tail -n 1`
+                  ./pinata unpin $lastcid;
+                  echo "$lastcid"
+                  echo "unpin status: $?"
+                fi
+                echo "##vso[task.setvariable variable=cid]$cid"
+          - task: CmdLine@2
+            displayName: "Update DNS"
+            inputs:
+              script: |
+                #!/bin/bash
+                echo "get cid: $(cid)"
+                if [[ -z "$(cid)" ]]; then
+                    echo "CID is empty"
+                    exit 1
+                fi
+                curl -X PATCH \
+                  --url "https://api.cloudflare.com/client/v4/zones/$(ZONE_ID)/dns_records/$(DNS_RECORD_ID)" \
+                  -H "Content-Type: application/json" \
+                  -H "Authorization: Bearer $(CLOUDFLARE_API_TOKEN)" \
+                  --data '{"content": "'dnslink=/ipfs/$(cid)'"}' -f -s
