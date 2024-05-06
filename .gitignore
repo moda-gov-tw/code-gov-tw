@@ -51,3 +51,7 @@ accessibility-check-results
 
 # Lighthouseci
 .lighthouseci
+
+# Local
+src/data/projects.json
+src/data/filters.json

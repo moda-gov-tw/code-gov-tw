@@ -1,6 +1,6 @@
 {
-  "name": "my-qwik-empty-starter",
-  "description": "App with Routing built-in ready to create your app",
+  "name": "code-gov-tw",
+  "description": "A website dedicated to promoting public code projects.",
   "engines": {
     "node": ">=15.0.0"
   },
@@ -10,11 +10,12 @@
   ],
   "type": "module",
   "scripts": {
-    "build": "qwik build && npm run remove-view-transition",
+    "build": "npm run build.data && qwik build && npm run remove-view-transition",
     "build.client": "vite build && npm run i18n-translate && npm run i18n-translate-zh-hant",
     "build.preview": "vite build --ssr src/entry.preview.tsx",
     "build.server": "vite build -c adapters/static/vite.config.ts",
     "build.types": "tsc --incremental --noEmit",
+    "build.data": "npx tsx publiccode-parser/main.ts && cp -r publiccode-parser/outputs/* src/data/",
     "deploy": "echo 'Run \"npm run qwik add\" to install a server adapter'",
     "dev": "vite --mode ssr",
     "dev.debug": "node --inspect-brk ./node_modules/vite/bin/vite.js --mode ssr --force",

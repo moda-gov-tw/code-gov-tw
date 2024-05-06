@@ -23,16 +23,25 @@ type OpenAPI = {
   url: string;
 };
 
+type Localisation = {
+  localisationReady: boolean;
+  availableLanguages: string[];
+};
+
 export type Project = {
   id: number;
+  publiccodeYmlVersion: string;
   name: string;
-  url?: string;
+  url: string;
+  categories: string[];
+  localisation: Localisation;
+  platforms: string[];
   releaseDate: string;
   landingURL?: string;
   developmentStatus: string;
   softwareType: string;
   description: {
-    "zh-Hant": {
+    [key: string]: {
       localisedName: string;
       shortDescription: string;
       longDescription?: string;
