@@ -1,8 +1,7 @@
 {
   "ci": {
     "collect": {
-      "numberOfRuns": 1,
-      "maxAutodiscoverUrls": 10
+      "maxAutodiscoverUrls": 15
     },
     "assert": {
       "assertions": {

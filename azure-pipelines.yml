@@ -2,11 +2,13 @@ trigger:
   branches:
     include:
       - main
-    exclude:
-      - refs/heads/release
-      - refs/heads/pre-release
+      - release
+
 pr:
-  - main
+  branches:
+    include:
+      - main
+      - release
 
 pool:
   vmImage: "ubuntu-latest"
@@ -14,10 +16,12 @@ pool:
 variables:
   npm_config_cache: $(Pipeline.Workspace)/.npm
   cache_key: 'npm | "$(Agent.OS)" | package.json'
+  artifact_name: "ci-build"
+  artifact_path: "./dist"
 
 stages:
   - stage: checkBeforeBuild
-    condition: and(succeeded(), eq(variables['Build.Reason'], 'PullRequest'))
+    displayName: Basic Checks
     jobs:
       - job: Linter
         displayName: Lint Project
@@ -52,11 +56,11 @@ stages:
                 npm install
                 npm run fmt.check
   - stage: build
-    condition: and(succeeded(), eq(variables['Build.Reason'], 'PullRequest'))
+    condition: succeeded()
     dependsOn: checkBeforeBuild
+    displayName: Build
     jobs:
       - job: Build
-        displayName: Build
         steps:
           - task: UseNode@1
             inputs:
@@ -73,11 +77,12 @@ stages:
                 npm run build
           - task: PublishPipelineArtifact@1
             inputs:
-              targetPath: "./dist"
-              artifact: "pr-build"
+              targetPath: $(artifact_path)
+              artifact: $(artifact_name)
               publishLocation: "pipeline"
   - stage: checkAfterBuild
-    condition: and(succeeded(), eq(variables['Build.Reason'], 'PullRequest'))
+    displayName: Performance and Accessibility Check
+    condition: succeeded()
     dependsOn: build
     jobs:
       - job: accessibility
@@ -94,8 +99,8 @@ stages:
           - task: DownloadPipelineArtifact@2
             inputs:
               buildType: "current"
-              artifactName: "pr-build"
-              targetPath: "./dist"
+              artifactName: $(artifact_name)
+              targetPath: $(artifact_path)
           - task: CmdLine@2
             displayName: Accessibility Check
             inputs:
@@ -122,8 +127,8 @@ stages:
           - task: DownloadPipelineArtifact@2
             inputs:
               buildType: "current"
-              artifactName: "pr-build"
-              targetPath: "./dist"
+              artifactName: $(artifact_name)
+              targetPath: $(artifact_path)
           - task: CmdLine@2
             displayName: Lighthouse CI
             inputs:
@@ -136,42 +141,64 @@ stages:
               targetPath: "./.lighthouseci"
               artifact: "lighthouse-results"
               publishLocation: "pipeline"
-  - stage: pre_release
-    displayName: Pre-release
-    dependsOn: []
-    condition: and(eq(variables['Build.SourceBranch'], 'refs/heads/main'), eq(variables['Build.Reason'], 'IndividualCI'))
+  - stage: releaseToIPFS
+    displayName: Release to IPFS
+    dependsOn: checkAfterBuild
+    condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/main'), eq(variables['Build.Reason'], 'IndividualCI'))
     jobs:
-      - job: build
-        displayName: Build
+      - job: prepare
+        displayName: Prepare
         steps:
-          - checkout: self
-            persistCredentials: true
-            clean: true
-          - task: UseNode@1
+          - task: GoTool@0
+            displayName: "Use Go 1.22.1"
             inputs:
-              version: "18.x"
-          - task: Cache@2
+              version: 1.22.1
+          - script: |
+              #!/bin/bash
+              git clone https://github.com/PinataCloud/pinata-go-cli
+              ls -al
+              cd pinata-go-cli
+              go build
+              mv pinata ../
+              cd ..
+              ./pinata auth $(PINATA_JWT)
+          - task: DownloadPipelineArtifact@2
             inputs:
-              key: $(cache_key)
-              path: $(npm_config_cache)
-            displayName: Use Cache
-          - task: CmdLine@2
-            inputs:
-              script: |
-                npm install
-                npm run build
-          - task: PublishPipelineArtifact@1
-            inputs:
-              targetPath: "./dist"
-              artifact: "pre-release-build"
-              publishLocation: "pipeline"
-          - task: CmdLine@2
-            displayName: "commit changes"
-            inputs:
-              script: |
-                git config --global user.email "can_yu@mutix.co"
-                git config --global user.name "AzurePipeline"
-                git checkout -b pre-release
-                git add -f ./dist
-                git commit -m "[skip ci] Pre-release build"
-                git push -u -f origin pre-release
+              buildType: "current"
+              artifactName: $(artifact_name)
+              targetPath: $(artifact_path)
+      - job: upload_to_ipfs
+        displayName: Upload to IPFS
+        dependsOn: prepare
+        steps:
+          - script: |
+              #!/bin/bash
+              name=`git log -n 1 --format=format:%h`
+              cid=`./pinata upload --name $name --cid-only ./dist | tail -n 1`
+              cidlist=`./pinata list | grep "ipfs_pin_hash" | cut -d '"' -f 4`
+              count=`echo $cidlist | wc -l`
+              if [ "$count" -gt 2 ]; then 
+                lastcid=`echo $cidlist | tail -n 1`
+                ./pinata unpin $lastcid;
+                echo "$lastcid"
+                echo "unpin status: $?"
+              fi
+              echo "##vso[task.setvariable variable=cid]$cid"
+              displayName: 'Publish to Pinata'
+      - job: update_dns
+        displayName: Update DNS
+        dependsOn: upload_to_ipfs
+        steps:
+          - script: |
+              #!/bin/bash
+              echo "get cid: $(cid)"
+              if [[ -z "$(cid)" ]]; then
+                  echo "CID is empty"
+                  exit 1
+              fi
+              curl -X PATCH \
+                --url "https://api.cloudflare.com/client/v4/zones/$(ZONE_ID)/dns_records/$(DNS_RECORD_ID)" \
+                -H "Content-Type: application/json" \
+                -H "Authorization: Bearer $(CLOUDFLARE_API_TOKEN)" \
+                --data '{"content": "'dnslink=/ipfs/$(cid)'"}' -f -s
+              displayName: 'Update DNS with CID'
