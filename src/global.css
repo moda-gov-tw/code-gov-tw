@@ -122,3 +122,18 @@ body {
 header {
   position: relative;
 }
+
+@keyframes expand {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@layer utilities {
+  .animate-expand {
+    animation: expand 3s ease-in-out infinite;
+  }
+}
