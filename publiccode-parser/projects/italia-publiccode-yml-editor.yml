@@ -43,9 +43,5 @@ tw:
     - name: SCSS
   vulnerabilityScanners:
     - "本專案為在地化成果，未涉及軟體開發作業。"
-  mainCopyrightOwnerLogo: "/images/projects/logos/foundation-for-public-code-logo.webp"
-  overrides:
-    repoOwners:
-      - "其他"
   # GitHub API 有資訊可以取得, 暫時手動填寫
   createdDate: "2022-12-01"

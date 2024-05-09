@@ -43,5 +43,4 @@ tw:
   vulnerabilityScanners:
     - "GitHub CodeQL"
     - "GitHub Dependabot Alerts"
-  mainCopyrightOwnerLogo: "/images/projects/logos/PDIS-logo.webp"
   accessibilityConformance: null

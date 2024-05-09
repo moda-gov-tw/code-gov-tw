@@ -47,7 +47,6 @@ tw:
     - name: "Vue.js"
   vulnerabilityScanners:
     - "SonarQube"
-  mainCopyrightOwnerLogo: "/images/projects/logos/MODA-logo.svg"
   openapi:
     - name: 資料集列表API
       description: "提供政府資料開放平臺資料集瀏覽與資料集搜尋功能"
