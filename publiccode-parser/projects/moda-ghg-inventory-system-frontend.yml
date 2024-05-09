@@ -47,5 +47,4 @@ tw:
   countryExtensionVersion: "1.0.0"
   vulnerabilityScanners:
     - "HCL AppScan"
-  mainCopyrightOwnerLogo: "/images/projects/logos/MODA-logo.svg"
   createdDate: "2023-11-24"

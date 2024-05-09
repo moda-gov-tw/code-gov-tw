@@ -56,7 +56,6 @@ tw:
   vulnerabilityScanners:
     - "Checkmarx"
   accessibilityConformance: "AA"
-  mainCopyrightOwnerLogo: "/images/projects/logos/MODA-logo.svg"
   # GitHub API 有資訊可以取得, 暫時手動填寫
   createdDate: "2024-04-03" # YYYY-MM-DD, 這個專案的建立日期
 

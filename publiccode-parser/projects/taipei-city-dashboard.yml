@@ -50,8 +50,5 @@ tw:
   vulnerabilityScanners:
     - "Checkmarx"
   accessibilityConformance: "AA"
-  mainCopyrightOwnerLogo: "/images/projects/logos/department-of-informations-technology-taipei-city-government-logo.webp"
   # GitHub API 有資訊可以取得, 暫時手動填寫
   createdDate: "2023-05-22" # YYYY-MM-DD, 這個專案的建立日期
-
-# 更多定義可以參考官方文件 https://yml.publiccode.tools/
