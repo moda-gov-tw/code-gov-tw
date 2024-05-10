@@ -18,7 +18,7 @@ export default component$(() => {
           www-mailbox.moda.gov.tw
         </a>
       </small>
-      <small>{$localize`更新日期：2024-01-24`}</small>
+      <small>{$localize`更新日期：2024-04-30`}</small>
       <small>
         <a
           href="https://spdx.org/licenses/CC0-1.0"
