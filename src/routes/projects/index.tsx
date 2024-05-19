@@ -4,6 +4,7 @@ import {
   useStore,
   useComputed$,
   $,
+  useTask$,
 } from "@builder.io/qwik";
 import Section from "~/components/section";
 import { RepoBlock } from "~/routes/projects/repo-block";
@@ -43,6 +44,14 @@ export default component$(() => {
     features: [],
     repoOwners: [],
     techStacks: [],
+  });
+
+  useTask$(({ track }) => {
+    track(() => filterStore.features);
+    track(() => filterStore.repoOwners);
+    track(() => filterStore.techStacks);
+
+    currentPage.value = 1;
   });
 
   const computedProjects = useComputed$(

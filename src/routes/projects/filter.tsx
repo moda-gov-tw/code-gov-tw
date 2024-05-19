@@ -1,4 +1,12 @@
-import { component$, useStore, $, useSignal, useTask$ } from "@builder.io/qwik";
+import {
+  component$,
+  useStore,
+  $,
+  useSignal,
+  useOnDocument,
+} from "@builder.io/qwik";
+import FilterCheckbox from "./filter-checkbox";
+import { useLocation } from "@builder.io/qwik-city";
 
 type FilterProps = {
   filterName: string;
@@ -8,51 +16,79 @@ type FilterProps = {
 };
 
 export default component$<FilterProps>((props) => {
+  const location = useLocation();
   const filterSize = useSignal(0);
-  const state = useStore({
-    filters: new Set(),
+
+  const filters = useStore({
+    status: new Array(props.filterOptions.length).fill(false),
   });
 
-  useTask$(({ track }) => {
-    track(() => filterSize.value);
-    props.store[props.filterName] = Array.from(state.filters);
-  });
-
-  const handleFilterChange = $((e: Event) => {
-    const target = e.target as HTMLElement;
-
-    const input = target.querySelector(
-      `input[type=checkbox].${props.filterName}`,
-    ) as HTMLInputElement;
-    input.checked = !input.checked;
-    if (input.checked) {
-      state.filters.add(input.value);
-    } else {
-      state.filters.delete(input.value);
+  const updateQueryParameters = $((seletedFilter: string[]) => {
+    const queryParameters = location.url.searchParams;
+    if (seletedFilter.length === 0) {
+      queryParameters.delete(props.filterName);
+      // Remove the query parameter if there are no filters selected
+      const final =
+        queryParameters.size === 0
+          ? location.url.pathname
+          : `?${queryParameters}`;
+      window.history.replaceState({}, "", final);
+      return;
     }
-    filterSize.value = state.filters.size;
+
+    queryParameters.set(props.filterName, seletedFilter.join(","));
+    window.history.replaceState({}, "", `?${queryParameters}`);
+  });
+
+  const updateFilters = $(() => {
+    const seletedFilter = [] as string[];
+    filters.status.forEach((status, index) => {
+      if (status) {
+        seletedFilter.push(props.filterOptions[index]);
+      }
+    });
+
+    props.store[props.filterName] = seletedFilter;
+    updateQueryParameters(seletedFilter);
+    filterSize.value = seletedFilter.length;
+  });
+
+  const initQueryParameters = $(() => {
+    const queryParameters = location.url.searchParams;
+    const selectedFilters = queryParameters.get(props.filterName);
+    if (selectedFilters) {
+      const selectedFiltersArray = selectedFilters.split(",");
+      selectedFiltersArray.forEach((selectedFilter) => {
+        const index = props.filterOptions.indexOf(selectedFilter);
+        if (index !== -1) {
+          filters.status[index] = true;
+        }
+      });
+      updateQueryParameters(selectedFiltersArray);
+      updateFilters();
+      filterSize.value = selectedFiltersArray.length;
+    }
+  });
+
+  useOnDocument("DOMContentLoaded", initQueryParameters);
+
+  const handleFilterChange = $((index: number, state: boolean) => {
+    filters.status[index] = state;
+    updateFilters();
   });
 
   const handleCheckAll = $(() => {
-    const checkboxes = document.querySelectorAll(
-      `input[type=checkbox].${props.filterName}`,
-    );
-    Array.from(checkboxes).forEach((checkbox) => {
-      (checkbox as HTMLInputElement).checked = true;
-      state.filters.add((checkbox as HTMLInputElement).value);
+    filters.status.forEach((_, index) => {
+      filters.status[index] = true;
     });
-    filterSize.value = state.filters.size;
+    updateFilters();
   });
 
   const handleClearFilters = $(() => {
-    const checkboxes = document.querySelectorAll(
-      `input[type=checkbox].${props.filterName}`,
-    );
-    Array.from(checkboxes).forEach((checkbox) => {
-      (checkbox as HTMLInputElement).checked = false;
+    filters.status.forEach((_, index) => {
+      filters.status[index] = false;
     });
-    state.filters.clear();
-    filterSize.value = state.filters.size;
+    updateFilters();
   });
 
   return (
@@ -65,7 +101,7 @@ export default component$<FilterProps>((props) => {
         <div id={props.filterName}>
           <h4>{props.categoryName}</h4>
         </div>
-        {filterSize.value !== props.filterOptions.length ? (
+        {filterSize.value < 2 ? (
           <button onClick$={handleCheckAll}>
             <div class="font-medium text-brand-secondary">{$localize`全選`}</div>
           </button>
@@ -76,27 +112,16 @@ export default component$<FilterProps>((props) => {
         )}
       </div>
       <div class="flex flex-col gap-2">
-        {props.filterOptions.map((option) => {
+        {props.filterOptions.map((option, index) => {
           return (
-            <div
+            <FilterCheckbox
               key={option}
-              class="flex cursor-pointer items-center gap-4"
-              onClick$={handleFilterChange}
-            >
-              <input
-                id={option}
-                class={[
-                  "pointer-events-none h-4 w-4 accent-brand-primary",
-                  props.filterName,
-                ]}
-                type="checkbox"
-                value={option}
-                onChange$={handleFilterChange}
-              />
-              <label for={option} class="pointer-events-none">
-                {option}
-              </label>
-            </div>
+              option={option}
+              index={index}
+              filterName={props.filterName}
+              onChange$={handleFilterChange}
+              checked={filters.status[index]}
+            />
           );
         })}
       </div>
