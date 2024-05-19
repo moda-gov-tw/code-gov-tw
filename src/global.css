@@ -137,3 +137,11 @@ header {
     animation: expand 3s ease-in-out infinite;
   }
 }
+
+.loading-icon {
+  width: 20px;
+  height: 20px;
+  border: 5px solid #d3420e;
+  border-top: 5px solid white;
+  border-radius: 50%;
+}

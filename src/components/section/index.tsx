@@ -1,7 +1,7 @@
-import { component$, Slot } from "@builder.io/qwik";
+import { component$, Slot, type ClassList } from "@builder.io/qwik";
 
 type SectionProps = {
-  class?: string;
+  class?: ClassList;
 };
 
 export default component$<SectionProps>((props) => {

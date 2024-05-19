@@ -6,7 +6,8 @@ import {
   useContextProvider,
   useOnWindow,
 } from "@builder.io/qwik";
-import type { RequestHandler } from "@builder.io/qwik-city";
+import { type RequestHandler } from "@builder.io/qwik-city";
+import { isDev } from "@builder.io/qwik/build";
 import Footer from "~/components/footer";
 import Header from "~/components/header";
 import {
@@ -28,7 +29,7 @@ export const onGet: RequestHandler = async ({ cacheControl }) => {
 
 export const onRequest: RequestHandler = (event) => {
   const nonce = "q9Wxu3i-H-RYysHVncGjiFv__BwHb7DzNVfUVr4gxlQ";
-  event.sharedMap.set("@nonce", nonce);
+  if (!isDev) event.sharedMap.set("@nonce", nonce);
 };
 
 export default component$(() => {
