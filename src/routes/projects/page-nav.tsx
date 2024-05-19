@@ -1,6 +1,9 @@
-import { component$, $ } from "@builder.io/qwik";
-import ArrowLeftIcon from "~/media/icons/arrow-left-icon.svg?jsx";
-import ArrowRightIcon from "~/media/icons/arrow-right-icon.svg?jsx";
+import { component$, $, useOnDocument } from "@builder.io/qwik";
+
+import PageNextButton from "./page-next-button";
+import PagePrevButton from "./page-prev-button";
+import PageNumberButton from "./page-number-button";
+import { useLocation } from "@builder.io/qwik-city";
 
 type PageNavProps = {
   currentPage: any;
@@ -43,7 +46,35 @@ function generatePageNumbers(totalPage: number, currentPageValue: number) {
 
 export const PageNav = component$<PageNavProps>(
   ({ currentPage, itemsPerPage, totalItems }) => {
+    const location = useLocation();
     const totalPage = Math.ceil(totalItems / itemsPerPage);
+
+    const updateQueryParameter = $(() => {
+      const queryParameters = location.url.searchParams;
+      queryParameters.set("page", currentPage.value.toString());
+      window.history.replaceState({}, "", `?${queryParameters}`);
+    });
+
+    const initQueryParameter = $(() => {
+      const queryParameters = location.url.searchParams;
+      const page = queryParameters.get("page");
+      if (page === null) {
+        currentPage.value = 1;
+        updateQueryParameter();
+        return;
+      }
+
+      const pageNumber = parseInt(page);
+
+      if (!isNaN(pageNumber) && pageNumber >= 1 && pageNumber <= totalPage) {
+        currentPage.value = pageNumber;
+      } else {
+        currentPage.value = 1;
+      }
+      updateQueryParameter();
+    });
+
+    useOnDocument("DOMContentLoaded", initQueryParameter);
 
     const handleNextPage = $(() => {
       if (currentPage.value * itemsPerPage >= totalItems) {
@@ -51,77 +82,46 @@ export const PageNav = component$<PageNavProps>(
       }
       currentPage.value++;
       window.scrollTo({ top: 0, behavior: "smooth" });
+      updateQueryParameter();
     });
 
     const handlePrevPage = $(() => {
       if (currentPage.value === 1) return;
       currentPage.value--;
       window.scrollTo({ top: 0, behavior: "smooth" });
+      updateQueryParameter();
+    });
+
+    const handleDirect = $((target: number) => {
+      currentPage.value = target;
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      updateQueryParameter();
     });
 
     const generatePageList = () => {
       const pages = generatePageNumbers(totalPage, currentPage.value);
 
       return pages.map((page, index) => (
-        <button
+        <PageNumberButton
           key={index}
-          class={[
-            "group relative w-10 font-medium hover:text-brand-secondary",
-            currentPage.value === page
-              ? "text-brand-secondary"
-              : "text-gray-300",
-            "transition-colors duration-[50ms] ease-out",
-          ]}
-          onClick$={() => {
-            currentPage.value = page;
-            window.scrollTo({ top: 0, behavior: "smooth" });
-          }}
-          disabled={page === -1}
-        >
-          {page === -1 ? "..." : page}
-          <span
-            class={[
-              "absolute inset-x-0 -top-4 w-10 border-t-2 border-brand-secondary group-hover:border-brand-secondary",
-              currentPage.value === page
-                ? "border-brand-secondary"
-                : "border-transparent",
-              "transition-colors duration-[50ms] ease-out",
-            ]}
-          ></span>
-        </button>
+          target={page}
+          current={currentPage.value}
+          onClick$={handleDirect}
+        />
       ));
     };
 
     return (
       <div class="flex justify-between border-t-[1px] pt-4">
-        <button
-          class={[
-            currentPage.value === 1 ? "pointer-events-none opacity-0" : "",
-          ]}
+        <PagePrevButton
           onClick$={handlePrevPage}
-        >
-          <div class="flex gap-3">
-            <ArrowLeftIcon class="w-5" />
-            <div class="text-sm font-medium">{$localize`上一頁`}</div>
-          </div>
-        </button>
-
+          disabled={currentPage.value === 1}
+        />
         <div class="hidden xl:flex">{generatePageList()}</div>
-
-        <button
-          class={[
-            currentPage.value * itemsPerPage >= totalItems
-              ? "pointer-events-none opacity-0"
-              : "",
-          ]}
+        <PageNextButton
           onClick$={handleNextPage}
           disabled={currentPage.value * itemsPerPage >= totalItems}
-        >
-          <div class="flex gap-3">
-            <div class="text-sm font-medium">{$localize`下一頁`}</div>
-            <ArrowRightIcon class="w-5" />
-          </div>
-        </button>
+        />
       </div>
     );
   },
