@@ -27,7 +27,7 @@ export default component$<Props>((props) => {
         "transition-colors duration-[50ms] ease-out",
       ]}
       onClick$={handleButtonClick}
-      disabled={props.target === -1}
+      disabled={props.target === props.current || props.target === -1}
     >
       {props.target === -1 ? "..." : props.target}
       <span

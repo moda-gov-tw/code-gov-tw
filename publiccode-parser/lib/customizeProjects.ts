@@ -1,4 +1,5 @@
 import type { Project } from "../../src/types/Project";
+import { normalizeUnit } from "./normalizeUnit";
 
 // Define the logos for the main copyright owners
 const mainCopyrightOwnerLogos: Record<string, string> = {
@@ -11,24 +12,6 @@ const mainCopyrightOwnerLogos: Record<string, string> = {
   "Element": "/images/logos/matrix-element-logo.webp",
 };
 
-// Define the main providers, other will be grouped under "其他"
-const mainProviders = [
-  "數位發展部",
-  "行政院公共數位創新空間（PDIS）",
-  "臺北市政府資訊局",
-];
-
-// Normalize the unit name like the following:
-// "數位發展部" => "數位發展部"
-// "數位發展部 資訊處" => "數位發展部"
-// "數位發展部 數位政府司" => "數位發展部"
-function normalizeUnit(unit: string): string {
-  if (unit.startsWith("數位發展部")) {
-    return "數位發展部";
-  }
-  return unit;
-}
-
 export function customizeProjects(projects: Project[]) {
   const modifiedProjects: Project[] = [];
 
@@ -39,14 +22,7 @@ export function customizeProjects(projects: Project[]) {
 
     if (!mainCopyrightOwner) continue;
 
-    // customize filter repoOwners
-    const normalizeOwner = normalizeUnit(mainCopyrightOwner)
-    if (mainProviders.includes(normalizeOwner)) {
-      newProject.filterTags.repoOwners = [normalizeOwner];
-    } else {
-      newProject.filterTags.repoOwners = ["其他"];
-    }
-
+    const normalizeOwner = normalizeUnit(mainCopyrightOwner);
     // customize provider logo
     newProject.tw = {
       ...newProject.tw,
