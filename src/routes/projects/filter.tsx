@@ -24,7 +24,8 @@ export default component$<FilterProps>((props) => {
   });
 
   const updateQueryParameters = $((seletedFilter: string[]) => {
-    const queryParameters = location.url.searchParams;
+    // Workaround for the issue that the query parameters are not extracted in useLocation
+    const queryParameters = new URLSearchParams(document.location.search);
     if (seletedFilter.length === 0) {
       queryParameters.delete(props.filterName);
       // Remove the query parameter if there are no filters selected
@@ -54,7 +55,8 @@ export default component$<FilterProps>((props) => {
   });
 
   const initQueryParameters = $(() => {
-    const queryParameters = location.url.searchParams;
+    // Workaround for the issue that the query parameters are not extracted in useLocation
+    const queryParameters = new URLSearchParams(document.location.search);
     const selectedFilters = queryParameters.get(props.filterName);
     if (selectedFilters) {
       const selectedFiltersArray = selectedFilters.split(",");
