@@ -3,7 +3,6 @@ import { component$, $, useOnDocument } from "@builder.io/qwik";
 import PageNextButton from "./page-next-button";
 import PagePrevButton from "./page-prev-button";
 import PageNumberButton from "./page-number-button";
-import { useLocation } from "@builder.io/qwik-city";
 
 type PageNavProps = {
   currentPage: any;
@@ -46,17 +45,18 @@ function generatePageNumbers(totalPage: number, currentPageValue: number) {
 
 export const PageNav = component$<PageNavProps>(
   ({ currentPage, itemsPerPage, totalItems }) => {
-    const location = useLocation();
     const totalPage = Math.ceil(totalItems / itemsPerPage);
 
     const updateQueryParameter = $(() => {
-      const queryParameters = location.url.searchParams;
+      // Workaround for the issue that the query parameters are not extracted in useLocation
+      const queryParameters = new URLSearchParams(document.location.search);
       queryParameters.set("page", currentPage.value.toString());
       window.history.replaceState({}, "", `?${queryParameters}`);
     });
 
     const initQueryParameter = $(() => {
-      const queryParameters = location.url.searchParams;
+      // Workaround for the issue that the query parameters are not extracted in useLocation
+      const queryParameters = new URLSearchParams(document.location.search);
       const page = queryParameters.get("page");
       if (page === null) {
         currentPage.value = 1;
