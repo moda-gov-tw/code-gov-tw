@@ -4,6 +4,7 @@ import { collectProjects } from "./lib/collectProjects";
 import { collectUniqueValues } from "./lib/collectUniqueValues";
 import { getYamlFiles } from "./lib/getYamlFiles"; // Provide the correct file path for the module
 import { customizeProjects } from "./lib/customizeProjects";
+import { createIndex } from "./lib/createIndex";
 
 // get current directory
 const baseDir = new URL(".", import.meta.url).pathname;
@@ -20,16 +21,18 @@ const finalFilters = {
   features: [...filterValues.features],
   techStacks: [...filterValues.techStacks],
 };
-console.log("Collected finalFilters values:", finalFilters);
 const projects = collectProjects(yamlFiles);
 const modifiedProjects = customizeProjects(projects);
+const index = createIndex(modifiedProjects);
 
 const outputFiltersFile = join(baseDir, "./outputs/filters.json");
 const outputProjectsFile = join(baseDir, "./outputs/projects.json");
+const outputIndexFile = join(baseDir, "./outputs/index.json");
 
 try {
   writeFileSync(outputProjectsFile, JSON.stringify(modifiedProjects, null, 2));
   writeFileSync(outputFiltersFile, JSON.stringify(finalFilters, null, 2));
+  writeFileSync(outputIndexFile, JSON.stringify(index, null, 2));
   console.log(
     `Successfully saved unique filter values to ${outputFiltersFile}`,
   );

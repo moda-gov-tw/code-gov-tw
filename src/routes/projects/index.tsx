@@ -7,26 +7,20 @@ import {
   useTask$,
 } from "@builder.io/qwik";
 import Section from "~/components/section";
-import { RepoBlock } from "~/routes/projects/repo-block";
 import { PageNav } from "~/routes/projects/page-nav";
-
 import Filter from "~/routes/projects/filter";
-import localProjects from "~/data/projects.json";
+import projectData from "~/data/projects.json";
 import filters from "~/data/filters.json";
-import type { Project } from "~/types/Project";
-import {
-  filterProjectsByFeatures,
-  filterProjectsByRepoOwners,
-  filterProjectsByTechStacks,
-} from "~/routes/projects/filter-rules";
+import projectIndex from "~/data/index.json";
 import MobileFilterClose from "./mobile-filter-close";
 import MobileFilterOpen from "./mobile-filter-open";
+import RepoList from "./repo-list";
 
 function paginateData(
-  filteredData: Project[],
+  filteredData: number[],
   pageNumber: number,
   itemsPerPage: number,
-): Project[] {
+): number[] {
   const startIndex = (pageNumber - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
   return filteredData.slice(startIndex, endIndex);
@@ -36,10 +30,6 @@ export default component$(() => {
   const mobileFilterStatus = useSignal(false);
   const itemsPerPage = 5;
   const currentPage = useSignal(1);
-  const store = useStore({
-    projects: localProjects,
-  });
-
   const filterStore = useStore({
     features: [],
     repoOwners: [],
@@ -55,17 +45,37 @@ export default component$(() => {
   });
 
   const computedProjects = useComputed$(
-    (): { data: Project[]; total: number } => {
-      const filteredProjects = store.projects.filter((project) => {
-        return (
-          filterProjectsByFeatures(project, filterStore.features) &&
-          filterProjectsByRepoOwners(project, filterStore.repoOwners) &&
-          filterProjectsByTechStacks(project, filterStore.techStacks)
-        );
+    (): { data: number[]; total: number } => {
+      const projectList: number[] = [];
+      filterStore.features.forEach((feature) => {
+        const target = projectIndex.features[feature] as number[];
+        projectList.push(...target);
       });
+      filterStore.repoOwners.forEach((repoOwner) => {
+        const target = projectIndex.repoOwners[repoOwner] as number[];
+        projectList.push(...target);
+      });
+      filterStore.techStacks.forEach((techStack) => {
+        const target = projectIndex.techStacks[techStack] as number[];
+        projectList.push(...target);
+      });
+
+      let uniqueProjectList = [...new Set(projectList)];
+
+      // If no filters are selected, show all projects
+      if (uniqueProjectList.length === 0) {
+        uniqueProjectList = [...Array.from(projectData.keys())];
+      }
+
+      const pages = paginateData(
+        uniqueProjectList,
+        currentPage.value,
+        itemsPerPage,
+      );
+
       return {
-        data: paginateData(filteredProjects, currentPage.value, itemsPerPage),
-        total: filteredProjects.length,
+        data: pages,
+        total: uniqueProjectList.length,
       };
     },
   );
@@ -121,31 +131,7 @@ export default component$(() => {
           </div>
           <div class={[mobileFilterStatus.value ? "hidden" : "block", "flex"]}>
             <div id="projects" class="flex flex-col gap-8">
-              {computedProjects.value.data.map((project) => {
-                const projectName =
-                  project.description["zh-Hant"].localisedName || project.name;
-                const mainCopyrightOwner = project.legal.mainCopyrightOwner;
-                const repoOwner = project.legal.repoOwner.split(" ")[0];
-                const projectDescription =
-                  project.description["zh-Hant"].shortDescription;
-                const projectFeatures = project.description["zh-Hant"].features;
-                const mainCopyrightOwnerLogo =
-                  project.tw.mainCopyrightOwnerLogo;
-                return (
-                  <RepoBlock
-                    id={project.id}
-                    key={project.name}
-                    name={projectName}
-                    repoOwner={repoOwner}
-                    mainCopyrightOwner={mainCopyrightOwner}
-                    mainCopyrightOwnerLogo={mainCopyrightOwnerLogo}
-                    shortDescription={projectDescription}
-                    features={projectFeatures}
-                    dependsOn={project.dependsOn?.open}
-                    techStacks={project.tw.techStacks}
-                  />
-                );
-              })}
+              <RepoList projectsID={computedProjects.value.data} />
               <PageNav
                 currentPage={currentPage}
                 itemsPerPage={itemsPerPage}

@@ -55,3 +55,4 @@ accessibility-check-results
 # Local
 src/data/projects.json
 src/data/filters.json
+src/data/index.json
