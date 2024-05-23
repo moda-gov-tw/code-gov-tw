@@ -13,6 +13,7 @@
 ```shell
 git clone https://github.com/moda-gov-tw/code-gov-tw.git # 複製本專案原始碼
 cd code-gov-tw
+# 需安裝 pnpm
 pnpm install # 從網路下載所需的套件
 ```
 

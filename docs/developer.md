@@ -1,6 +1,8 @@
-## Project Structure
+# 開發指南
 
-這個專案使用了Qwik與[QwikCity](https://qwik.builder.io/qwikcity/overview/)。QwikCity是建立在Qwik之上的一套附加工具，用以簡化完整網站建置的流程，包括基於目錄的路由、版面配置等功能。
+## 專案結構
+
+這個專案使用了 Qwik 與[QwikCity](https://qwik.builder.io/qwikcity/overview/)。QwikCity 是建立在 Qwik 之上的一套附加工具，用以簡化完整網站建置的流程，包括基於目錄的路由、版面配置等功能。
 
 在您的專案中，您將看到以下的目錄結構：
 
@@ -26,17 +28,20 @@
 - `src/data`：儲存專案列表及篩選選項。
 - `src/locales`：儲存國際化(i18n)的本地字串。
 - `src/media`：儲存媒體資源，如圖示、圖片，用於Qwik圖片優化。
-- `src/routes`：提供基於目錄的路由，可以包含`layout.tsx`版面配置檔案的階層結構，以及作為頁面的`index.tsx`檔案。此外，`index.ts`檔案是端點。若想暸解更多路由的資訊請看[官方文件](https://qwik.builder.io/qwikcity/routing/overview/)
-- `src/types`：儲存類型。
-- `public`：任何靜態資產，如圖片，都可以放在public目錄中。想暸解更多資訊情看 [Vite public directory](https://vitejs.dev/guide/assets.html#the-public-directory)
+- `src/routes`：提供基於目錄的路由，可以包含`layout.tsx`版面配置檔案的階層結構，以及作為頁面的`index.tsx`檔案。此外，`index.ts`檔案是端點。若想暸解更多路由設定請看[官方文件](https://qwik.builder.io/qwikcity/routing/overview/)
+- `src/types`：儲存共用的 TypeScript 型別定義。
+- `public`：任何靜態資源，如圖片，都可以放在public目錄中。想暸解更多請看 [Vite public directory](https://vitejs.dev/guide/assets.html#the-public-directory)
 
-## Development
+## 開發階段
 
 開發模式使用[Vite的開發伺服器](https://vitejs.dev/)。`dev`指令會在開發時進行伺服器端渲染(SSR)輸出。
 
-> 注意：在開發模式中，Vite可能會請求大量的`.js`檔案。這並不代表Qwik的生產環境構建。
+> 注意：在開發模式中，Vite 可能會請求大量的`.js`檔案。這並不代表Qwik的生產環境構建。
 
-## Preview
+- 這階段可能會用到下列指令
+  - `pnpm fmt` : 調整所有程式碼風格
+
+## 預覽階段
 
 預覽指令會建立客戶端模組的生產構建，並運行一個本地伺服器。預覽伺服器僅為在本地預覽生產構建提供便利，不應作為生產伺服器使用。
 
@@ -44,13 +49,17 @@
 pnpm preview # or `pnpm preview`
 ```
 
-## Production
+## 生產環境
 
-生產構建將通過運行客戶端和伺服器構建指令來生成客戶端和伺服器模組。構建指令將使用Typescript對原始碼進行類型檢查。
+生產構建將通過運行客戶端和伺服器構建指令來生成客戶端和伺服器模組。構建指令將使用 Typescript 對原始碼進行類型檢查。
 
 ```shell
 pnpm build # or `pnpm build`
 ```
+
+- 這階段會用到的指令，可用於建置後的檢查，同時也是 CI 中使用的檢查
+  - `pnpm a11y.check`
+  - `lhci autorun`
 
 ## 部署
 
@@ -68,14 +77,14 @@ npx http-server ./dist
 
 這個工具用於更新專案列表和篩選器選項。
 
-1. 新增符合[publiccode.yml 標準](https://github.com/publiccodeyml/publiccode.yml)的檔案, 可複製[範本](../publiccode-parser/template.yml)使用
+1. 建立符合[publiccode.yml 標準](https://github.com/publiccodeyml/publiccode.yml)的檔案, 可複製[範本](../publiccode-parser/template.yml)使用
 
-2. 將該 yml 檔案至路徑 `publiccode-parser/projects` 中
+2. 將該 yml 檔案放至路徑 `publiccode-parser/projects` 中
 
 3. 執行程式並更新網站資料
 
 ```sh
-npx tsx publiccode-parser/generator.ts && cp publiccode-parser/outputs/* src/data/
+pnpm build.data
 ```
 
 ### 國際化 Internationalization (i18n)
@@ -86,4 +95,4 @@ npx tsx publiccode-parser/generator.ts && cp publiccode-parser/outputs/* src/dat
 pnpm i18n-extract
 ```
 
-- 執行指令後會建立 `./src/locales/message.zh-hant.json` 檔案，以該檔案的內容建立其他語系檔案中並更新內容 (例如建立一個新的黨案 message.en.json 並將 `locale` 的值更新為 `en` 並翻譯內容的字串)
+- 執行指令後會建立 `./src/locales/message.zh-hant.json` 檔案，以該檔案的內容建立其他語系檔案中並更新內容 (例如建立一個新的檔案 message.en.json 並將 `locale` 的值更新為 `en` 並翻譯內容的字串)
