@@ -1,7 +1,6 @@
 publiccodeYmlVersion: 0.3.0
 name: moda-ghg-inventory-system-frontend
 url: "https://github.com/moda-gov-tw/moda-ghg-inventory-system-frontend"
-landingURL: "https://ghg.moda.gov.tw/Member/Login"
 releaseDate: "2023-12-18"
 platforms:
   - web
