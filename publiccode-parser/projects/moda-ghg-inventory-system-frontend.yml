@@ -40,8 +40,6 @@ dependsOn:
       version: "6.0"
     - name: C#
     - name: MySQL
-usedBy:
-  - "[數位產業自願性溫室氣體盤查系統](https://ghg.moda.gov.tw/Member/Login) (無障礙檢測結果：尚未檢測)"
 tw:
   countryExtensionVersion: "1.0.0"
   vulnerabilityScanners:
