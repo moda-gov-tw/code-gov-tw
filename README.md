@@ -17,6 +17,12 @@ cd code-gov-tw
 pnpm install # 從網路下載所需的套件
 ```
 
+初次下載完本專後，需要先建立專案一覽與篩選器所需要的資料(位於 publiccode-parser/projects)
+
+```shell
+pnpm build.data
+```
+
 接著使用下列指令開啟網站後，正常會開啟一個瀏覽器並連到[網站首頁](http://localhost:5173/)。沒有自動啟動的話也可以看指令顯示的網址自行連線。接著就可以開始瀏覽目前網站現有的內容
 
 ```shell
