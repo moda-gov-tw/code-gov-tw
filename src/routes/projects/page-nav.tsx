@@ -3,6 +3,7 @@ import { component$, $, useOnDocument } from "@builder.io/qwik";
 import PageNextButton from "./page-next-button";
 import PagePrevButton from "./page-prev-button";
 import PageNumberButton from "./page-number-button";
+import { isBrowser } from "@builder.io/qwik/build";
 
 type PageNavProps = {
   currentPage: any;
@@ -100,7 +101,7 @@ export const PageNav = component$<PageNavProps>(
 
     const generatePageList = () => {
       const pages = generatePageNumbers(totalPage, currentPage.value);
-
+      isBrowser && updateQueryParameter();
       return pages.map((page, index) => (
         <PageNumberButton
           key={index}
