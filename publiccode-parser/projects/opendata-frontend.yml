@@ -26,9 +26,9 @@ legal:
 maintenance:
   type: internal
   contacts:
-    - name: 王雅平分析師
-      email: "kate@moda.gov.tw"
-      phone: "02-23800393"
+    - name: 曾華伶分析師
+      email: "lynntseng@moda.gov.tw"
+      phone: "02-23800392"
 localisation:
   localisationReady: true
   availableLanguages:
