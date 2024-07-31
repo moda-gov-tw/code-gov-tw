@@ -48,11 +48,11 @@ tw:
   vulnerabilityScanners:
     - "SonarQube"
   openapi:
-    - name: 資料集列表API
-      description: "提供外界取得政府資料開放平臺資料集列表相關欄位，並可藉由關鍵字、資料提供機關等條件進行簡易搜尋。"
-      url: "https://file.data.gov.tw/APIdocument.json"
-    - name: 資料集搜尋選項API
-      description: "輔助提供政府資料開放平臺資料提供機關與服務分類，可作為發展資料集條件搜尋功能選項(如開發下拉選單便利選擇機關別)參考。"
-      url: "https://file.data.gov.tw/APIdocument.json"
+    - name: 資料集列表 API
+      description: "提供政府資料開放平臺資料集列表相關欄位，可藉由關鍵字進行簡易搜尋，亦可透過資料集名稱、檔案格式、標章類型、服務分類等條件進行進階搜尋。"
+      url: "https://file.data.gov.tw/APIdocument_search.json"
+    - name: 資料提供機關及服務分類選單 API
+      description: "可運用資料提供機關及服務分類選單API，結合資料集列表API，開發現行政府資料開放平臺之資料提供機關及服務分類下拉式選單功能，便利選擇機關與服務分類，提供符合搜尋條件之相關資料集。"
+      url: "https://file.data.gov.tw/APIdocument_options.json"
   # GitHub API 有資訊可以取得, 暫時手動填寫
-  createdDate: "2024-03-31"
+  createdDate: "2024-07-31"
