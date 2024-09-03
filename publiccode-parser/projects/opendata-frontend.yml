@@ -1,7 +1,7 @@
 publiccodeYmlVersion: 0.3.0
 name: opendata-frontend
 url: "https://github.com/moda-gov-tw/opendata-frontend"
-releaseDate: "2024-04-30"
+releaseDate: "2024-07-31"
 platforms:
   - web
 categories:
@@ -55,4 +55,4 @@ tw:
       description: "可運用資料提供機關及服務分類選單API，結合資料集列表API，開發現行政府資料開放平臺之資料提供機關及服務分類下拉式選單功能，便利選擇機關與服務分類，提供符合搜尋條件之相關資料集。"
       url: "https://file.data.gov.tw/APIdocument_options.json"
   # GitHub API 有資訊可以取得, 暫時手動填寫
-  createdDate: "2024-07-31"
+  createdDate: "2024-04-30"
