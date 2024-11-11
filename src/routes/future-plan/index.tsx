@@ -44,6 +44,18 @@ export default component$(() => {
       date: "2024/12",
       content: $localize`發布公共程式指引，以提供公共程式標案指南`,
     },
+    {
+      date: "2024/12",
+      content: $localize`發布 113 年公民科技試驗場域成果，提供更多示範公共程式`,
+    },
+    {
+      date: "2025/05",
+      content: $localize`發布公共程式指引，以提供公共程式標案指南`,
+    },
+    {
+      date: "2025/12",
+      content: $localize`發布我國政府軟體建置與開放原始碼現況報告`,
+    },
   ];
 
   return (
